@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1000">
+       <KeyFrameSet>
+       </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:layout_marginEnd="4dp"
+            android:layout_height="262dp"
+            android:layout_marginTop="92dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintHorizontal_bias="0.375"
+            android:layout_width="190dp"
+            motion:layout_constraintEnd_toStartOf="@+id/nutrient"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp"
+            android:id="@+id/left_cals" />
+        <Constraint
+            motion:layout_editor_absoluteY="402dp"
+            android:layout_height="262dp"
+            motion:layout_editor_absoluteX="46dp"
+            android:layout_width="190dp"
+            android:id="@+id/photo" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:layout_width="190dp"
+            android:layout_height="262dp"
+            motion:layout_editor_absoluteY="402dp"
+            motion:layout_editor_absoluteX="46dp" />
+        <Constraint
+            android:layout_width="190dp"
+            android:layout_height="262dp"
+            motion:layout_editor_absoluteY="402dp"
+            motion:layout_editor_absoluteX="46dp" />
+        <Constraint
+            android:layout_width="190dp"
+            android:layout_height="262dp"
+            motion:layout_editor_absoluteY="402dp"
+            motion:layout_editor_absoluteX="46dp" />
+        <Constraint
+            android:layout_width="190dp"
+            android:layout_height="262dp"
+            motion:layout_editor_absoluteY="402dp"
+            motion:layout_editor_absoluteX="46dp" />
+        <Constraint
+            android:layout_width="190dp"
+            android:layout_height="262dp"
+            motion:layout_editor_absoluteY="402dp"
+            motion:layout_editor_absoluteX="46dp" />
+        <Constraint
+            android:layout_width="190dp"
+            android:layout_height="262dp"
+            motion:layout_editor_absoluteY="402dp"
+            motion:layout_editor_absoluteX="46dp" />
+        <Constraint
+            android:id="@+id/photo"
+            android:layout_height="262dp"
+            android:layout_width="380dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toBottomOf="@+id/nutrient"
+            android:layout_marginTop="48dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintVertical_bias="0.462"
+            motion:layout_constraintHorizontal_bias="0.516"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="4dp" />
+    </ConstraintSet>
+</MotionScene>
