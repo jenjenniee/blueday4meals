@@ -1,4 +1,4 @@
-#Fri May 05 18:00:54 KST 2023
+#Wed May 10 14:59:55 KST 2023
 base.2=/Users/jingyeong/Documents/GitHub/blueday4meals/app/build/intermediates/dex/debug/mergeProjectDexDebug/15/classes.dex
 path.2=15/classes.dex
 base.1=/Users/jingyeong/Documents/GitHub/blueday4meals/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex

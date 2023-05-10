@@ -1898,7 +1898,7 @@ color primary_text_default_material_dark
 color primary_text_default_material_light
 color primary_text_disabled_material_dark
 color primary_text_disabled_material_light
-color purple_200
+color purple
 color purple_500
 color purple_700
 color ripple_material_dark
@@ -2810,6 +2810,9 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable rectangle_purple
+drawable rectangle_style
+drawable rectangle_white
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -2914,6 +2917,7 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id breakfast
 id btn_login
 id btn_register
 id buttonPanel
@@ -2970,6 +2974,7 @@ id design_menu_item_text
 id design_navigation_view
 id dialog_button
 id dimensions
+id dinner
 id direct
 id disableHome
 id disableIntraAutoTransition
@@ -3056,6 +3061,7 @@ id labeled
 id layout
 id left
 id leftToRight
+id left_cals
 id legacy
 id line1
 id line3
@@ -3063,6 +3069,7 @@ id linear
 id listMode
 id list_item
 id login
+id lunch
 id m3_side_sheet
 id marquee
 id masked
@@ -3141,6 +3148,7 @@ id north
 id notification_background
 id notification_main_column
 id notification_main_column_container
+id nutrient
 id off
 id on
 id onInterceptTouchReturnSwipe
@@ -3158,6 +3166,7 @@ id path
 id pathRelative
 id peekHeight
 id percent
+id photo
 id pin
 id position
 id postLayout
@@ -3427,6 +3436,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
 layout custom_dialog
+layout daily
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar
@@ -4912,4 +4922,5 @@ styleable ViewStubCompat android_id android_layout android_inflatedId
 styleable ViewTransition android_id SharedValue SharedValueId clearsTag duration ifTagNotSet ifTagSet motionInterpolator motionTarget onStateTransition pathMotionArc setsTag transitionDisable upDuration viewTransitionMode
 styleable include constraintSet
 xml backup_rules
+xml daily_consumption_scene
 xml data_extraction_rules
