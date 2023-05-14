@@ -29,7 +29,8 @@
         android:theme="@style/Theme.Blueday4meals"
         android:usesCleartextTraffic="true" >
         <activity android:name="com.example.blueday4meals.MainActivity" />
-        <activity android:name="com.example.blueday4meals.RegisterActivity" />
+        <activity android:name="com.example.blueday4meals.ChildRegisterActivity" />
+        <activity android:name="com.example.blueday4meals.ParentsRegisterActivity" />
         <activity
             android:name="com.example.blueday4meals.LoginActivity"
             android:exported="true" >

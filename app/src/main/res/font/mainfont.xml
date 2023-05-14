@@ -6,4 +6,9 @@
         android:fontVariationSettings=""
         android:font="@font/dongle"/>
 
+    <font android:fontStyle="normal"
+        android:fontWeight="400"
+        android:fontVariationSettings=""
+        android:font="@font/tmoney"/>
+
 </font-family>
