@@ -2,15 +2,12 @@ package com.example.blueday4meals;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
 import android.text.InputFilter;
 import android.text.Spanned;
-import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
@@ -25,13 +22,12 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.Calendar;
-import java.util.GregorianCalendar;
 import java.util.regex.Pattern;
 
 public class ChildRegisterActivity extends AppCompatActivity {
 
     private EditText et_cid, et_cpwd, et_cpwdR;
-    private int day = 0, month = 0, year = 0, gender = 0;
+    private int day = 0, month = 0, year = 0, gender = 0, okay = 0;
     private boolean validate = false;
     private AlertDialog dialog;
     private Button btn_idcheck, btn_cRegion1, btn_cRegion2, btn_cRegion3, btn_signup;
@@ -103,26 +99,24 @@ public class ChildRegisterActivity extends AppCompatActivity {
         });
 
         // 생년월일 변경 시 수행
-        Calendar calendar = new GregorianCalendar();
         DatePicker dps_cBirth = findViewById(R.id.cBirth);
+        Calendar calendar = Calendar.getInstance();
         year = calendar.get(Calendar.YEAR);
         month = calendar.get(Calendar.MONTH);
         day = calendar.get(Calendar.DAY_OF_MONTH);
-        DatePicker.OnDateChangedListener onDateChangedListener = null;
-        dps_cBirth.init(year, month, day, onDateChangedListener);
-        onDateChangedListener = new DatePicker.OnDateChangedListener() {
+//        DatePicker.OnDateChangedListener onDateChangedListener = null;
+//        dps_cBirth.init(year, month, day, onDateChangedListener);
+        dps_cBirth.setOnDateChangedListener(new DatePicker.OnDateChangedListener() {
             @Override
             public void onDateChanged(DatePicker datePicker, int yy, int mm, int dd) {
                 year = yy;
                 month = mm;
                 day = dd;
             }
-        };
+        });
 
         // 성별 라디오버튼 클릭시 수행
         RadioGroup rbg_cGender = findViewById(R.id.cGender);
-        RadioButton rb_male = findViewById(R.id.male);
-        RadioButton rb_female = findViewById(R.id.female);
         rbg_cGender.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int checkedId) {
@@ -161,11 +155,11 @@ public class ChildRegisterActivity extends AppCompatActivity {
         btn_signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // EditText에 현재 입력되어있는 값을 get(가져온다)해온다.
+                // EditText에 현재 입력되어있는 값을 가져온다.
                 String id = et_cid.getText().toString();
                 String pwd = et_cpwd.getText().toString();
                 String pwdR = et_cpwdR.getText().toString();
-                String birth = Integer.toString(year) + Integer.toString(month) + Integer.toString(day);
+                String birth = Integer.toString(year) + Integer.toString(month+1) + Integer.toString(day);
                 String region = "";
 
                 Response.Listener<String> responseListener = new Response.Listener<String>() {
@@ -175,35 +169,29 @@ public class ChildRegisterActivity extends AppCompatActivity {
                             JSONObject jsonObject = new JSONObject(response);
                             boolean success = jsonObject.getBoolean("success");
 
-//                            if(id.length() >)
-
                             if (id.length() >= 5) {
                                 if (pwd.length() >= 8) {
                                     if (validate) {
                                         if (pwd.equals(pwdR)) {
                                             if (success) {
                                                 Toast.makeText(getApplicationContext(), "회원 등록에 성공하였습니다.", Toast.LENGTH_SHORT).show();
+                                                okay = 1;
                                                 Intent intent = new Intent(ChildRegisterActivity.this, LoginActivity.class);
                                                 startActivity(intent);
                                             } else {
                                                 Toast.makeText(getApplicationContext(), "회원 등록에 실패하였습니다.", Toast.LENGTH_SHORT).show();
-                                                return;
                                             }
                                         } else {
                                             Toast.makeText(getApplicationContext(), "비밀번호 확인이 틀립니다.", Toast.LENGTH_SHORT).show();
-                                            return;
                                         }
                                     } else {
                                         Toast.makeText(getApplicationContext(), "아이디 중복확인을 해주세요.", Toast.LENGTH_SHORT).show();
-                                        return;
                                     }
                                 } else {
                                     Toast.makeText(getApplicationContext(), "비밀번호는 8자 이상이어야 합니다.", Toast.LENGTH_SHORT).show();
-                                    return;
                                 }
                             } else {
                                 Toast.makeText(getApplicationContext(), "아이디는 5자 이상이어야 합니다.", Toast.LENGTH_SHORT).show();
-                                return;
                             }
 
                         } catch (JSONException e) {
@@ -213,10 +201,13 @@ public class ChildRegisterActivity extends AppCompatActivity {
 
                     }
                 };
-                // 서버로 Volley를 이용해서 요청을 함.
-                ChildRegisterRequest registerRequest = new ChildRegisterRequest(id, pwd, birth, gender, region, responseListener);
-                RequestQueue queue = Volley.newRequestQueue(ChildRegisterActivity.this);
-                queue.add(registerRequest);
+
+                if(okay == 1){
+                    // 서버로 Volley를 이용해서 요청을 함.
+                    ChildRegisterRequest registerRequest = new ChildRegisterRequest(id, pwd, birth, gender, region, responseListener);
+                    RequestQueue queue = Volley.newRequestQueue(ChildRegisterActivity.this);
+                    queue.add(registerRequest);
+                }
 
             }
         });
