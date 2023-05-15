@@ -12,6 +12,8 @@ import android.util.AttributeSet;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.blueday4meals.R;
+
 @SuppressLint("AppCompatCustomView")
 public class CustomButtonOutLineView extends Button {
     private boolean stroke = false;
