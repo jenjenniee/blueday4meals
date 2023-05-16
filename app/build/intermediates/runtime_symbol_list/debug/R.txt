@@ -73,6 +73,8 @@ int animator mtrl_fab_hide_motion_spec 0x7f02001d
 int animator mtrl_fab_show_motion_spec 0x7f02001e
 int animator mtrl_fab_transformation_sheet_collapse_spec 0x7f02001f
 int animator mtrl_fab_transformation_sheet_expand_spec 0x7f020020
+int array Chungbuk 0x7f140003
+int array Citydo 0x7f140001
 int attr SharedValue 0x7f030000
 int attr SharedValueId 0x7f030001
 int attr actionBarDivider 0x7f030002
@@ -2927,7 +2929,6 @@ int id cBirth 0x7f090066
 int id cGender 0x7f090067
 int id cRegion1 0x7f090068
 int id cRegion2 0x7f090069
-int id cRegion3 0x7f09006a
 int id cache_measures 0x7f09006b
 int id callMeasure 0x7f09006c
 int id cancel_button 0x7f09006d

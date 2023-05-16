@@ -1,5 +1,7 @@
 R_DEF: Internal format may change without notice
 local
+array Chungbuk
+array Citydo
 attr? textStroke
 attr? textStrokeColor
 attr? textStrokeWidth
@@ -35,7 +37,6 @@ id cBirth
 id cGender
 id cRegion1
 id cRegion2
-id cRegion3
 id child
 id cid
 id cpwd
