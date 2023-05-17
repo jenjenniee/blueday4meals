@@ -1,6 +1,5 @@
 package com.example.blueday4meals;
 
-
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.ColorStateList;
