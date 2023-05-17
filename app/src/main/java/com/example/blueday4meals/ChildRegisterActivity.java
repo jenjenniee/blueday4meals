@@ -158,8 +158,8 @@ public class ChildRegisterActivity extends AppCompatActivity {
                 String id = et_cid.getText().toString();
                 String pwd = et_cpwd.getText().toString();
                 String pwdR = et_cpwdR.getText().toString();
-                String birth = Integer.toString(year) + Integer.toString(month+1) + Integer.toString(day);
-                String region = "";
+                String birth = Integer.toString(year) + "-" + Integer.toString(month+1) + "-" + Integer.toString(day);
+                String region = btn_cRegion1.getText().toString() + ";" + btn_cRegion2.getText().toString();
 
                 Response.Listener<String> responseListener = new Response.Listener<String>() {
                     @Override
@@ -197,7 +197,12 @@ public class ChildRegisterActivity extends AppCompatActivity {
                     if (pwd.length() >= 8) {
                         if (validate) {
                             if (pwd.equals(pwdR)) {
-                                okay = 1;
+                                if  (btn_cRegion1.getText().toString().equals("도/특별시/광역시") || btn_cRegion2.getText().toString().equals("시/군/구")) {
+                                    okay = 0;
+                                    Toast.makeText(getApplicationContext(), "지역을 선택해 주세요.", Toast.LENGTH_SHORT).show();
+                                }else{
+                                    okay = 1;
+                                }
                             } else {
                                 okay = 0;
                                 Toast.makeText(getApplicationContext(), "비밀번호 확인이 틀립니다.", Toast.LENGTH_SHORT).show();
