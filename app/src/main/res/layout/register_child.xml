@@ -215,16 +215,15 @@
             android:layout_marginTop="10dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="10dp"
-            android:text="도"
-            android:fontFamily="@font/dongle"
-            android:background="@drawable/round_button"
             android:layout_weight="1"
+            android:background="@drawable/round_button"
+            android:fontFamily="@font/dongle"
+            android:text="도/특별시/광역시"
             android:textColor="#E4E7FF"
             android:textSize="40sp"
             app:textStroke="true"
             app:textStrokeColor="#CEC2FF"
-            app:textStrokeWidth="20.0"
-            />
+            app:textStrokeWidth="20.0" />
 
         <com.example.blueday4meals.CustomButtonOutLineView
             android:id="@+id/cRegion2"
@@ -234,34 +233,16 @@
             android:layout_marginTop="10dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="10dp"
-            android:text="시"
-            android:fontFamily="@font/dongle"
-            android:textColor="#E4E7FF"
-            android:textSize="40sp"
-            app:textStroke="true"
-            app:textStrokeColor="#CEC2FF"
-            app:textStrokeWidth="20.0"
-            android:background="@drawable/round_button"
             android:layout_weight="1"
-            />
-
-        <com.example.blueday4meals.CustomButtonOutLineView
-            android:id="@+id/cRegion3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="10dp"
-            android:text="동"
+            android:background="@drawable/round_button"
             android:fontFamily="@font/dongle"
+            android:text="시/군/구"
             android:textColor="#E4E7FF"
             android:textSize="40sp"
             app:textStroke="true"
             app:textStrokeColor="#CEC2FF"
-            app:textStrokeWidth="20.0"
-            android:background="@drawable/round_button"
-            android:layout_weight="1" />
+            app:textStrokeWidth="20.0" />
+
     </LinearLayout>
 
         <com.example.blueday4meals.CustomButtonOutLineView

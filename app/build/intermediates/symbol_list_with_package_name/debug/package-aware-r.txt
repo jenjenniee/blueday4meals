@@ -74,6 +74,8 @@ animator mtrl_fab_hide_motion_spec
 animator mtrl_fab_show_motion_spec
 animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
+array Chungbuk
+array Citydo
 attr SharedValue
 attr SharedValueId
 attr actionBarDivider
@@ -2928,7 +2930,6 @@ id cBirth
 id cGender
 id cRegion1
 id cRegion2
-id cRegion3
 id cache_measures
 id callMeasure
 id cancel_button
