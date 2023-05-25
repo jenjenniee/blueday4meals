@@ -3198,6 +3198,11 @@ id bounceStart
 id breakfast
 id btn_login
 id btn_register
+id button1
+id button2
+id button3
+id button4
+id button5
 id buttonPanel
 id cBirth
 id cGender
@@ -3368,6 +3373,7 @@ id ltr
 id lunch
 id m3_side_sheet
 id male
+id map
 id marquee
 id masked
 id match_constraint
@@ -3624,6 +3630,7 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textView
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3782,6 +3789,10 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_main
+layout camera
+layout child_nutrient
+layout childmain
 layout custom_dialog
 layout daily
 layout design_bottom_navigation_item
@@ -3853,6 +3864,7 @@ layout mtrl_picker_text_input_date
 layout mtrl_picker_text_input_date_range
 layout mtrl_search_bar
 layout mtrl_search_view
+layout naver_map
 layout navermap_compass_view
 layout navermap_indoor_level_item
 layout navermap_indoor_level_picker
@@ -3879,6 +3891,7 @@ layout notification_template_media
 layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout parentmain
 layout preference
 layout preference_category
 layout preference_category_material
@@ -3902,6 +3915,7 @@ layout register_type
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
+layout setting
 layout support_simple_spinner_dropdown_item
 mipmap ic_launcher
 mipmap ic_launcher_round
