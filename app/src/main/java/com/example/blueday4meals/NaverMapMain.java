@@ -133,6 +133,8 @@ public class NaverMapMain extends AppCompatActivity implements NaverMap.OnMapCli
                     if (distance <= 1000) { // 1000m(1km) 이내의 마커만 표시하도록 설정
                         Marker marker = new Marker();
                         marker.setPosition(markerLocation);
+                        marker.setWidth(20); // 마커 크기 조절
+                        marker.setHeight(20);
                         marker.setMap(naverMap);
 
                         int finalI = i;
