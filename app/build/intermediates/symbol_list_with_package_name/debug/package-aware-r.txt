@@ -3281,6 +3281,9 @@ id dragLeft
 id dragRight
 id dragStart
 id dragUp
+id drawer
+id drawer_layout
+id drawer_title
 id dropdown_menu
 id easeIn
 id easeInOut

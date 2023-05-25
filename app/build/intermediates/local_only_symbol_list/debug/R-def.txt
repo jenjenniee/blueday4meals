@@ -48,6 +48,9 @@ id cid
 id cpwd
 id cpwdR
 id dinner
+id drawer
+id drawer_layout
+id drawer_title
 id end
 id et_id
 id et_pass

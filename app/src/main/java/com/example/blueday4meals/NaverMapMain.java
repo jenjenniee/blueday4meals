@@ -4,13 +4,18 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
 
 import android.Manifest;
+import android.content.Intent;
 import android.graphics.PointF;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.naver.maps.geometry.LatLng;
@@ -143,14 +148,34 @@ public class NaverMapMain extends AppCompatActivity implements NaverMap.OnMapCli
         });
     }
 
+    //마커 클릭시 가게 정보 제공
+    //마커 클릭시 가게 정보 제공
     private void getClickHandler(int index) {
         if (naverMapInfo != null && index >= 0 && index < naverMapInfo.size()) {
             NaverMapData selectedData = naverMapInfo.get(index);
             String name = selectedData.getfranchisee_name();
-            Toast.makeText(NaverMapMain.this, "가게 이름: " + name, Toast.LENGTH_SHORT).show();
-            //  이름을 활용하여 추가 작업 수행
+            String tel_num = selectedData.gettel_num();
+            DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
+            TextView drawerTitle = findViewById(R.id.drawer_title);
+            drawerTitle.setText(name + "\n" + tel_num);
+            drawerTitle.setClickable(true);
+            drawerTitle.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    // 전화 걸기 Intent 생성
+                    Intent intent = new Intent(Intent.ACTION_DIAL);
+                    intent.setData(Uri.parse("tel:" + tel_num));
+                    startActivity(intent);
+                }
+            });
+
+            drawerLayout.openDrawer(GravityCompat.START);
         }
     }
+
+
+
+
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
