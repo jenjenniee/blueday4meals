@@ -52,9 +52,14 @@
             android:name="com.google.android.actions"
             android:resource="@xml/network_security_config" />
 
-        <activity android:name="com.example.blueday4meals.MainActivity" />
+        <activity android:name="com.example.blueday4meals.NaverMapMain" />
         <activity android:name="com.example.blueday4meals.ChildRegisterActivity" />
         <activity android:name="com.example.blueday4meals.ParentsRegisterActivity" />
+        <activity android:name="com.example.blueday4meals.ChildMainPage" />
+        <activity android:name="com.example.blueday4meals.ParentMainPage" />
+        <activity android:name="com.example.blueday4meals.CameraMain" />
+        <activity android:name="com.example.blueday4meals.SettingMain" />
+        <activity android:name="com.example.blueday4meals.NutrientMain" />
         <activity
             android:name="com.example.blueday4meals.LoginActivity"
             android:exported="true" >

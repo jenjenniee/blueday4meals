@@ -56,7 +56,6 @@ id left_cals
 id login
 id lunch
 id male
-id map
 id nutrient
 id parent
 id photo
@@ -69,7 +68,6 @@ id rbg_logintype
 id register
 id signup
 id start
-layout activity_main
 layout daily
 layout login
 layout register

@@ -3368,7 +3368,6 @@ id ltr
 id lunch
 id m3_side_sheet
 id male
-id map
 id marquee
 id masked
 id match_constraint
@@ -3783,7 +3782,6 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
-layout activity_main
 layout custom_dialog
 layout daily
 layout design_bottom_navigation_item
