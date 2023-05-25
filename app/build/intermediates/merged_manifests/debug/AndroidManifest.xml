@@ -52,16 +52,16 @@
             android:name="com.google.android.actions"
             android:resource="@xml/network_security_config" />
 
-        <activity android:name="com.example.blueday4meals.NaverMapMain" />
-        <activity android:name="com.example.blueday4meals.ChildRegisterActivity" />
-        <activity android:name="com.example.blueday4meals.ParentsRegisterActivity" />
+        <activity android:name="com.example.blueday4meals.NaverMap.NaverMapMain" />
+        <activity android:name="com.example.blueday4meals.Register.ChildRegisterActivity" />
+        <activity android:name="com.example.blueday4meals.Register.ParentsRegisterActivity" />
         <activity android:name="com.example.blueday4meals.ChildMainPage" />
         <activity android:name="com.example.blueday4meals.ParentMainPage" />
-        <activity android:name="com.example.blueday4meals.CameraMain" />
+        <activity android:name="com.example.blueday4meals.Camera.CameraMain" />
         <activity android:name="com.example.blueday4meals.SettingMain" />
-        <activity android:name="com.example.blueday4meals.NutrientMain" />
+        <activity android:name="com.example.blueday4meals.Nutrient.NutrientMain" />
         <activity
-            android:name="com.example.blueday4meals.LoginActivity"
+            android:name="com.example.blueday4meals.Login.LoginActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -73,7 +73,7 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity android:name="com.example.blueday4meals.RegisterType" />
+        <activity android:name="com.example.blueday4meals.Register.RegisterType" />
 
         <meta-data
             android:name="com.naver.maps.map.CLIENT_ID"

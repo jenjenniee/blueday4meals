@@ -6,6 +6,11 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.blueday4meals.Camera.CameraMain;
+import com.example.blueday4meals.Function.navigationbar;
+import com.example.blueday4meals.NaverMap.NaverMapMain;
+import com.example.blueday4meals.Nutrient.NutrientMain;
+
 public class SettingMain extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
