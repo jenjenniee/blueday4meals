@@ -73,6 +73,7 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:textSize="18sp"
+            android:fontFamily="@font/dongle"
             android:textColor="@android:color/black" />
 
     </FrameLayout>

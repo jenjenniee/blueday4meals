@@ -106,8 +106,8 @@ public class NaverMapMain extends AppCompatActivity implements NaverMap.OnMapCli
     @Override
     public void onMapReady(@NonNull NaverMap naverMap) {
         this.naverMap = naverMap;
-        naverMap.setLocationSource(locationSource);  //현재위치 표시
-        ActivityCompat.requestPermissions(this, PERMISSIONS, LOCATION_PERMISSION_REQUEST_CODE); //현재위치 표시할때 권한 확인
+        naverMap.setLocationSource(locationSource);  // 현재위치 표시
+        ActivityCompat.requestPermissions(this, PERMISSIONS, LOCATION_PERMISSION_REQUEST_CODE); // 현재위치 표시할 때 권한 확인
 
         // 클라이언트 객체 생성
         NaverMapApiInterface naverMapApiInterface = NaverMapRequest.getClient().create(NaverMapApiInterface.class);
@@ -120,27 +120,32 @@ public class NaverMapMain extends AppCompatActivity implements NaverMap.OnMapCli
                 naverMapList = response.body(); // naverMapList에 요청에 대한 응답 결과 저장
                 naverMapInfo = naverMapList.data;
 
-                // 마커 여러개 찍기
+                // 현재 위치 기준으로 마커 표시
+                LatLng currentLocation = new LatLng(locationSource.getLastLocation().getLatitude(), locationSource.getLastLocation().getLongitude());
                 for (int i = 0; i < naverMapInfo.size(); i++) {
-                    Marker[] markers = new Marker[naverMapInfo.size()];
+                    NaverMapData mapData = naverMapInfo.get(i);
+                    LatLng markerLocation = new LatLng(mapData.getlatitude(), mapData.getlongitude());
 
-                    markers[i] = new Marker();
-                    double lat = naverMapInfo.get(i).getlatitude();
-                    double lnt = naverMapInfo.get(i).getlongitude();
-                    markers[i].setPosition(new LatLng(lat, lnt));
-                    markers[i].setMap(naverMap);
+                    // 현재 위치와 마커의 거리 계산 -진경
+                    double distance = currentLocation.distanceTo(markerLocation);
 
-                    int finalI = i;
-                    markers[i].setOnClickListener(new Overlay.OnClickListener() {
-                        @Override
-                        public boolean onClick(@NonNull Overlay overlay) {
-                            getClickHandler(finalI);
-                            return false;
-                        }
-                    });
+                    // 일정 범위 내에 있는 마커만 표시
+                    if (distance <= 1000) { // 1000m(1km) 이내의 마커만 표시하도록 설정
+                        Marker marker = new Marker();
+                        marker.setPosition(markerLocation);
+                        marker.setMap(naverMap);
+
+                        int finalI = i;
+                        marker.setOnClickListener(new Overlay.OnClickListener() {
+                            @Override
+                            public boolean onClick(@NonNull Overlay overlay) {
+                                getClickHandler(finalI);
+                                return false;
+                            }
+                        });
+                    }
                 }
             }
-
             @Override
             public void onFailure(Call<NaverMapItem> call, Throwable t) { // 통신 실패시
 
@@ -148,13 +153,15 @@ public class NaverMapMain extends AppCompatActivity implements NaverMap.OnMapCli
         });
     }
 
-    //마커 클릭시 가게 정보 제공
-    //마커 클릭시 가게 정보 제공
+    //마커 클릭시 가게 정보 제공 (가게명, 전화번호)
     private void getClickHandler(int index) {
+        //데이터 불러오기
         if (naverMapInfo != null && index >= 0 && index < naverMapInfo.size()) {
             NaverMapData selectedData = naverMapInfo.get(index);
             String name = selectedData.getfranchisee_name();
             String tel_num = selectedData.gettel_num();
+
+            //정보 text 추가
             DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
             TextView drawerTitle = findViewById(R.id.drawer_title);
             drawerTitle.setText(name + "\n" + tel_num);
