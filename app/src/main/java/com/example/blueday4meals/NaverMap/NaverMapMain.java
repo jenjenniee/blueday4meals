@@ -11,8 +11,12 @@ import androidx.fragment.app.FragmentManager;
 import android.Manifest;
 import android.content.Intent;
 import android.graphics.PointF;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.style.ImageSpan;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -159,7 +163,6 @@ public class NaverMapMain extends AppCompatActivity implements NaverMap.OnMapCli
     }
 
     //마커 클릭시 가게 정보 제공
-    //마커 클릭시 가게 정보 제공
     private void getClickHandler(int index) {
         if (naverMapInfo != null && index >= 0 && index < naverMapInfo.size()) {
             NaverMapData selectedData = naverMapInfo.get(index);
@@ -167,8 +170,22 @@ public class NaverMapMain extends AppCompatActivity implements NaverMap.OnMapCli
             String tel_num = selectedData.gettel_num();
             DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
             TextView drawerTitle = findViewById(R.id.drawer_title);
-            drawerTitle.setText(name + "\n" + tel_num);
+
+            // 이미지와 텍스트를 함께 표시하기 위해 SpannableString 생성
+            SpannableString spannableString = new SpannableString("call " +' ' + tel_num);
+
+            // 리소스에서 이미지를 로드하고 ImageSpan 생성
+            Drawable image = getResources().getDrawable(R.drawable.call); // 이미지 로드
+            image.setBounds(0, 0, 30, 30); // 이미지 크기 설정
+            ImageSpan imageSpan = new ImageSpan(image, ImageSpan.ALIGN_BASELINE);
+
+            // SpannableString에 ImageSpan을 설정
+            spannableString.setSpan(imageSpan, 0, 5, Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
+
+            drawerTitle.setText(name + "\n");
+            drawerTitle.append(spannableString);
             drawerTitle.setClickable(true);
+
             drawerTitle.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -182,10 +199,6 @@ public class NaverMapMain extends AppCompatActivity implements NaverMap.OnMapCli
             drawerLayout.openDrawer(GravityCompat.START);
         }
     }
-
-
-
-
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {

@@ -17,6 +17,7 @@ color white
 drawable bg5
 drawable bg6
 drawable bg7
+drawable call
 drawable cityspinner
 drawable ic_launcher_background
 drawable ic_launcher_foreground
