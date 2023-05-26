@@ -50,7 +50,10 @@ id cpwd
 id cpwdR
 id dinner
 id drawer
+id drawer_address
 id drawer_layout
+id drawer_open_time
+id drawer_shopImg
 id drawer_title
 id end
 id et_id

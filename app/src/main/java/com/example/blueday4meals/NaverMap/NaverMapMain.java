@@ -10,15 +10,22 @@ import androidx.fragment.app.FragmentManager;
 
 import android.Manifest;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
 import android.graphics.PointF;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.Html;
+import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.style.ImageSpan;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -41,12 +48,15 @@ import com.naver.maps.map.overlay.Marker;
 import com.naver.maps.map.overlay.Overlay;
 import com.naver.maps.map.util.FusedLocationSource;
 
+import java.io.IOException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+
 
 public class NaverMapMain extends AppCompatActivity implements NaverMap.OnMapClickListener, OnMapReadyCallback {
 
@@ -162,17 +172,27 @@ public class NaverMapMain extends AppCompatActivity implements NaverMap.OnMapCli
         });
     }
 
+
+
+
     //마커 클릭시 가게 정보 제공
     private void getClickHandler(int index) {
         if (naverMapInfo != null && index >= 0 && index < naverMapInfo.size()) {
             NaverMapData selectedData = naverMapInfo.get(index);
-            String name = selectedData.getfranchisee_name();
-            String tel_num = selectedData.gettel_num();
+            String shopImg = selectedData.getshop_img(); //가맹점이미지
+            String name = selectedData.getfranchisee_name(); //가맹점명
+            String tel_num = selectedData.gettel_num(); //전화번호
+            String open_time = selectedData.getopen_time(); //영업시간
+            String road_address = selectedData.getroad_address(); //도로명주소
             DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
+            TextView drawershopImg = findViewById(R.id.drawer_shopImg);
             TextView drawerTitle = findViewById(R.id.drawer_title);
+            TextView drawerOpentime = findViewById(R.id.drawer_open_time);
+            TextView drawerAddress = findViewById(R.id.drawer_address);
 
             // 이미지와 텍스트를 함께 표시하기 위해 SpannableString 생성
             SpannableString spannableString = new SpannableString("call " +' ' + tel_num);
+
 
             // 리소스에서 이미지를 로드하고 ImageSpan 생성
             Drawable image = getResources().getDrawable(R.drawable.call); // 이미지 로드
@@ -182,7 +202,23 @@ public class NaverMapMain extends AppCompatActivity implements NaverMap.OnMapCli
             // SpannableString에 ImageSpan을 설정
             spannableString.setSpan(imageSpan, 0, 5, Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
 
-            drawerTitle.setText(name + "\n");
+
+            //이미지 로드(작동안됨)
+            /*
+            String htmlImg =
+                    "<img src='http://animalnara.kr/images/business/potato.jpg'>";
+
+            TextView htmlView = findViewById(R.id.drawer_shopImg);
+            htmlView.setText(Html.fromHtml(htmlImg));
+            */
+
+
+
+            drawerTitle.setText(name + "\n" + "\n"+ "\n"+ "\n"); //가맹점 이름
+
+            drawerOpentime.setText(open_time + "\n"+ "\n"); //영업시간
+            drawerAddress.setText("\n"+ road_address); //신주소
+
             drawerTitle.append(spannableString);
             drawerTitle.setClickable(true);
 
@@ -191,10 +227,12 @@ public class NaverMapMain extends AppCompatActivity implements NaverMap.OnMapCli
                 public void onClick(View view) {
                     // 전화 걸기 Intent 생성
                     Intent intent = new Intent(Intent.ACTION_DIAL);
-                    intent.setData(Uri.parse("tel:" + tel_num));
+                    intent.setData(Uri.parse("tel:" + tel_num + "\n"));
                     startActivity(intent);
                 }
             });
+
+
 
             drawerLayout.openDrawer(GravityCompat.START);
         }

@@ -67,7 +67,39 @@
         android:background="@android:color/white">
 
         <TextView
+            android:id="@+id/drawer_shopImg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:fontFamily="@font/dongle"
+            android:textColor="@android:color/black"
+            android:bufferType="spannable"
+            />
+
+        <TextView
             android:id="@+id/drawer_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:fontFamily="@font/dongle"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/drawer_open_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:fontFamily="@font/dongle"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/drawer_address"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

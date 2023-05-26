@@ -3,6 +3,10 @@ package com.example.blueday4meals.NaverMap;
 import com.google.gson.annotations.SerializedName;
 
 public class NaverMapData {
+    @SerializedName("이미지")
+    private String shop_img;
+    @SerializedName("영업시간")
+    private String open_time;
     @SerializedName("가맹점명")
     private String franchisee_name;
     @SerializedName("가맹점유형코드")
@@ -24,6 +28,15 @@ public class NaverMapData {
     @SerializedName("전화번호")
     private String tel_num;
 
+
+
+    public String getshop_img() {
+        return shop_img;
+    }
+
+    public String getopen_time() {
+        return open_time;
+    }
 
     public String getfranchisee_name() {
         return franchisee_name;
