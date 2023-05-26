@@ -1,41 +1,34 @@
 package com.example.blueday4meals.NaverMap;
 
-import androidx.appcompat.app.AppCompatActivity;
+import android.Manifest;
+import android.content.Context;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.graphics.PointF;
+import android.graphics.drawable.Drawable;
+import android.location.Location;
+import android.location.LocationManager;
+import android.net.Uri;
+import android.os.Build;
+import android.os.Bundle;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.style.ImageSpan;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
 
-import android.Manifest;
-import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.Canvas;
-import android.graphics.PointF;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
-import android.net.Uri;
-import android.os.Bundle;
-import android.text.Html;
-import android.text.Spannable;
-import android.text.SpannableString;
-import android.text.Spanned;
-import android.text.style.ImageSpan;
-import android.util.Log;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
-
 import com.example.blueday4meals.Camera.CameraMain;
 import com.example.blueday4meals.ChildMainPage;
 import com.example.blueday4meals.Function.navigationbar;
-import com.example.blueday4meals.NaverMap.NaverMapApiInterface;
-import com.example.blueday4meals.NaverMap.NaverMapData;
-import com.example.blueday4meals.NaverMap.NaverMapItem;
-import com.example.blueday4meals.NaverMap.NaverMapRequest;
 import com.example.blueday4meals.Nutrient.NutrientMain;
 import com.example.blueday4meals.R;
 import com.example.blueday4meals.SettingMain;
@@ -48,8 +41,6 @@ import com.naver.maps.map.overlay.Marker;
 import com.naver.maps.map.overlay.Overlay;
 import com.naver.maps.map.util.FusedLocationSource;
 
-import java.io.IOException;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -71,6 +62,8 @@ public class NaverMapMain extends AppCompatActivity implements NaverMap.OnMapCli
     };
     List<LatLng> lstLatLng = new ArrayList<>();
     Button btnMain, btnCam, btnNut, btnMap, btnSet;
+    double longitude, latitude;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -125,14 +118,31 @@ public class NaverMapMain extends AppCompatActivity implements NaverMap.OnMapCli
                 new navigationbar(NaverMapMain.this, SettingMain.class);
             }
         });
+
+        ActivityCompat.requestPermissions(this, PERMISSIONS, LOCATION_PERMISSION_REQUEST_CODE); // 현재위치 표시할 때 권한 확인
+
+        final LocationManager lm = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+
+        if ( Build.VERSION.SDK_INT >= 23 &&
+                ContextCompat.checkSelfPermission( getApplicationContext(), android.Manifest.permission.ACCESS_FINE_LOCATION ) != PackageManager.PERMISSION_GRANTED ) {
+            ActivityCompat.requestPermissions( NaverMapMain.this, new String[] {
+                    android.Manifest.permission.ACCESS_FINE_LOCATION}, 0 );
+        }
+        else {
+            // 가장최근 위치정보 가져오기
+            Location location = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+            if (location != null) {
+                longitude = location.getLongitude();
+                latitude = location.getLatitude();
+            }
+        }
     }
 
     @Override
     public void onMapReady(@NonNull NaverMap naverMap) {
         this.naverMap = naverMap;
         naverMap.setLocationSource(locationSource);  //현재위치 표시
-        ActivityCompat.requestPermissions(this, PERMISSIONS, LOCATION_PERMISSION_REQUEST_CODE); //현재위치 표시할때 권한 확인
-
+        ActivityCompat.requestPermissions(this, PERMISSIONS, LOCATION_PERMISSION_REQUEST_CODE);
         // 클라이언트 객체 생성
         NaverMapApiInterface naverMapApiInterface = NaverMapRequest.getClient().create(NaverMapApiInterface.class);
         // 응답을 받을 콜백 구현
@@ -144,27 +154,34 @@ public class NaverMapMain extends AppCompatActivity implements NaverMap.OnMapCli
                 naverMapList = response.body(); // naverMapList에 요청에 대한 응답 결과 저장
                 naverMapInfo = naverMapList.data;
 
-                // 마커 여러개 찍기
+                // 현재 위치 기준으로 마커 표시
+                LatLng currentLocation = new LatLng(latitude, longitude);
                 for (int i = 0; i < naverMapInfo.size(); i++) {
-                    Marker[] markers = new Marker[naverMapInfo.size()];
+                    NaverMapData mapData = naverMapInfo.get(i);
+                    LatLng markerLocation = new LatLng(mapData.getlatitude(), mapData.getlongitude());
 
-                    markers[i] = new Marker();
-                    double lat = naverMapInfo.get(i).getlatitude();
-                    double lnt = naverMapInfo.get(i).getlongitude();
-                    markers[i].setPosition(new LatLng(lat, lnt));
-                    markers[i].setMap(naverMap);
+                    // 현재 위치와 마커의 거리 계산 -진경
+                    double distance = currentLocation.distanceTo(markerLocation);
 
-                    int finalI = i;
-                    markers[i].setOnClickListener(new Overlay.OnClickListener() {
-                        @Override
-                        public boolean onClick(@NonNull Overlay overlay) {
-                            getClickHandler(finalI);
-                            return false;
-                        }
-                    });
+                    // 일정 범위 내에 있는 마커만 표시
+                    if (distance <= 1000) { // 1000m(1km) 이내의 마커만 표시하도록 설정
+                        Marker marker = new Marker();
+                        marker.setPosition(markerLocation);
+                        marker.setWidth(50); // 마커 크기 조절
+                        marker.setHeight(75);
+                        marker.setMap(naverMap);
+
+                        int finalI = i;
+                        marker.setOnClickListener(new Overlay.OnClickListener() {
+                            @Override
+                            public boolean onClick(@NonNull Overlay overlay) {
+                                getClickHandler(finalI);
+                                return false;
+                            }
+                        });
+                    }
                 }
             }
-
             @Override
             public void onFailure(Call<NaverMapItem> call, Throwable t) { // 통신 실패시
 
