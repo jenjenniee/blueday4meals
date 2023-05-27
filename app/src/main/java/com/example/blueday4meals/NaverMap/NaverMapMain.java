@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.style.ImageSpan;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -238,8 +239,10 @@ public class NaverMapMain extends AppCompatActivity implements NaverMap.OnMapCli
             }
             longitude = location.getLongitude();
             latitude = location.getLatitude();
+            Log.d("TAG", "변수 값: " + location);
+            Log.d("TAG", "변수 값: " + latitude);
+            Log.d("TAG", "변수 값: " + longitude);
         }
-        Toast.makeText(getApplicationContext(), String.valueOf(latitude),Toast.LENGTH_LONG).show();
     }
 
 
