@@ -17,6 +17,7 @@ import android.text.style.ImageSpan;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -60,10 +61,8 @@ public class NaverMapMain extends AppCompatActivity implements NaverMap.OnMapCli
             Manifest.permission.ACCESS_FINE_LOCATION,
             Manifest.permission.ACCESS_COARSE_LOCATION
     };
-    List<LatLng> lstLatLng = new ArrayList<>();
     Button btnMain, btnCam, btnNut, btnMap, btnSet;
     double longitude, latitude;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -121,8 +120,27 @@ public class NaverMapMain extends AppCompatActivity implements NaverMap.OnMapCli
 
         ActivityCompat.requestPermissions(this, PERMISSIONS, LOCATION_PERMISSION_REQUEST_CODE); // 현재위치 표시할 때 권한 확인
 
+
         final LocationManager lm = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
 
+        /*
+        while(longitude != 0 && latitude != 0){
+            if ( Build.VERSION.SDK_INT >= 23 &&
+                    ContextCompat.checkSelfPermission( getApplicationContext(), android.Manifest.permission.ACCESS_FINE_LOCATION ) != PackageManager.PERMISSION_GRANTED ) {
+                ActivityCompat.requestPermissions( NaverMapMain.this, new String[] {
+                        android.Manifest.permission.ACCESS_FINE_LOCATION}, 0 );
+            }
+            else {
+                // 가장최근 위치정보 가져오기
+                Location location = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+                if (location != null) {
+                    longitude = location.getLongitude();
+                    latitude = location.getLatitude();
+                }
+            }
+        }
+        */
+/*
         if ( Build.VERSION.SDK_INT >= 23 &&
                 ContextCompat.checkSelfPermission( getApplicationContext(), android.Manifest.permission.ACCESS_FINE_LOCATION ) != PackageManager.PERMISSION_GRANTED ) {
             ActivityCompat.requestPermissions( NaverMapMain.this, new String[] {
@@ -136,6 +154,22 @@ public class NaverMapMain extends AppCompatActivity implements NaverMap.OnMapCli
                 latitude = location.getLatitude();
             }
         }
+*/
+        /*
+        if (Build.VERSION.SDK_INT >= 23 &&
+                ContextCompat.checkSelfPermission(getApplicationContext(), android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(NaverMapMain.this, new String[] { android.Manifest.permission.ACCESS_FINE_LOCATION }, 0);
+        } else {
+            // 가장 최근 위치정보 가져오기
+            Location location = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+            while (location == null) {
+                location = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+            }
+            longitude = location.getLongitude();
+            latitude = location.getLatitude();
+        }
+        */
+        setloc();
     }
 
     @Override
@@ -189,7 +223,24 @@ public class NaverMapMain extends AppCompatActivity implements NaverMap.OnMapCli
         });
     }
 
+    private void setloc(){
+        if (Build.VERSION.SDK_INT >= 23 &&
+                ContextCompat.checkSelfPermission(getApplicationContext(), android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(NaverMapMain.this, new String[] { android.Manifest.permission.ACCESS_FINE_LOCATION }, 0);
+        } else {
+            // 가장 최근 위치정보 가져오기
 
+            final LocationManager lm = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+
+            Location location = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+            while (location == null) {
+                location = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+            }
+            longitude = location.getLongitude();
+            latitude = location.getLatitude();
+        }
+        Toast.makeText(getApplicationContext(), String.valueOf(latitude),Toast.LENGTH_LONG).show();
+    }
 
 
     //마커 클릭시 가게 정보 제공
@@ -265,7 +316,7 @@ public class NaverMapMain extends AppCompatActivity implements NaverMap.OnMapCli
                 naverMap.setLocationTrackingMode(LocationTrackingMode.Follow);
             }
         }
-
+        setloc();
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
     }
 

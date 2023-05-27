@@ -6,22 +6,22 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="31"
-8-->C:\Users\USER\Downloads\blueday4meals-main\blueday4meals-main\app\src\main\AndroidManifest.xml
+8-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="33" />
-9-->C:\Users\USER\Downloads\blueday4meals-main\blueday4meals-main\app\src\main\AndroidManifest.xml
+9-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->C:\Users\USER\Downloads\blueday4meals-main\blueday4meals-main\app\src\main\AndroidManifest.xml:5:5-67
-11-->C:\Users\USER\Downloads\blueday4meals-main\blueday4meals-main\app\src\main\AndroidManifest.xml:5:22-64
+11-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:5:5-67
+11-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:5:22-64
 12    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-12-->C:\Users\USER\Downloads\blueday4meals-main\blueday4meals-main\app\src\main\AndroidManifest.xml:6:5-81
-12-->C:\Users\USER\Downloads\blueday4meals-main\blueday4meals-main\app\src\main\AndroidManifest.xml:6:22-78
+12-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:6:5-81
+12-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:6:22-78
 13    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-13-->C:\Users\USER\Downloads\blueday4meals-main\blueday4meals-main\app\src\main\AndroidManifest.xml:7:5-79
-13-->C:\Users\USER\Downloads\blueday4meals-main\blueday4meals-main\app\src\main\AndroidManifest.xml:7:22-76
+13-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:7:5-79
+13-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:7:22-76
 14    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-14-->C:\Users\USER\Downloads\blueday4meals-main\blueday4meals-main\app\src\main\AndroidManifest.xml:7:5-79
-14-->C:\Users\USER\Downloads\blueday4meals-main\blueday4meals-main\app\src\main\AndroidManifest.xml:7:22-76
+14-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:7:5-79
+14-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:7:22-76
 15
 16    <uses-feature
 16-->[com.naver.maps:map-sdk:3.16.0] C:\Users\USER\.gradle\caches\transforms-3\24f7711ab1fc387f85008ac212c53bb3\transformed\jetified-map-sdk-3.16.0\AndroidManifest.xml:9:5-11:35
@@ -64,93 +64,93 @@
 36-->[androidx.core:core:1.9.0] C:\Users\USER\.gradle\caches\transforms-3\c6770eda00af6c105866b6db09ea3053\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
 37
 38    <application
-38-->C:\Users\USER\Downloads\blueday4meals-main\blueday4meals-main\app\src\main\AndroidManifest.xml:9:5-45:18
+38-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:9:5-45:18
 39        android:allowBackup="true"
-39-->C:\Users\USER\Downloads\blueday4meals-main\blueday4meals-main\app\src\main\AndroidManifest.xml:10:9-35
+39-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:10:9-35
 40        android:appComponentFactory="whateverString"
-40-->C:\Users\USER\Downloads\blueday4meals-main\blueday4meals-main\app\src\main\AndroidManifest.xml:20:9-53
+40-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:20:9-53
 41        android:dataExtractionRules="@xml/data_extraction_rules"
-41-->C:\Users\USER\Downloads\blueday4meals-main\blueday4meals-main\app\src\main\AndroidManifest.xml:11:9-65
+41-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:11:9-65
 42        android:debuggable="true"
 43        android:extractNativeLibs="false"
 44        android:fullBackupContent="@xml/backup_rules"
-44-->C:\Users\USER\Downloads\blueday4meals-main\blueday4meals-main\app\src\main\AndroidManifest.xml:12:9-54
+44-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:12:9-54
 45        android:icon="@mipmap/ic_launcher"
-45-->C:\Users\USER\Downloads\blueday4meals-main\blueday4meals-main\app\src\main\AndroidManifest.xml:13:9-43
+45-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:13:9-43
 46        android:label="@string/app_name"
-46-->C:\Users\USER\Downloads\blueday4meals-main\blueday4meals-main\app\src\main\AndroidManifest.xml:14:9-41
+46-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:14:9-41
 47        android:supportsRtl="true"
-47-->C:\Users\USER\Downloads\blueday4meals-main\blueday4meals-main\app\src\main\AndroidManifest.xml:15:9-35
+47-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:15:9-35
 48        android:testOnly="true"
 49        android:theme="@style/Theme.Blueday4meals"
-49-->C:\Users\USER\Downloads\blueday4meals-main\blueday4meals-main\app\src\main\AndroidManifest.xml:16:9-51
+49-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:16:9-51
 50        android:usesCleartextTraffic="true" >
-50-->C:\Users\USER\Downloads\blueday4meals-main\blueday4meals-main\app\src\main\AndroidManifest.xml:17:9-44
+50-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:17:9-44
 51        <meta-data
-51-->C:\Users\USER\Downloads\blueday4meals-main\blueday4meals-main\app\src\main\AndroidManifest.xml:21:9-23:63
+51-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:21:9-23:63
 52            android:name="com.google.android.actions"
-52-->C:\Users\USER\Downloads\blueday4meals-main\blueday4meals-main\app\src\main\AndroidManifest.xml:22:13-54
+52-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:22:13-54
 53            android:resource="@xml/network_security_config" />
-53-->C:\Users\USER\Downloads\blueday4meals-main\blueday4meals-main\app\src\main\AndroidManifest.xml:23:13-60
+53-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:23:13-60
 54
 55        <activity android:name="com.example.blueday4meals.NaverMap.NaverMapMain" />
-55-->C:\Users\USER\Downloads\blueday4meals-main\blueday4meals-main\app\src\main\AndroidManifest.xml:24:9-58
-55-->C:\Users\USER\Downloads\blueday4meals-main\blueday4meals-main\app\src\main\AndroidManifest.xml:24:19-56
+55-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:24:9-58
+55-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:24:19-56
 56        <activity android:name="com.example.blueday4meals.Register.ChildRegisterActivity" />
-56-->C:\Users\USER\Downloads\blueday4meals-main\blueday4meals-main\app\src\main\AndroidManifest.xml:25:9-67
-56-->C:\Users\USER\Downloads\blueday4meals-main\blueday4meals-main\app\src\main\AndroidManifest.xml:25:19-65
+56-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:25:9-67
+56-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:25:19-65
 57        <activity android:name="com.example.blueday4meals.Register.ParentsRegisterActivity" />
-57-->C:\Users\USER\Downloads\blueday4meals-main\blueday4meals-main\app\src\main\AndroidManifest.xml:26:9-69
-57-->C:\Users\USER\Downloads\blueday4meals-main\blueday4meals-main\app\src\main\AndroidManifest.xml:26:19-67
+57-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:26:9-69
+57-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:26:19-67
 58        <activity android:name="com.example.blueday4meals.ChildMainPage" />
-58-->C:\Users\USER\Downloads\blueday4meals-main\blueday4meals-main\app\src\main\AndroidManifest.xml:27:9-50
-58-->C:\Users\USER\Downloads\blueday4meals-main\blueday4meals-main\app\src\main\AndroidManifest.xml:27:19-48
+58-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:27:9-50
+58-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:27:19-48
 59        <activity android:name="com.example.blueday4meals.ParentMainPage" />
-59-->C:\Users\USER\Downloads\blueday4meals-main\blueday4meals-main\app\src\main\AndroidManifest.xml:28:9-51
-59-->C:\Users\USER\Downloads\blueday4meals-main\blueday4meals-main\app\src\main\AndroidManifest.xml:28:19-49
+59-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:28:9-51
+59-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:28:19-49
 60        <activity android:name="com.example.blueday4meals.Camera.CameraMain" />
-60-->C:\Users\USER\Downloads\blueday4meals-main\blueday4meals-main\app\src\main\AndroidManifest.xml:29:9-54
-60-->C:\Users\USER\Downloads\blueday4meals-main\blueday4meals-main\app\src\main\AndroidManifest.xml:29:19-52
+60-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:29:9-54
+60-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:29:19-52
 61        <activity android:name="com.example.blueday4meals.SettingMain" />
-61-->C:\Users\USER\Downloads\blueday4meals-main\blueday4meals-main\app\src\main\AndroidManifest.xml:30:9-48
-61-->C:\Users\USER\Downloads\blueday4meals-main\blueday4meals-main\app\src\main\AndroidManifest.xml:30:19-46
+61-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:30:9-48
+61-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:30:19-46
 62        <activity android:name="com.example.blueday4meals.Nutrient.NutrientMain" />
-62-->C:\Users\USER\Downloads\blueday4meals-main\blueday4meals-main\app\src\main\AndroidManifest.xml:31:9-58
-62-->C:\Users\USER\Downloads\blueday4meals-main\blueday4meals-main\app\src\main\AndroidManifest.xml:31:19-56
+62-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:31:9-58
+62-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:31:19-56
 63        <activity
-63-->C:\Users\USER\Downloads\blueday4meals-main\blueday4meals-main\app\src\main\AndroidManifest.xml:32:9-40:20
+63-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:32:9-40:20
 64            android:name="com.example.blueday4meals.Login.LoginActivity"
-64-->C:\Users\USER\Downloads\blueday4meals-main\blueday4meals-main\app\src\main\AndroidManifest.xml:32:19-54
+64-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:32:19-54
 65            android:exported="true" >
-65-->C:\Users\USER\Downloads\blueday4meals-main\blueday4meals-main\app\src\main\AndroidManifest.xml:32:55-78
+65-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:32:55-78
 66            <intent-filter>
-66-->C:\Users\USER\Downloads\blueday4meals-main\blueday4meals-main\app\src\main\AndroidManifest.xml:33:13-36:29
+66-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:33:13-36:29
 67                <action android:name="android.intent.action.MAIN" />
-67-->C:\Users\USER\Downloads\blueday4meals-main\blueday4meals-main\app\src\main\AndroidManifest.xml:34:17-69
-67-->C:\Users\USER\Downloads\blueday4meals-main\blueday4meals-main\app\src\main\AndroidManifest.xml:34:25-66
+67-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:34:17-69
+67-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:34:25-66
 68
 69                <category android:name="android.intent.category.LAUNCHER" />
-69-->C:\Users\USER\Downloads\blueday4meals-main\blueday4meals-main\app\src\main\AndroidManifest.xml:35:17-77
-69-->C:\Users\USER\Downloads\blueday4meals-main\blueday4meals-main\app\src\main\AndroidManifest.xml:35:27-74
+69-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:35:17-77
+69-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:35:27-74
 70            </intent-filter>
 71
 72            <meta-data
-72-->C:\Users\USER\Downloads\blueday4meals-main\blueday4meals-main\app\src\main\AndroidManifest.xml:37:13-39:36
+72-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:37:13-39:36
 73                android:name="android.app.lib_name"
-73-->C:\Users\USER\Downloads\blueday4meals-main\blueday4meals-main\app\src\main\AndroidManifest.xml:38:17-52
+73-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:38:17-52
 74                android:value="" />
-74-->C:\Users\USER\Downloads\blueday4meals-main\blueday4meals-main\app\src\main\AndroidManifest.xml:39:17-33
+74-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:39:17-33
 75        </activity>
 76        <activity android:name="com.example.blueday4meals.Register.RegisterType" />
-76-->C:\Users\USER\Downloads\blueday4meals-main\blueday4meals-main\app\src\main\AndroidManifest.xml:41:9-58
-76-->C:\Users\USER\Downloads\blueday4meals-main\blueday4meals-main\app\src\main\AndroidManifest.xml:41:19-56
+76-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:41:9-58
+76-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:41:19-56
 77
 78        <meta-data
-78-->C:\Users\USER\Downloads\blueday4meals-main\blueday4meals-main\app\src\main\AndroidManifest.xml:42:9-44:42
+78-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:42:9-44:42
 79            android:name="com.naver.maps.map.CLIENT_ID"
-79-->C:\Users\USER\Downloads\blueday4meals-main\blueday4meals-main\app\src\main\AndroidManifest.xml:43:13-56
+79-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:43:13-56
 80            android:value="g9m45hxvbu" />
-80-->C:\Users\USER\Downloads\blueday4meals-main\blueday4meals-main\app\src\main\AndroidManifest.xml:44:13-39
+80-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:44:13-39
 81
 82        <activity
 82-->[com.naver.maps:map-sdk:3.16.0] C:\Users\USER\.gradle\caches\transforms-3\24f7711ab1fc387f85008ac212c53bb3\transformed\jetified-map-sdk-3.16.0\AndroidManifest.xml:21:9-25:51

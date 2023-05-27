@@ -18,7 +18,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[R3CM507ASSF]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\USER\.android\avd\Pixel_2_API_33_1.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -86,7 +86,7 @@
     <property name="android-custom-viewC:/Users/USER/Downloads/blueday4meals-main/blueday4meals-main/app/src/main/java/com/example/blueday4meals/Function/CustomTextOutLineView.java_SELECTED" value="CustomTextOutLineView" />
     <property name="android-custom-viewC:/Users/animalnara/github/blueday4meals_0520/app/src/main/java/com/example/blueday4meals/CustomButtonOutLineView.java_SELECTED" value="CustomButtonOutLineView" />
     <property name="cidr.known.project.marker" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/blueday4meals-main" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
