@@ -81,26 +81,27 @@
 
         <RadioButton
             android:id="@+id/rb_child"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/dongle"
             android:fontFamily="@font/dovemayo"
             android:text="아동"
-            android:textSize="18sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:textSize="24sp" />
 
         <RadioButton
             android:id="@+id/rb_parents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:fontFamily="@font/dovemayo"
             android:text="부모"
-            android:textSize="18sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:textSize="24sp" />
     </RadioGroup>
 
     <EditText
         android:id="@+id/et_id"
         android:layout_width="215dp"
-        android:layout_height="45dp"
+        android:layout_height="60dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -108,10 +109,10 @@
         android:fontFamily="@font/dovemayo"
         android:hint="아이디"
         android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:textSize="24sp"
-        android:maxLines="1"
         android:maxLength="12"
+        android:maxLines="1"
+        android:minHeight="48dp"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rbg_logintype" />
@@ -119,7 +120,7 @@
     <EditText
         android:id="@+id/et_pass"
         android:layout_width="215dp"
-        android:layout_height="45dp"
+        android:layout_height="60dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -127,26 +128,37 @@
         android:fontFamily="@font/dovemayo"
         android:hint="패스워드"
         android:inputType="textPassword"
-        android:minHeight="48dp"
-        android:textSize="24sp"
         android:maxLines="1"
+        android:minHeight="48dp"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_id" />
+
+    <CheckBox
+        android:id="@+id/cb_autoLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dongle"
+        android:text="자동로그인"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_login"
+        app:layout_constraintEnd_toEndOf="@+id/et_pass"
+        app:layout_constraintTop_toBottomOf="@+id/et_pass" />
 
     <com.example.blueday4meals.Function.CustomButtonOutLineView
         android:id="@+id/btn_login"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="44dp"
         android:layout_weight="1"
         android:background="@color/purple"
         android:fontFamily="@font/dovemayo"
         android:text="로그인"
         android:textColor="#E4E7FF"
         android:textSize="30sp"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintEnd_toEndOf="@+id/et_pass"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/et_pass"
         app:layout_constraintTop_toBottomOf="@+id/et_pass"
         app:textStroke="true"
