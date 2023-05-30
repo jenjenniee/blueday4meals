@@ -18,6 +18,7 @@ drawable bg5
 drawable bg6
 drawable bg7
 drawable call
+drawable card
 drawable cityspinner
 drawable ic_launcher_background
 drawable ic_launcher_foreground
@@ -31,6 +32,7 @@ drawable rectangle_style
 drawable rectangle_white
 drawable round_button
 font dongle
+font dovemayo
 font mainfont
 id breakfast
 id btn_login
@@ -50,11 +52,8 @@ id cpwd
 id cpwdR
 id dinner
 id drawer
-id drawer_address
+id drawer_info
 id drawer_layout
-id drawer_open_time
-id drawer_shopImg
-id drawer_title
 id end
 id et_id
 id et_pass
@@ -64,6 +63,7 @@ id imageView
 id imageView2
 id imageView3
 id imageView4
+id imageView5
 id left_cals
 id login
 id lunch

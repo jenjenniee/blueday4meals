@@ -65,6 +65,7 @@ public class NaverMapMain extends AppCompatActivity implements NaverMap.OnMapCli
     Button btnMain, btnCam, btnNut, btnMap, btnSet;
     double longitude, latitude;
 
+    //네이버 맵 호출
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -134,14 +135,14 @@ public class NaverMapMain extends AppCompatActivity implements NaverMap.OnMapCli
         this.naverMap = naverMap;
         naverMap.setLocationSource(locationSource);  //현재위치 표시
         ActivityCompat.requestPermissions(this, PERMISSIONS, LOCATION_PERMISSION_REQUEST_CODE);
-        // 클라이언트 객체 생성
+        // 클라이언트 객체 생성 -
         NaverMapApiInterface naverMapApiInterface = NaverMapRequest.getClient().create(NaverMapApiInterface.class);
         // 응답을 받을 콜백 구현
         Call<NaverMapItem> call = naverMapApiInterface.getMapData();
         // 클라이언트 객체가 제공하는 enqueue로 통신에 대한 요청, 응답 처리 방법 명시
         call.enqueue(new Callback<NaverMapItem>() {
             @Override
-            public void onResponse(Call<NaverMapItem> call, Response<NaverMapItem> response) { // 통신 성공시
+            public void onResponse(Call<NaverMapItem> call, Response<NaverMapItem> response) { // 통신 성공시 -
                 naverMapList = response.body(); // naverMapList에 요청에 대한 응답 결과 저장
                 naverMapInfo = naverMapList.data;
 
@@ -151,7 +152,7 @@ public class NaverMapMain extends AppCompatActivity implements NaverMap.OnMapCli
                     NaverMapData mapData = naverMapInfo.get(i);
                     LatLng markerLocation = new LatLng(mapData.getlatitude(), mapData.getlongitude());
 
-                    // 현재 위치와 마커의 거리 계산 -진경
+                    // 현재 위치와 마커의 거리 계산
                     double distance = currentLocation.distanceTo(markerLocation);
 
                     // 일정 범위 내에 있는 마커만 표시
@@ -161,6 +162,7 @@ public class NaverMapMain extends AppCompatActivity implements NaverMap.OnMapCli
                         marker.setWidth(50); // 마커 크기 조절
                         marker.setHeight(75);
                         marker.setMap(naverMap);
+
 
                         int finalI = i;
                         marker.setOnClickListener(new Overlay.OnClickListener() {
@@ -179,7 +181,7 @@ public class NaverMapMain extends AppCompatActivity implements NaverMap.OnMapCli
             }
         });
     }
-
+// 현재 위치 정보 가져오기
     private void setloc(){
         if (Build.VERSION.SDK_INT >= 23 &&
                 ContextCompat.checkSelfPermission(getApplicationContext(), android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
@@ -206,16 +208,11 @@ public class NaverMapMain extends AppCompatActivity implements NaverMap.OnMapCli
     private void getClickHandler(int index) {
         if (naverMapInfo != null && index >= 0 && index < naverMapInfo.size()) {
             NaverMapData selectedData = naverMapInfo.get(index);
-            String shopImg = selectedData.getshop_img(); //가맹점이미지
             String name = selectedData.getfranchisee_name(); //가맹점명
             String tel_num = selectedData.gettel_num(); //전화번호
-            String open_time = selectedData.getopen_time(); //영업시간
             String road_address = selectedData.getroad_address(); //도로명주소
             DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
-            TextView drawershopImg = findViewById(R.id.drawer_shopImg);
-            TextView drawerTitle = findViewById(R.id.drawer_title);
-            TextView drawerOpentime = findViewById(R.id.drawer_open_time);
-            TextView drawerAddress = findViewById(R.id.drawer_address);
+            TextView drawerInfo = findViewById(R.id.drawer_info);
 
             // 이미지와 텍스트를 함께 표시하기 위해 SpannableString 생성
             SpannableString spannableString = new SpannableString("call " +' ' + tel_num);
@@ -230,32 +227,21 @@ public class NaverMapMain extends AppCompatActivity implements NaverMap.OnMapCli
             spannableString.setSpan(imageSpan, 0, 5, Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
 
 
-            //이미지 로드(작동안됨)
-            /*
-            String htmlImg =
-                    "<img src='http://animalnara.kr/images/business/potato.jpg'>";
+            drawerInfo.setText(name + "\n");
+            drawerInfo.append(road_address+ "\n");
+            drawerInfo.append(spannableString);
+            drawerInfo.setClickable(true);
 
-            TextView htmlView = findViewById(R.id.drawer_shopImg);
-            htmlView.setText(Html.fromHtml(htmlImg));
-            */
-
-
-
-            drawerTitle.setText(name + "\n" + "\n"+ "\n"+ "\n"); //가맹점 이름
-
-            drawerOpentime.setText(open_time + "\n"+ "\n"); //영업시간
-            drawerAddress.setText("\n"+ road_address); //신주소
-
-            drawerTitle.append(spannableString);
-            drawerTitle.setClickable(true);
-
-            drawerTitle.setOnClickListener(new View.OnClickListener() {
+            //전화걸기
+             drawerInfo.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     // 전화 걸기 Intent 생성
                     Intent intent = new Intent(Intent.ACTION_DIAL);
-                    intent.setData(Uri.parse("tel:" + tel_num + "\n"));
+                    intent.setData(Uri.parse("tel:" + tel_num ));
                     startActivity(intent);
+//                    DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
+//                    drawerLayout.closeDrawer(GravityCompat.START);
                 }
             });
 

@@ -2918,6 +2918,7 @@ drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable call
+drawable card
 drawable cityspinner
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
@@ -3093,6 +3094,7 @@ drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 font dongle
+font dovemayo
 font mainfont
 id ALT
 id BOTTOM_END
@@ -3283,11 +3285,8 @@ id dragRight
 id dragStart
 id dragUp
 id drawer
-id drawer_address
+id drawer_info
 id drawer_layout
-id drawer_open_time
-id drawer_shopImg
-id drawer_title
 id dropdown_menu
 id easeIn
 id easeInOut
@@ -3352,6 +3351,7 @@ id imageView
 id imageView2
 id imageView3
 id imageView4
+id imageView5
 id immediateStop
 id included
 id indeterminate
