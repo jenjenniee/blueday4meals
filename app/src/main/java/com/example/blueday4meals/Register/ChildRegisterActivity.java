@@ -160,20 +160,7 @@ public class ChildRegisterActivity extends AppCompatActivity {
                 String id = et_cid.getText().toString();
                 String pwd = et_cpwd.getText().toString();
                 String pwdR = et_cpwdR.getText().toString();
-
-                // 생년월일 xxxx-xx-xx 형식으로 저장
-                String birth = Integer.toString(year);
-                if(Integer.toString(month+1).length() == 1) {
-                    birth += "-0" + Integer.toString(month+1);
-                } else {
-                    birth += "-" + Integer.toString(month+1);
-                }
-                if(Integer.toString(day).length() == 1) {
-                    birth += "-0" + Integer.toString(day);
-                } else {
-                    birth += "-" + Integer.toString(day);
-                }
-
+                String birth = Integer.toString(year) + "-" + Integer.toString(month+1) + "-" + Integer.toString(day);
                 String region = btn_cRegion1.getText().toString() + ";" + btn_cRegion2.getText().toString();
 
                 Response.Listener<String> responseListener = new Response.Listener<String>() {

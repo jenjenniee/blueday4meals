@@ -17,6 +17,7 @@ color white
 drawable bg5
 drawable bg6
 drawable bg7
+drawable bigcard
 drawable call
 drawable card
 drawable cityspinner
@@ -46,6 +47,7 @@ id cBirth
 id cGender
 id cRegion1
 id cRegion2
+id cb_autoLogin
 id child
 id cid
 id cpwd
@@ -63,7 +65,6 @@ id imageView
 id imageView2
 id imageView3
 id imageView4
-id imageView5
 id left_cals
 id login
 id lunch
@@ -89,6 +90,7 @@ layout childmain
 layout daily
 layout login
 layout naver_map
+layout nutrition_main
 layout parentmain
 layout register
 layout register_child

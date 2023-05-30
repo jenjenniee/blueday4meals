@@ -1,6 +1,7 @@
 package com.example.blueday4meals;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -18,6 +19,7 @@ public class SettingMain extends AppCompatActivity {
         setContentView(R.layout.setting);
 
         String userID = getIntent().getStringExtra("userID");
+        Log.d("TAG", "변수 값: " + userID);
 
         Button btnMain, btnCam, btnNut, btnMap, btnSet;
 

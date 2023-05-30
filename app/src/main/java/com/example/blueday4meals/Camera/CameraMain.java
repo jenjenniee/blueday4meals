@@ -1,6 +1,7 @@
 package com.example.blueday4meals.Camera;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -20,6 +21,7 @@ public class CameraMain extends AppCompatActivity {
         setContentView(R.layout.camera);
 
         String userID = getIntent().getStringExtra("userID");
+        Log.d("TAG", "변수 값: " + userID);
 
         Button btnMain, btnCam, btnNut, btnMap, btnSet;
 

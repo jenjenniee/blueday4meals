@@ -4,23 +4,24 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.RequestQueue;
-import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
 import com.example.blueday4meals.Camera.CameraMain;
 import com.example.blueday4meals.ChildMainPage;
 import com.example.blueday4meals.Function.navigationbar;
 import com.example.blueday4meals.NaverMap.NaverMapMain;
+import com.example.blueday4meals.Nutrient.requests.getdaynuti;
 import com.example.blueday4meals.R;
 import com.example.blueday4meals.SettingMain;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
 
 public class NutrientMain extends AppCompatActivity {
     @Override
@@ -29,14 +30,31 @@ public class NutrientMain extends AppCompatActivity {
         setContentView(R.layout.child_nutrient);
 
         String userID = getIntent().getStringExtra("userID");
-        int Cal = getIntent().getIntExtra("needCal", 0);
-        int Point = getIntent().getIntExtra("Points", 5);
 
-        double Carbon = 0, Fat = 0, Protain = 0;
+
+        Date currentDate = new Date();
+
+        // Calendar 객체를 생성하고 현재 날짜와 시간을 설정합니다
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(currentDate);
+        //calendar.add(Calendar.DAY_OF_MONTH, -10); //데베에 24일부터만 있어서 테스트용
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
+
+        String birthdateString = dateFormat.format(calendar.getTime());
+
+        Date today = null;
+        try {
+            today = dateFormat.parse(birthdateString);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+        SimpleDateFormat outputFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
+        String formattedDate = outputFormat.format(today);
+
 
         Button btnMain, btnCam, btnNut, btnMap, btnSet;
 
-        int age = 0, gender = 0;
         btnMain = findViewById(R.id.button1);
         btnMap = findViewById(R.id.button2);
         btnNut = findViewById(R.id.button3);
@@ -79,34 +97,15 @@ public class NutrientMain extends AppCompatActivity {
             }
         });
 
-        Response.Listener<String> responseListener = new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-                try {
-                    JSONObject jsonObject = new JSONObject(response);
-                    textViewResult.setText((CharSequence) jsonObject);
-                    boolean success = jsonObject.getBoolean("success");
-                    JSONArray data = jsonObject.getJSONArray("data");
-                    if (success && data.length() > 0) {
-                        JSONObject item = data.getJSONObject(0);
-                        String userGender = item.getString("userGender");
-                        String userBirth = item.getString("userBirth");
 
-                        Toast.makeText(getApplicationContext(), userBirth, Toast.LENGTH_SHORT).show();
-                        Toast.makeText(getApplicationContext(), userGender, Toast.LENGTH_LONG).show();
-                    }
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                    System.out.println("오류");
-                }
-            }
-        };
-
-        CalRequest Request = new CalRequest(userID, responseListener);
         RequestQueue queue = Volley.newRequestQueue(NutrientMain.this);
-        queue.add(Request);
+        RequestQueue queue1 = Volley.newRequestQueue(NutrientMain.this);
 
-        new daily(age, gender);
-        new Rating(Cal,Carbon,Protain,Fat);
+        getdaynuti.nuturientgetter.getter(userID, formattedDate, queue, queue1, new getdaynuti.ResultListener() {
+            @Override
+            public void onResult(int point) {
+                textViewResult.setText(String.valueOf(point));
+            }
+        });
     }
 }

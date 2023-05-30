@@ -72,6 +72,7 @@ public class NaverMapMain extends AppCompatActivity implements NaverMap.OnMapCli
         setContentView(R.layout.naver_map);
 
         String userID = getIntent().getStringExtra("userID");
+        Log.d("TAG", "변수 값: " + userID);
 
         FragmentManager fm = getSupportFragmentManager();
         MapFragment mapFragment = (MapFragment) fm.findFragmentById(R.id.map);

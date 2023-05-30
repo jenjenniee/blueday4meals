@@ -2909,6 +2909,7 @@ drawable avd_show_password
 drawable bg5
 drawable bg6
 drawable bg7
+drawable bigcard
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -3216,6 +3217,7 @@ id callMeasure
 id cancel_action
 id cancel_button
 id carryVelocity
+id cb_autoLogin
 id center
 id centerCrop
 id centerInside
@@ -3351,7 +3353,6 @@ id imageView
 id imageView2
 id imageView3
 id imageView4
-id imageView5
 id immediateStop
 id included
 id indeterminate
@@ -3898,6 +3899,7 @@ layout notification_template_media
 layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout nutrition_main
 layout parentmain
 layout preference
 layout preference_category

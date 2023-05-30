@@ -83,7 +83,6 @@
             android:id="@+id/rb_child"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/dongle"
             android:fontFamily="@font/dovemayo"
             android:text="아동"
             android:textSize="24sp" />
