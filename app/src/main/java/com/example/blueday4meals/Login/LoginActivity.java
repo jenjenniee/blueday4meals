@@ -156,7 +156,6 @@ public class LoginActivity extends AppCompatActivity {
                             }
                         };
                     }
-
                     LoginRequest loginRequest = new LoginRequest(userID, userPass, c_responseListener);
                     ParentsLoginRequest parentsLoginRequest = new ParentsLoginRequest(userID, userPass, p_responseListener);
                     RequestQueue queue = Volley.newRequestQueue(LoginActivity.this);
