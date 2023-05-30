@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NaverMap.NaverMapMain">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.naver.maps.map.MapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="홈" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="지도" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="영양" />
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="카메라" />
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="설정" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/drawer"
+        android:layout_width="280dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@android:color/white">
+
+        <TextView
+            android:id="@+id/drawer_shopImg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:fontFamily="@font/dongle"
+            android:textColor="@android:color/black"
+            android:bufferType="spannable"
+            />
+
+        <TextView
+            android:id="@+id/drawer_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:fontFamily="@font/dongle"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/drawer_open_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:fontFamily="@font/dongle"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/drawer_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:fontFamily="@font/dongle"
+            android:textColor="@android:color/black" />
+
+    </FrameLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>
