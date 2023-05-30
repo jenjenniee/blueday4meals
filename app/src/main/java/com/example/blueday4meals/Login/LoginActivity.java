@@ -166,7 +166,6 @@ public class LoginActivity extends AppCompatActivity {
             });
         }
 
-
     }
 
     protected InputFilter idFilter= new InputFilter() {
