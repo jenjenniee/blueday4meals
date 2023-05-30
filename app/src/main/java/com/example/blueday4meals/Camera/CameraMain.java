@@ -19,6 +19,8 @@ public class CameraMain extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.camera);
 
+        String userID = getIntent().getStringExtra("userID");
+
         Button btnMain, btnCam, btnNut, btnMap, btnSet;
 
         btnMain = findViewById(R.id.button1);
@@ -30,35 +32,35 @@ public class CameraMain extends AppCompatActivity {
         btnMain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new navigationbar(CameraMain.this, ChildMainPage.class);
+                new navigationbar(CameraMain.this, ChildMainPage.class, userID);
             }
         });
 
         btnMap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new navigationbar(CameraMain.this, NaverMapMain.class);
+                new navigationbar(CameraMain.this, NaverMapMain.class, userID);
             }
         });
 
         btnNut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new navigationbar(CameraMain.this, NutrientMain.class);
+                new navigationbar(CameraMain.this, NutrientMain.class, userID);
             }
         });
 
         btnCam.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new navigationbar(CameraMain.this, CameraMain.class);
+                new navigationbar(CameraMain.this, CameraMain.class, userID);
             }
         });
 
         btnSet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new navigationbar(CameraMain.this, SettingMain.class);
+                new navigationbar(CameraMain.this, SettingMain.class, userID);
             }
         });
     }

@@ -17,6 +17,8 @@ public class SettingMain extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.setting);
 
+        String userID = getIntent().getStringExtra("userID");
+
         Button btnMain, btnCam, btnNut, btnMap, btnSet;
 
         btnMain = findViewById(R.id.button1);
@@ -28,35 +30,35 @@ public class SettingMain extends AppCompatActivity {
         btnMain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new navigationbar(SettingMain.this, ChildMainPage.class);
+                new navigationbar(SettingMain.this, ChildMainPage.class, userID);
             }
         });
 
         btnMap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new navigationbar(SettingMain.this, NaverMapMain.class);
+                new navigationbar(SettingMain.this, NaverMapMain.class, userID);
             }
         });
 
         btnNut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new navigationbar(SettingMain.this, NutrientMain.class);
+                new navigationbar(SettingMain.this, NutrientMain.class, userID);
             }
         });
 
         btnCam.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new navigationbar(SettingMain.this, CameraMain.class);
+                new navigationbar(SettingMain.this, CameraMain.class, userID);
             }
         });
 
         btnSet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new navigationbar(SettingMain.this, SettingMain.class);
+                new navigationbar(SettingMain.this, SettingMain.class, userID);
             }
         });
     }

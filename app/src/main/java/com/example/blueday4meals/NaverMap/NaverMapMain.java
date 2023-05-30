@@ -70,6 +70,8 @@ public class NaverMapMain extends AppCompatActivity implements NaverMap.OnMapCli
         super.onCreate(savedInstanceState);
         setContentView(R.layout.naver_map);
 
+        String userID = getIntent().getStringExtra("userID");
+
         FragmentManager fm = getSupportFragmentManager();
         MapFragment mapFragment = (MapFragment) fm.findFragmentById(R.id.map);
         if (mapFragment == null) {
@@ -87,35 +89,35 @@ public class NaverMapMain extends AppCompatActivity implements NaverMap.OnMapCli
         btnMain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new navigationbar(NaverMapMain.this, ChildMainPage.class);
+                new navigationbar(NaverMapMain.this, ChildMainPage.class, userID);
             }
         });
 
         btnMap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new navigationbar(NaverMapMain.this, NaverMapMain.class);
+                new navigationbar(NaverMapMain.this, NaverMapMain.class, userID);
             }
         });
 
         btnNut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new navigationbar(NaverMapMain.this, NutrientMain.class);
+                new navigationbar(NaverMapMain.this, NutrientMain.class, userID);
             }
         });
 
         btnCam.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new navigationbar(NaverMapMain.this, CameraMain.class);
+                new navigationbar(NaverMapMain.this, CameraMain.class, userID);
             }
         });
 
         btnSet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new navigationbar(NaverMapMain.this, SettingMain.class);
+                new navigationbar(NaverMapMain.this, SettingMain.class, userID);
             }
         });
 
@@ -124,52 +126,6 @@ public class NaverMapMain extends AppCompatActivity implements NaverMap.OnMapCli
 
         final LocationManager lm = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
 
-        /*
-        while(longitude != 0 && latitude != 0){
-            if ( Build.VERSION.SDK_INT >= 23 &&
-                    ContextCompat.checkSelfPermission( getApplicationContext(), android.Manifest.permission.ACCESS_FINE_LOCATION ) != PackageManager.PERMISSION_GRANTED ) {
-                ActivityCompat.requestPermissions( NaverMapMain.this, new String[] {
-                        android.Manifest.permission.ACCESS_FINE_LOCATION}, 0 );
-            }
-            else {
-                // 가장최근 위치정보 가져오기
-                Location location = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-                if (location != null) {
-                    longitude = location.getLongitude();
-                    latitude = location.getLatitude();
-                }
-            }
-        }
-        */
-/*
-        if ( Build.VERSION.SDK_INT >= 23 &&
-                ContextCompat.checkSelfPermission( getApplicationContext(), android.Manifest.permission.ACCESS_FINE_LOCATION ) != PackageManager.PERMISSION_GRANTED ) {
-            ActivityCompat.requestPermissions( NaverMapMain.this, new String[] {
-                    android.Manifest.permission.ACCESS_FINE_LOCATION}, 0 );
-        }
-        else {
-            // 가장최근 위치정보 가져오기
-            Location location = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-            if (location != null) {
-                longitude = location.getLongitude();
-                latitude = location.getLatitude();
-            }
-        }
-*/
-        /*
-        if (Build.VERSION.SDK_INT >= 23 &&
-                ContextCompat.checkSelfPermission(getApplicationContext(), android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(NaverMapMain.this, new String[] { android.Manifest.permission.ACCESS_FINE_LOCATION }, 0);
-        } else {
-            // 가장 최근 위치정보 가져오기
-            Location location = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-            while (location == null) {
-                location = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-            }
-            longitude = location.getLongitude();
-            latitude = location.getLatitude();
-        }
-        */
         setloc();
     }
 
