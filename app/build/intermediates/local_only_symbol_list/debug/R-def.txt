@@ -83,10 +83,12 @@ id rb_child
 id rb_parents
 id rbg_logintype
 id recyclerView
+id refreshbutton
 id register
 id signup
 id start
 id textView
+id webview
 layout activity_main
 layout camera
 layout child_nutrient

@@ -18,7 +18,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -29,11 +28,11 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
 
 import com.example.blueday4meals.Camera.CameraMain;
-import com.example.blueday4meals.ChildMainPage;
+import com.example.blueday4meals.MainPages.ChildMainPage;
 import com.example.blueday4meals.Function.navigationbar;
 import com.example.blueday4meals.Nutrient.NutrientMain;
 import com.example.blueday4meals.R;
-import com.example.blueday4meals.SettingMain;
+import com.example.blueday4meals.MainPages.SettingMain;
 import com.naver.maps.geometry.LatLng;
 import com.naver.maps.map.LocationTrackingMode;
 import com.naver.maps.map.MapFragment;
@@ -43,7 +42,6 @@ import com.naver.maps.map.overlay.Marker;
 import com.naver.maps.map.overlay.Overlay;
 import com.naver.maps.map.util.FusedLocationSource;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;

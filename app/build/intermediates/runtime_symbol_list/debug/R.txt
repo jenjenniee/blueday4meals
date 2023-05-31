@@ -3528,6 +3528,7 @@ int id rbg_logintype 0x7f0a01ab
 int id rectangles 0x7f0a01ac
 int id recyclerView 0x7f0a01ad
 int id recycler_view 0x7f0a01ae
+int id refreshbutton 0x7f0a0252
 int id register 0x7f0a01af
 int id reverseSawtooth 0x7f0a01b0
 int id right 0x7f0a01b1
@@ -3681,6 +3682,7 @@ int id view_tree_saved_state_registry_owner 0x7f0a0244
 int id view_tree_view_model_store_owner 0x7f0a0245
 int id visible 0x7f0a0246
 int id visible_removing_fragment_view_tag 0x7f0a0247
+int id webview 0x7f0a0253
 int id west 0x7f0a0248
 int id wide 0x7f0a0249
 int id withText 0x7f0a024a

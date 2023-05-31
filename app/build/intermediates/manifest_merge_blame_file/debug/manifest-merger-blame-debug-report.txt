@@ -102,21 +102,21 @@
 57        <activity android:name="com.example.blueday4meals.Register.ParentsRegisterActivity" />
 57-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:26:9-69
 57-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:26:19-67
-58        <activity android:name="com.example.blueday4meals.ChildMainPage" />
-58-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:27:9-50
-58-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:27:19-48
-59        <activity android:name="com.example.blueday4meals.ParentMainPage" />
-59-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:28:9-51
-59-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:28:19-49
+58        <activity android:name="com.example.blueday4meals.MainPages.ChildMainPage" />
+58-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:27:9-60
+58-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:27:19-58
+59        <activity android:name="com.example.blueday4meals.MainPages.ParentMainPage" />
+59-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:28:9-61
+59-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:28:19-59
 60        <activity android:name="com.example.blueday4meals.Nutrient.rating.RatingMain" />
 60-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:29:9-63
 60-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:29:19-61
 61        <activity android:name="com.example.blueday4meals.Camera.CameraMain" />
 61-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:30:9-54
 61-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:30:19-52
-62        <activity android:name="com.example.blueday4meals.SettingMain" />
-62-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:31:9-48
-62-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:31:19-46
+62        <activity android:name="com.example.blueday4meals.MainPages.SettingMain" />
+62-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:31:9-58
+62-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:31:19-56
 63        <activity android:name="com.example.blueday4meals.Nutrient.NutrientMain" />
 63-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:32:9-58
 63-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:32:19-56

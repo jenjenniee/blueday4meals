@@ -17,7 +17,7 @@ import android.widget.Toast;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
-import com.example.blueday4meals.ChildMainPage;
+import com.example.blueday4meals.MainPages.ChildMainPage;
 import com.example.blueday4meals.Function.CustomButtonOutLineView;
 import com.example.blueday4meals.R;
 import com.example.blueday4meals.Register.RegisterType;

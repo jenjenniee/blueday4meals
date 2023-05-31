@@ -55,11 +55,11 @@
         <activity android:name="com.example.blueday4meals.NaverMap.NaverMapMain" />
         <activity android:name="com.example.blueday4meals.Register.ChildRegisterActivity" />
         <activity android:name="com.example.blueday4meals.Register.ParentsRegisterActivity" />
-        <activity android:name="com.example.blueday4meals.ChildMainPage" />
-        <activity android:name="com.example.blueday4meals.ParentMainPage" />
+        <activity android:name="com.example.blueday4meals.MainPages.ChildMainPage" />
+        <activity android:name="com.example.blueday4meals.MainPages.ParentMainPage" />
         <activity android:name="com.example.blueday4meals.Nutrient.rating.RatingMain" />
         <activity android:name="com.example.blueday4meals.Camera.CameraMain" />
-        <activity android:name="com.example.blueday4meals.SettingMain" />
+        <activity android:name="com.example.blueday4meals.MainPages.SettingMain" />
         <activity android:name="com.example.blueday4meals.Nutrient.NutrientMain" />
         <activity
             android:name="com.example.blueday4meals.Login.LoginActivity"

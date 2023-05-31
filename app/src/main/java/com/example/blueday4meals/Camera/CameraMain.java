@@ -7,12 +7,12 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.blueday4meals.ChildMainPage;
+import com.example.blueday4meals.MainPages.ChildMainPage;
 import com.example.blueday4meals.Function.navigationbar;
 import com.example.blueday4meals.NaverMap.NaverMapMain;
 import com.example.blueday4meals.Nutrient.NutrientMain;
 import com.example.blueday4meals.R;
-import com.example.blueday4meals.SettingMain;
+import com.example.blueday4meals.MainPages.SettingMain;
 
 public class CameraMain extends AppCompatActivity {
     @Override

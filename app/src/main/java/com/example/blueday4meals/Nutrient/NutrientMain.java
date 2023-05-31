@@ -10,13 +10,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
 import com.example.blueday4meals.Camera.CameraMain;
-import com.example.blueday4meals.ChildMainPage;
+import com.example.blueday4meals.MainPages.ChildMainPage;
 import com.example.blueday4meals.Function.navigationbar;
 import com.example.blueday4meals.NaverMap.NaverMapMain;
 import com.example.blueday4meals.Nutrient.rating.RatingMain;
 import com.example.blueday4meals.Nutrient.requests.getdaynuti;
 import com.example.blueday4meals.R;
-import com.example.blueday4meals.SettingMain;
+import com.example.blueday4meals.MainPages.SettingMain;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

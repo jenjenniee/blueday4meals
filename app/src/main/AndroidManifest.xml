@@ -24,11 +24,11 @@
         <activity android:name=".NaverMap.NaverMapMain"/>
         <activity android:name=".Register.ChildRegisterActivity"/>
         <activity android:name=".Register.ParentsRegisterActivity"/>
-        <activity android:name=".ChildMainPage"/>
-        <activity android:name=".ParentMainPage"/>
+        <activity android:name=".MainPages.ChildMainPage"/>
+        <activity android:name=".MainPages.ParentMainPage"/>
         <activity android:name=".Nutrient.rating.RatingMain"/>
         <activity android:name=".Camera.CameraMain"/>
-        <activity android:name=".SettingMain"/>
+        <activity android:name=".MainPages.SettingMain"/>
         <activity android:name=".Nutrient.NutrientMain"/>
         <activity android:name=".Login.LoginActivity" android:exported="true">
             <intent-filter>
