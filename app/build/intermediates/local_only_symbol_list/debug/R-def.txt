@@ -36,9 +36,11 @@ drawable round_button
 font dongle
 font dovemayo
 font mainfont
+id Btn_camera_open
 id breakfast
 id btn_login
 id btn_register
+id btn_view
 id button
 id button1
 id button2
@@ -67,7 +69,9 @@ id imageView
 id imageView2
 id imageView3
 id imageView4
+id img_food
 id left_cals
+id listview
 id login
 id lunch
 id male
@@ -88,6 +92,9 @@ id register
 id signup
 id start
 id textView
+id tv_food_nutrition_info
+id tv_food_position
+id tv_foodname
 id webview
 layout activity_main
 layout camera
@@ -96,6 +103,7 @@ layout childmain
 layout daily
 layout item_loading
 layout item_row
+layout list_item
 layout login
 layout naver_map
 layout nutrition_main
@@ -112,6 +120,8 @@ string app_name
 string attachment_summary_off
 string attachment_summary_on
 string attachment_title
+string foodlens_app_token
+string foodlens_company_token
 string hello_blank_fragment
 string messages_header
 string reply_title
