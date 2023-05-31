@@ -1,5 +1,7 @@
 package com.example.blueday4meals.Nutrient.calculaors;
 
+import android.util.Log;
+
 public class DailyCalculator {
 
     public static int[] calculate(int age, int gender) {

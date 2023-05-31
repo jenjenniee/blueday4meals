@@ -26,6 +26,7 @@
         <activity android:name=".Register.ParentsRegisterActivity"/>
         <activity android:name=".ChildMainPage"/>
         <activity android:name=".ParentMainPage"/>
+        <activity android:name=".Nutrient.rating.RatingMain"/>
         <activity android:name=".Camera.CameraMain"/>
         <activity android:name=".SettingMain"/>
         <activity android:name=".Nutrient.NutrientMain"/>

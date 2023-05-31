@@ -31,6 +31,7 @@ drawable marker
 drawable rectangle_purple
 drawable rectangle_style
 drawable rectangle_white
+drawable round_border
 drawable round_button
 font dongle
 font dovemayo
@@ -38,6 +39,7 @@ font mainfont
 id breakfast
 id btn_login
 id btn_register
+id button
 id button1
 id button2
 id button3
@@ -76,9 +78,11 @@ id photo
 id pid
 id ppwd
 id ppwdR
+id progressBar
 id rb_child
 id rb_parents
 id rbg_logintype
+id recyclerView
 id register
 id signup
 id start
@@ -88,10 +92,13 @@ layout camera
 layout child_nutrient
 layout childmain
 layout daily
+layout item_loading
+layout item_row
 layout login
 layout naver_map
 layout nutrition_main
 layout parentmain
+layout ratingmainpage
 layout register
 layout register_child
 layout register_parents

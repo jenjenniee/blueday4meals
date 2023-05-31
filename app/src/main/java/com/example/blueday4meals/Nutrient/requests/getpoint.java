@@ -43,8 +43,10 @@ public class getpoint {
                             double[] Fat =  new double[dataArray.length()];
                             double[] DietFiber =  new double[dataArray.length()];
                             if (dataArray.length() > 0) {
-                                JSONObject dataObject = dataArray.getJSONObject(0);
+
+                                Log.d("TAG", "co 값: " + jsonResponse);
                                 for(int i = 0; i < dataArray.length(); i++) {
+                                    JSONObject dataObject = dataArray.getJSONObject(i);
                                     Cal[i] =dataObject.getInt("calorie");
                                     Carbon[i] =dataObject.getDouble("carbohydrate");
                                     Protain[i] =dataObject.getDouble("protein");
@@ -58,12 +60,9 @@ public class getpoint {
                                     protein += Protain[i];
                                     fat += Fat[i];
                                     dietary_fiber += DietFiber[i];
+
                                 }
-                                Log.d("TAG", "co 값: " + calorie);
-                                Log.d("TAG", "car 값: " + carbohydrate);
-                                Log.d("TAG", "pr 값: " + protein);
-                                Log.d("TAG", "f 값: " + fat);
-                                Log.d("TAG", "di 값: " + dietary_fiber);
+
                                 int point = Rating.calculateRating(needCal, calorie, carbohydrate, protein, fat, needDietFiber, dietary_fiber);
                                 listener.onResult(point);
                             }

@@ -19,7 +19,6 @@ public class ChildMainPage extends AppCompatActivity {
         setContentView(R.layout.childmain);
 
         String userID = getIntent().getStringExtra("userID");
-        Log.d("TAG", "변수 값: " + userID);
 
         Button btnMain, btnCam, btnNut, btnMap, btnSet;
 

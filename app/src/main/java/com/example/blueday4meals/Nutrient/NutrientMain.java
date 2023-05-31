@@ -13,6 +13,7 @@ import com.example.blueday4meals.Camera.CameraMain;
 import com.example.blueday4meals.ChildMainPage;
 import com.example.blueday4meals.Function.navigationbar;
 import com.example.blueday4meals.NaverMap.NaverMapMain;
+import com.example.blueday4meals.Nutrient.rating.RatingMain;
 import com.example.blueday4meals.Nutrient.requests.getdaynuti;
 import com.example.blueday4meals.R;
 import com.example.blueday4meals.SettingMain;
@@ -53,13 +54,14 @@ public class NutrientMain extends AppCompatActivity {
         String formattedDate = outputFormat.format(today);
 
 
-        Button btnMain, btnCam, btnNut, btnMap, btnSet;
+        Button btnMain, btnCam, btnNut, btnMap, btnSet, btnrat;
 
         btnMain = findViewById(R.id.button1);
         btnMap = findViewById(R.id.button2);
         btnNut = findViewById(R.id.button3);
         btnCam = findViewById(R.id.button4);
         btnSet = findViewById(R.id.button5);
+        btnrat = findViewById(R.id.button);
         TextView textViewResult = findViewById(R.id.textView);
 
         btnMain.setOnClickListener(new View.OnClickListener() {
@@ -94,6 +96,13 @@ public class NutrientMain extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 new navigationbar(NutrientMain.this, SettingMain.class, userID);
+            }
+        });
+
+        btnrat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                new navigationbar(NutrientMain.this, RatingMain.class, userID);
             }
         });
 

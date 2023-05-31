@@ -64,7 +64,7 @@
 36-->[androidx.core:core:1.9.0] C:\Users\USER\.gradle\caches\transforms-3\c6770eda00af6c105866b6db09ea3053\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
 37
 38    <application
-38-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:9:5-45:18
+38-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:9:5-46:18
 39        android:allowBackup="true"
 39-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:10:9-35
 40        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -108,137 +108,140 @@
 59        <activity android:name="com.example.blueday4meals.ParentMainPage" />
 59-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:28:9-51
 59-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:28:19-49
-60        <activity android:name="com.example.blueday4meals.Camera.CameraMain" />
-60-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:29:9-54
-60-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:29:19-52
-61        <activity android:name="com.example.blueday4meals.SettingMain" />
-61-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:30:9-48
-61-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:30:19-46
-62        <activity android:name="com.example.blueday4meals.Nutrient.NutrientMain" />
-62-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:31:9-58
-62-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:31:19-56
-63        <activity
-63-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:32:9-40:20
-64            android:name="com.example.blueday4meals.Login.LoginActivity"
-64-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:32:19-54
-65            android:exported="true" >
-65-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:32:55-78
-66            <intent-filter>
-66-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:33:13-36:29
-67                <action android:name="android.intent.action.MAIN" />
-67-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:34:17-69
-67-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:34:25-66
-68
-69                <category android:name="android.intent.category.LAUNCHER" />
-69-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:35:17-77
-69-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:35:27-74
-70            </intent-filter>
-71
-72            <meta-data
-72-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:37:13-39:36
-73                android:name="android.app.lib_name"
-73-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:38:17-52
-74                android:value="" />
-74-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:39:17-33
-75        </activity>
-76        <activity android:name="com.example.blueday4meals.Register.RegisterType" />
-76-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:41:9-58
-76-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:41:19-56
-77
-78        <meta-data
-78-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:42:9-44:42
-79            android:name="com.naver.maps.map.CLIENT_ID"
-79-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:43:13-56
-80            android:value="g9m45hxvbu" />
-80-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:44:13-39
-81
-82        <activity
-82-->[com.naver.maps:map-sdk:3.16.0] C:\Users\USER\.gradle\caches\transforms-3\24f7711ab1fc387f85008ac212c53bb3\transformed\jetified-map-sdk-3.16.0\AndroidManifest.xml:21:9-25:51
-83            android:name="com.naver.maps.map.app.LegendActivity"
-83-->[com.naver.maps:map-sdk:3.16.0] C:\Users\USER\.gradle\caches\transforms-3\24f7711ab1fc387f85008ac212c53bb3\transformed\jetified-map-sdk-3.16.0\AndroidManifest.xml:22:13-65
-84            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
-84-->[com.naver.maps:map-sdk:3.16.0] C:\Users\USER\.gradle\caches\transforms-3\24f7711ab1fc387f85008ac212c53bb3\transformed\jetified-map-sdk-3.16.0\AndroidManifest.xml:23:13-91
-85            android:label="@string/navermap_legend"
-85-->[com.naver.maps:map-sdk:3.16.0] C:\Users\USER\.gradle\caches\transforms-3\24f7711ab1fc387f85008ac212c53bb3\transformed\jetified-map-sdk-3.16.0\AndroidManifest.xml:24:13-52
-86            android:theme="@style/navermap_app" />
-86-->[com.naver.maps:map-sdk:3.16.0] C:\Users\USER\.gradle\caches\transforms-3\24f7711ab1fc387f85008ac212c53bb3\transformed\jetified-map-sdk-3.16.0\AndroidManifest.xml:25:13-48
-87        <activity
-87-->[com.naver.maps:map-sdk:3.16.0] C:\Users\USER\.gradle\caches\transforms-3\24f7711ab1fc387f85008ac212c53bb3\transformed\jetified-map-sdk-3.16.0\AndroidManifest.xml:26:9-30:51
-88            android:name="com.naver.maps.map.app.LegalNoticeActivity"
-88-->[com.naver.maps:map-sdk:3.16.0] C:\Users\USER\.gradle\caches\transforms-3\24f7711ab1fc387f85008ac212c53bb3\transformed\jetified-map-sdk-3.16.0\AndroidManifest.xml:27:13-70
-89            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
-89-->[com.naver.maps:map-sdk:3.16.0] C:\Users\USER\.gradle\caches\transforms-3\24f7711ab1fc387f85008ac212c53bb3\transformed\jetified-map-sdk-3.16.0\AndroidManifest.xml:28:13-91
-90            android:label="@string/navermap_legal_notice"
-90-->[com.naver.maps:map-sdk:3.16.0] C:\Users\USER\.gradle\caches\transforms-3\24f7711ab1fc387f85008ac212c53bb3\transformed\jetified-map-sdk-3.16.0\AndroidManifest.xml:29:13-58
-91            android:theme="@style/navermap_app" />
-91-->[com.naver.maps:map-sdk:3.16.0] C:\Users\USER\.gradle\caches\transforms-3\24f7711ab1fc387f85008ac212c53bb3\transformed\jetified-map-sdk-3.16.0\AndroidManifest.xml:30:13-48
-92        <activity
-92-->[com.naver.maps:map-sdk:3.16.0] C:\Users\USER\.gradle\caches\transforms-3\24f7711ab1fc387f85008ac212c53bb3\transformed\jetified-map-sdk-3.16.0\AndroidManifest.xml:31:9-35:51
-93            android:name="com.naver.maps.map.app.OpenSourceLicenseActivity"
-93-->[com.naver.maps:map-sdk:3.16.0] C:\Users\USER\.gradle\caches\transforms-3\24f7711ab1fc387f85008ac212c53bb3\transformed\jetified-map-sdk-3.16.0\AndroidManifest.xml:32:13-76
-94            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
-94-->[com.naver.maps:map-sdk:3.16.0] C:\Users\USER\.gradle\caches\transforms-3\24f7711ab1fc387f85008ac212c53bb3\transformed\jetified-map-sdk-3.16.0\AndroidManifest.xml:33:13-91
-95            android:label="@string/navermap_open_source_license"
-95-->[com.naver.maps:map-sdk:3.16.0] C:\Users\USER\.gradle\caches\transforms-3\24f7711ab1fc387f85008ac212c53bb3\transformed\jetified-map-sdk-3.16.0\AndroidManifest.xml:34:13-65
-96            android:theme="@style/navermap_app" /> <!-- Needs to be explicitly declared on P+ -->
-96-->[com.naver.maps:map-sdk:3.16.0] C:\Users\USER\.gradle\caches\transforms-3\24f7711ab1fc387f85008ac212c53bb3\transformed\jetified-map-sdk-3.16.0\AndroidManifest.xml:35:13-48
-97        <uses-library
-97-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\USER\.gradle\caches\transforms-3\27fba98b7da56e65dbc6232ad8edc635\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:39:9-41:40
-98            android:name="org.apache.http.legacy"
-98-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\USER\.gradle\caches\transforms-3\27fba98b7da56e65dbc6232ad8edc635\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:40:13-50
-99            android:required="false" />
-99-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\USER\.gradle\caches\transforms-3\27fba98b7da56e65dbc6232ad8edc635\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:41:13-37
-100
-101        <activity
-101-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\USER\.gradle\caches\transforms-3\21ce86848169df2766db09eb4dd61bc2\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
-102            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-102-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\USER\.gradle\caches\transforms-3\21ce86848169df2766db09eb4dd61bc2\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:19-85
-103            android:exported="false"
-103-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\USER\.gradle\caches\transforms-3\21ce86848169df2766db09eb4dd61bc2\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:22:19-43
-104            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-104-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\USER\.gradle\caches\transforms-3\21ce86848169df2766db09eb4dd61bc2\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:21:19-78
-105
-106        <meta-data
-106-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\USER\.gradle\caches\transforms-3\fd74a84c6c2e9035ede7d9353abe41eb\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:21:9-23:69
-107            android:name="com.google.android.gms.version"
-107-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\USER\.gradle\caches\transforms-3\fd74a84c6c2e9035ede7d9353abe41eb\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:22:13-58
-108            android:value="@integer/google_play_services_version" />
-108-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\USER\.gradle\caches\transforms-3\fd74a84c6c2e9035ede7d9353abe41eb\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:23:13-66
-109
-110        <provider
-110-->[androidx.emoji2:emoji2:1.2.0] C:\Users\USER\.gradle\caches\transforms-3\7b79f7e4a058224274d9b5ea417be867\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-111            android:name="androidx.startup.InitializationProvider"
-111-->[androidx.emoji2:emoji2:1.2.0] C:\Users\USER\.gradle\caches\transforms-3\7b79f7e4a058224274d9b5ea417be867\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
-112            android:authorities="com.example.blueday4meals.androidx-startup"
-112-->[androidx.emoji2:emoji2:1.2.0] C:\Users\USER\.gradle\caches\transforms-3\7b79f7e4a058224274d9b5ea417be867\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
-113            android:exported="false" >
-113-->[androidx.emoji2:emoji2:1.2.0] C:\Users\USER\.gradle\caches\transforms-3\7b79f7e4a058224274d9b5ea417be867\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
-114            <meta-data
-114-->[androidx.emoji2:emoji2:1.2.0] C:\Users\USER\.gradle\caches\transforms-3\7b79f7e4a058224274d9b5ea417be867\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
-115                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-115-->[androidx.emoji2:emoji2:1.2.0] C:\Users\USER\.gradle\caches\transforms-3\7b79f7e4a058224274d9b5ea417be867\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
-116                android:value="androidx.startup" />
-116-->[androidx.emoji2:emoji2:1.2.0] C:\Users\USER\.gradle\caches\transforms-3\7b79f7e4a058224274d9b5ea417be867\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
-117            <meta-data
-117-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\USER\.gradle\caches\transforms-3\e49fb580d7eda2494a8100e094041989\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
-118                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-118-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\USER\.gradle\caches\transforms-3\e49fb580d7eda2494a8100e094041989\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
-119                android:value="androidx.startup" />
-119-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\USER\.gradle\caches\transforms-3\e49fb580d7eda2494a8100e094041989\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
-120        </provider>
-121
-122        <uses-library
-122-->[androidx.window:window:1.0.0] C:\Users\USER\.gradle\caches\transforms-3\a168aa6180515b270a921847cb17cfdc\transformed\jetified-window-1.0.0\AndroidManifest.xml:25:9-27:40
-123            android:name="androidx.window.extensions"
-123-->[androidx.window:window:1.0.0] C:\Users\USER\.gradle\caches\transforms-3\a168aa6180515b270a921847cb17cfdc\transformed\jetified-window-1.0.0\AndroidManifest.xml:26:13-54
-124            android:required="false" />
-124-->[androidx.window:window:1.0.0] C:\Users\USER\.gradle\caches\transforms-3\a168aa6180515b270a921847cb17cfdc\transformed\jetified-window-1.0.0\AndroidManifest.xml:27:13-37
-125        <uses-library
-125-->[androidx.window:window:1.0.0] C:\Users\USER\.gradle\caches\transforms-3\a168aa6180515b270a921847cb17cfdc\transformed\jetified-window-1.0.0\AndroidManifest.xml:28:9-30:40
-126            android:name="androidx.window.sidecar"
-126-->[androidx.window:window:1.0.0] C:\Users\USER\.gradle\caches\transforms-3\a168aa6180515b270a921847cb17cfdc\transformed\jetified-window-1.0.0\AndroidManifest.xml:29:13-51
-127            android:required="false" />
-127-->[androidx.window:window:1.0.0] C:\Users\USER\.gradle\caches\transforms-3\a168aa6180515b270a921847cb17cfdc\transformed\jetified-window-1.0.0\AndroidManifest.xml:30:13-37
-128    </application>
-129
-130</manifest>
+60        <activity android:name="com.example.blueday4meals.Nutrient.rating.RatingMain" />
+60-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:29:9-63
+60-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:29:19-61
+61        <activity android:name="com.example.blueday4meals.Camera.CameraMain" />
+61-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:30:9-54
+61-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:30:19-52
+62        <activity android:name="com.example.blueday4meals.SettingMain" />
+62-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:31:9-48
+62-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:31:19-46
+63        <activity android:name="com.example.blueday4meals.Nutrient.NutrientMain" />
+63-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:32:9-58
+63-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:32:19-56
+64        <activity
+64-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:33:9-41:20
+65            android:name="com.example.blueday4meals.Login.LoginActivity"
+65-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:33:19-54
+66            android:exported="true" >
+66-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:33:55-78
+67            <intent-filter>
+67-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:34:13-37:29
+68                <action android:name="android.intent.action.MAIN" />
+68-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:35:17-69
+68-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:35:25-66
+69
+70                <category android:name="android.intent.category.LAUNCHER" />
+70-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:36:17-77
+70-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:36:27-74
+71            </intent-filter>
+72
+73            <meta-data
+73-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:38:13-40:36
+74                android:name="android.app.lib_name"
+74-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:39:17-52
+75                android:value="" />
+75-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:40:17-33
+76        </activity>
+77        <activity android:name="com.example.blueday4meals.Register.RegisterType" />
+77-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:42:9-58
+77-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:42:19-56
+78
+79        <meta-data
+79-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:43:9-45:42
+80            android:name="com.naver.maps.map.CLIENT_ID"
+80-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:44:13-56
+81            android:value="g9m45hxvbu" />
+81-->C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\AndroidManifest.xml:45:13-39
+82
+83        <activity
+83-->[com.naver.maps:map-sdk:3.16.0] C:\Users\USER\.gradle\caches\transforms-3\24f7711ab1fc387f85008ac212c53bb3\transformed\jetified-map-sdk-3.16.0\AndroidManifest.xml:21:9-25:51
+84            android:name="com.naver.maps.map.app.LegendActivity"
+84-->[com.naver.maps:map-sdk:3.16.0] C:\Users\USER\.gradle\caches\transforms-3\24f7711ab1fc387f85008ac212c53bb3\transformed\jetified-map-sdk-3.16.0\AndroidManifest.xml:22:13-65
+85            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+85-->[com.naver.maps:map-sdk:3.16.0] C:\Users\USER\.gradle\caches\transforms-3\24f7711ab1fc387f85008ac212c53bb3\transformed\jetified-map-sdk-3.16.0\AndroidManifest.xml:23:13-91
+86            android:label="@string/navermap_legend"
+86-->[com.naver.maps:map-sdk:3.16.0] C:\Users\USER\.gradle\caches\transforms-3\24f7711ab1fc387f85008ac212c53bb3\transformed\jetified-map-sdk-3.16.0\AndroidManifest.xml:24:13-52
+87            android:theme="@style/navermap_app" />
+87-->[com.naver.maps:map-sdk:3.16.0] C:\Users\USER\.gradle\caches\transforms-3\24f7711ab1fc387f85008ac212c53bb3\transformed\jetified-map-sdk-3.16.0\AndroidManifest.xml:25:13-48
+88        <activity
+88-->[com.naver.maps:map-sdk:3.16.0] C:\Users\USER\.gradle\caches\transforms-3\24f7711ab1fc387f85008ac212c53bb3\transformed\jetified-map-sdk-3.16.0\AndroidManifest.xml:26:9-30:51
+89            android:name="com.naver.maps.map.app.LegalNoticeActivity"
+89-->[com.naver.maps:map-sdk:3.16.0] C:\Users\USER\.gradle\caches\transforms-3\24f7711ab1fc387f85008ac212c53bb3\transformed\jetified-map-sdk-3.16.0\AndroidManifest.xml:27:13-70
+90            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+90-->[com.naver.maps:map-sdk:3.16.0] C:\Users\USER\.gradle\caches\transforms-3\24f7711ab1fc387f85008ac212c53bb3\transformed\jetified-map-sdk-3.16.0\AndroidManifest.xml:28:13-91
+91            android:label="@string/navermap_legal_notice"
+91-->[com.naver.maps:map-sdk:3.16.0] C:\Users\USER\.gradle\caches\transforms-3\24f7711ab1fc387f85008ac212c53bb3\transformed\jetified-map-sdk-3.16.0\AndroidManifest.xml:29:13-58
+92            android:theme="@style/navermap_app" />
+92-->[com.naver.maps:map-sdk:3.16.0] C:\Users\USER\.gradle\caches\transforms-3\24f7711ab1fc387f85008ac212c53bb3\transformed\jetified-map-sdk-3.16.0\AndroidManifest.xml:30:13-48
+93        <activity
+93-->[com.naver.maps:map-sdk:3.16.0] C:\Users\USER\.gradle\caches\transforms-3\24f7711ab1fc387f85008ac212c53bb3\transformed\jetified-map-sdk-3.16.0\AndroidManifest.xml:31:9-35:51
+94            android:name="com.naver.maps.map.app.OpenSourceLicenseActivity"
+94-->[com.naver.maps:map-sdk:3.16.0] C:\Users\USER\.gradle\caches\transforms-3\24f7711ab1fc387f85008ac212c53bb3\transformed\jetified-map-sdk-3.16.0\AndroidManifest.xml:32:13-76
+95            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+95-->[com.naver.maps:map-sdk:3.16.0] C:\Users\USER\.gradle\caches\transforms-3\24f7711ab1fc387f85008ac212c53bb3\transformed\jetified-map-sdk-3.16.0\AndroidManifest.xml:33:13-91
+96            android:label="@string/navermap_open_source_license"
+96-->[com.naver.maps:map-sdk:3.16.0] C:\Users\USER\.gradle\caches\transforms-3\24f7711ab1fc387f85008ac212c53bb3\transformed\jetified-map-sdk-3.16.0\AndroidManifest.xml:34:13-65
+97            android:theme="@style/navermap_app" /> <!-- Needs to be explicitly declared on P+ -->
+97-->[com.naver.maps:map-sdk:3.16.0] C:\Users\USER\.gradle\caches\transforms-3\24f7711ab1fc387f85008ac212c53bb3\transformed\jetified-map-sdk-3.16.0\AndroidManifest.xml:35:13-48
+98        <uses-library
+98-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\USER\.gradle\caches\transforms-3\27fba98b7da56e65dbc6232ad8edc635\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:39:9-41:40
+99            android:name="org.apache.http.legacy"
+99-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\USER\.gradle\caches\transforms-3\27fba98b7da56e65dbc6232ad8edc635\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:40:13-50
+100            android:required="false" />
+100-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\USER\.gradle\caches\transforms-3\27fba98b7da56e65dbc6232ad8edc635\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:41:13-37
+101
+102        <activity
+102-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\USER\.gradle\caches\transforms-3\21ce86848169df2766db09eb4dd61bc2\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+103            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+103-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\USER\.gradle\caches\transforms-3\21ce86848169df2766db09eb4dd61bc2\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+104            android:exported="false"
+104-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\USER\.gradle\caches\transforms-3\21ce86848169df2766db09eb4dd61bc2\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+105            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+105-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\USER\.gradle\caches\transforms-3\21ce86848169df2766db09eb4dd61bc2\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+106
+107        <meta-data
+107-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\USER\.gradle\caches\transforms-3\fd74a84c6c2e9035ede7d9353abe41eb\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:21:9-23:69
+108            android:name="com.google.android.gms.version"
+108-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\USER\.gradle\caches\transforms-3\fd74a84c6c2e9035ede7d9353abe41eb\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:22:13-58
+109            android:value="@integer/google_play_services_version" />
+109-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\USER\.gradle\caches\transforms-3\fd74a84c6c2e9035ede7d9353abe41eb\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:23:13-66
+110
+111        <provider
+111-->[androidx.emoji2:emoji2:1.2.0] C:\Users\USER\.gradle\caches\transforms-3\7b79f7e4a058224274d9b5ea417be867\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+112            android:name="androidx.startup.InitializationProvider"
+112-->[androidx.emoji2:emoji2:1.2.0] C:\Users\USER\.gradle\caches\transforms-3\7b79f7e4a058224274d9b5ea417be867\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+113            android:authorities="com.example.blueday4meals.androidx-startup"
+113-->[androidx.emoji2:emoji2:1.2.0] C:\Users\USER\.gradle\caches\transforms-3\7b79f7e4a058224274d9b5ea417be867\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+114            android:exported="false" >
+114-->[androidx.emoji2:emoji2:1.2.0] C:\Users\USER\.gradle\caches\transforms-3\7b79f7e4a058224274d9b5ea417be867\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+115            <meta-data
+115-->[androidx.emoji2:emoji2:1.2.0] C:\Users\USER\.gradle\caches\transforms-3\7b79f7e4a058224274d9b5ea417be867\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+116                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+116-->[androidx.emoji2:emoji2:1.2.0] C:\Users\USER\.gradle\caches\transforms-3\7b79f7e4a058224274d9b5ea417be867\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+117                android:value="androidx.startup" />
+117-->[androidx.emoji2:emoji2:1.2.0] C:\Users\USER\.gradle\caches\transforms-3\7b79f7e4a058224274d9b5ea417be867\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+118            <meta-data
+118-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\USER\.gradle\caches\transforms-3\e49fb580d7eda2494a8100e094041989\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+119                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+119-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\USER\.gradle\caches\transforms-3\e49fb580d7eda2494a8100e094041989\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+120                android:value="androidx.startup" />
+120-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\USER\.gradle\caches\transforms-3\e49fb580d7eda2494a8100e094041989\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+121        </provider>
+122
+123        <uses-library
+123-->[androidx.window:window:1.0.0] C:\Users\USER\.gradle\caches\transforms-3\a168aa6180515b270a921847cb17cfdc\transformed\jetified-window-1.0.0\AndroidManifest.xml:25:9-27:40
+124            android:name="androidx.window.extensions"
+124-->[androidx.window:window:1.0.0] C:\Users\USER\.gradle\caches\transforms-3\a168aa6180515b270a921847cb17cfdc\transformed\jetified-window-1.0.0\AndroidManifest.xml:26:13-54
+125            android:required="false" />
+125-->[androidx.window:window:1.0.0] C:\Users\USER\.gradle\caches\transforms-3\a168aa6180515b270a921847cb17cfdc\transformed\jetified-window-1.0.0\AndroidManifest.xml:27:13-37
+126        <uses-library
+126-->[androidx.window:window:1.0.0] C:\Users\USER\.gradle\caches\transforms-3\a168aa6180515b270a921847cb17cfdc\transformed\jetified-window-1.0.0\AndroidManifest.xml:28:9-30:40
+127            android:name="androidx.window.sidecar"
+127-->[androidx.window:window:1.0.0] C:\Users\USER\.gradle\caches\transforms-3\a168aa6180515b270a921847cb17cfdc\transformed\jetified-window-1.0.0\AndroidManifest.xml:29:13-51
+128            android:required="false" />
+128-->[androidx.window:window:1.0.0] C:\Users\USER\.gradle\caches\transforms-3\a168aa6180515b270a921847cb17cfdc\transformed\jetified-window-1.0.0\AndroidManifest.xml:30:13-37
+129    </application>
+130
+131</manifest>

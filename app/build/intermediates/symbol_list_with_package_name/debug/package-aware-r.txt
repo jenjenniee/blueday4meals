@@ -3090,6 +3090,7 @@ drawable preference_list_divider_material
 drawable rectangle_purple
 drawable rectangle_style
 drawable rectangle_white
+drawable round_border
 drawable round_button
 drawable test_level_drawable
 drawable tooltip_frame_dark
@@ -3202,6 +3203,7 @@ id bounceStart
 id breakfast
 id btn_login
 id btn_register
+id button
 id button1
 id button2
 id button3
@@ -3516,6 +3518,7 @@ id preferences_detail
 id preferences_header
 id preferences_sliding_pane_layout
 id pressed
+id progressBar
 id progress_circular
 id progress_horizontal
 id radio
@@ -3524,6 +3527,7 @@ id rb_child
 id rb_parents
 id rbg_logintype
 id rectangles
+id recyclerView
 id recycler_view
 id register
 id reverseSawtooth
@@ -3820,6 +3824,8 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout expand_button
 layout image_frame
+layout item_loading
+layout item_row
 layout login
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
@@ -3917,6 +3923,7 @@ layout preference_widget_seekbar
 layout preference_widget_seekbar_material
 layout preference_widget_switch
 layout preference_widget_switch_compat
+layout ratingmainpage
 layout register
 layout register_child
 layout register_parents
