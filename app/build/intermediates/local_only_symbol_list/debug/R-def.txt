@@ -4,6 +4,7 @@ array Chungbuk
 array Citydo
 array reply_entries
 array reply_values
+array timediv
 attr? textStroke
 attr? textStrokeColor
 attr? textStrokeWidth
@@ -41,6 +42,7 @@ id breakfast
 id btn_login
 id btn_register
 id btn_view
+id btttttt
 id button
 id button1
 id button2

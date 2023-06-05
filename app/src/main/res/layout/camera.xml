@@ -18,12 +18,27 @@
             android:layout_marginEnd="12dp"
             android:layout_marginBottom="12dp"
             android:layout_weight="1"/>
-
-        <Button
-            android:id="@+id/Btn_camera_open"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="홈" />
+            android:layout_height="match_parent"
+            android:layout_weight="7"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/Btn_camera_open"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="카메라"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/btttttt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="임시 확인"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+
 
 
         <LinearLayout

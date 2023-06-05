@@ -55,4 +55,10 @@
         <item>음성군</item>
         <item>단양군</item>
     </string-array>
+
+    <string-array name="timediv">
+        <item>아침</item>
+        <item>점심</item>
+        <item>저녁</item>
+    </string-array>
 </resources>
