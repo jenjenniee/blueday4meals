@@ -30,6 +30,9 @@
         <activity android:name=".Camera.CameraMain"/>
         <activity android:name=".MainPages.SettingMain"/>
         <activity android:name=".Nutrient.NutrientMain"/>
+        <activity android:name=".Nutrient.calendar.CalendarAdapter"/>
+        <activity android:name=".Nutrient.calendar.CalendarViewHolder"/>
+        <activity android:name=".Nutrient.calendar.CalendarUtils"/>
         <activity android:name=".Login.LoginActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
