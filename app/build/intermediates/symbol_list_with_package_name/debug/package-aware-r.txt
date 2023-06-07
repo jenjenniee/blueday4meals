@@ -3231,6 +3231,7 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable bad
 drawable bg5
 drawable bg6
 drawable bg7
@@ -3354,6 +3355,7 @@ drawable foodlens_svg_icon_star
 drawable foodlens_svg_icon_x_new
 drawable foodlens_svg_icon_x_new01
 drawable foodlens_table_border
+drawable good
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_arrow_back_black_24
@@ -3371,6 +3373,7 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_search_black_24
+drawable left_arrow
 drawable login_pic1
 drawable login_pic2
 drawable login_pic3
@@ -3495,6 +3498,7 @@ drawable navermap_zoom_out_disabled
 drawable navermap_zoom_out_normal
 drawable navermap_zoom_out_pressed
 drawable navigation_empty_icon
+drawable notbad
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -3511,8 +3515,13 @@ drawable preference_list_divider_material
 drawable rectangle_purple
 drawable rectangle_style
 drawable rectangle_white
+drawable recycleview_shape
+drawable right_arrow
 drawable round_border
 drawable round_button
+drawable temp1
+drawable temp2
+drawable temp3
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -3653,6 +3662,7 @@ id btn_manual
 id btn_more
 id btn_now
 id btn_past
+id btn_rating
 id btn_register
 id btn_search
 id btn_show_quantity
@@ -3674,6 +3684,7 @@ id cGender
 id cRegion1
 id cRegion2
 id cache_measures
+id calendar
 id callMeasure
 id camera1
 id camera2
@@ -3682,6 +3693,7 @@ id cancel_action
 id cancel_button
 id carryVelocity
 id cb_autoLogin
+id cellDayText
 id center
 id centerCrop
 id centerInside
@@ -3711,6 +3723,7 @@ id compress
 id confirm_button
 id constraint
 id container
+id containerLayout
 id content
 id contentPanel
 id contiguous
@@ -3780,6 +3793,7 @@ id embed
 id end
 id endToStart
 id end_padder
+id energyLayout
 id enterAlways
 id enterAlwaysCollapsed
 id equal
@@ -3877,6 +3891,7 @@ id italic
 id item_touch_helper_previous_elevation
 id iv_anim
 id iv_anim_gallery
+id iv_dailyScoreIcon
 id iv_photo
 id jpeg
 id jumpToEnd
@@ -3915,6 +3930,7 @@ id left
 id leftToRight
 id left_cals
 id legacy
+id li_meal
 id light
 id line01
 id line02
@@ -3997,6 +4013,7 @@ id message
 id middle
 id mini
 id mono
+id monthYearTV
 id month_grid
 id month_navigation_bar
 id month_navigation_fragment_toggle
@@ -4074,6 +4091,7 @@ id notification_background
 id notification_main_column
 id notification_main_column_container
 id nutrient
+id nutrientLayout
 id off
 id on
 id onInterceptTouchReturnSwipe
@@ -4086,10 +4104,15 @@ id parallax
 id parent
 id parentPanel
 id parentRelative
+id parentView
 id parent_matrix
 id password_toggle
 id path
 id pathRelative
+id pb_carbs
+id pb_fat
+id pb_fiber
+id pb_protein
 id peekHeight
 id percent
 id photo
@@ -4130,6 +4153,8 @@ id root
 id rounded
 id row_index_key
 id rtl
+id rv_calendar
+id rv_meal
 id satellite
 id save_non_transition_alpha
 id save_overlay_view
@@ -4172,6 +4197,7 @@ id select_dialog_listview
 id selected
 id selection_type
 id serving_calorie
+id shape_listview
 id sharedValueSet
 id sharedValueUnset
 id shortcut
@@ -4275,6 +4301,7 @@ id toggle
 id toolbar
 id toolbarlayout
 id top
+id topLayout
 id topLeft
 id topPanel
 id topRight
@@ -4301,10 +4328,18 @@ id tv_calorie_title
 id tv_carbon_value
 id tv_carbonhydrate
 id tv_carbonhydrate_g
+id tv_carbsIntake
+id tv_carbsStandard
 id tv_chole_g
 id tv_chole_value
 id tv_cholesterol
 id tv_date
+id tv_energyIntake
+id tv_energyStandard
+id tv_fatIntake
+id tv_fatStandard
+id tv_fiberIntake
+id tv_fiberStandard
 id tv_food_name
 id tv_food_nutrition_info
 id tv_food_position
@@ -4313,6 +4348,8 @@ id tv_foodname
 id tv_gram_main
 id tv_powered_by_foodlens
 id tv_protein
+id tv_proteinIntake
+id tv_proteinStandard
 id tv_protein_g
 id tv_protein_value
 id tv_quantity
@@ -4482,6 +4519,10 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
+layout calendar_cell_bad
+layout calendar_cell_basic
+layout calendar_cell_good
+layout calendar_cell_notbad
 layout camera
 layout cameraview_gl_view
 layout cameraview_layout_focus_marker

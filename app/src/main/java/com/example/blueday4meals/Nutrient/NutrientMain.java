@@ -3,7 +3,9 @@ package com.example.blueday4meals.Nutrient;
 import static com.example.blueday4meals.Nutrient.calendar.CalendarUtils.daysInWeekArray;
 import static com.example.blueday4meals.Nutrient.calendar.CalendarUtils.monthYearFromDate;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -22,6 +24,7 @@ import com.example.blueday4meals.Nutrient.calendar.CalendarAdapter;
 import com.example.blueday4meals.Nutrient.calendar.CalendarUtils;
 import com.example.blueday4meals.Nutrient.rating.RatingMain;
 import com.example.blueday4meals.Nutrient.requests.getdaynuti;
+import com.example.blueday4meals.Nutrient.requests.getpoint;
 import com.example.blueday4meals.R;
 import com.example.blueday4meals.MainPages.SettingMain;
 
@@ -71,6 +74,8 @@ public class NutrientMain extends AppCompatActivity implements CalendarAdapter.O
 
         Button btnMain, btnCam, btnNut, btnMap, btnSet, btnrat;
 
+        TextView cals, carbs, proteins, fats, fibers;
+
         btnMain = findViewById(R.id.button1);
         btnMap = findViewById(R.id.button2);
         btnNut = findViewById(R.id.button3);
@@ -78,6 +83,11 @@ public class NutrientMain extends AppCompatActivity implements CalendarAdapter.O
         btnSet = findViewById(R.id.button5);
         btnrat = findViewById(R.id.btn_rating);
 //        TextView textViewResult = findViewById(R.id.textView);
+        cals = findViewById(R.id.tv_energyIntake);
+        carbs = findViewById(R.id.tv_carbsIntake);
+        proteins = findViewById(R.id.tv_proteinIntake);
+        fats = findViewById(R.id.tv_fatIntake);
+        fibers = findViewById(R.id.tv_fiberIntake);
 
         btnMain.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -129,6 +139,16 @@ public class NutrientMain extends AppCompatActivity implements CalendarAdapter.O
             @Override
             public void onResult(int point) {
 //                textViewResult.setText(String.valueOf(point));
+            }
+
+            @Override
+            public void onDataResult(int cal, double carb, double protein, double fat, double fiber) {
+//                String res = cal + " " + carb + " " + protein + " " + fat + " " + fiber;
+                cals.setText(Integer.toString(cal));
+                carbs.setText(Double.toString(carb));
+                proteins.setText(Double.toString(protein));
+                fats.setText(Double.toString(fat));
+                fibers.setText(Double.toString(fiber));
             }
         });
     }

@@ -20,6 +20,7 @@ public class getpoint {
 
     public interface ResultListener {
         void onResult(int point);
+        void onDataResult(int cal, double carb, double protein, double fat, double fiber);
     }
 
     public static class RatingCalculator {
@@ -65,6 +66,7 @@ public class getpoint {
 
                                 int point = Rating.calculateRating(needCal, calorie, carbohydrate, protein, fat, needDietFiber, dietary_fiber);
                                 listener.onResult(point);
+                                listener.onDataResult(calorie, carbohydrate, protein, fat, dietary_fiber);
                             }
                         } else {
                         }

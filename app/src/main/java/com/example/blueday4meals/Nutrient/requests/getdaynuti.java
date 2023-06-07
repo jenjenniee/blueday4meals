@@ -20,6 +20,7 @@ public class getdaynuti {
 
     public interface ResultListener {
         void onResult(int point);
+        void onDataResult(int cal, double carb, double protein, double fat, double fiber);
     }
 
     public static class nuturientgetter {
@@ -55,6 +56,11 @@ public class getdaynuti {
                                     @Override
                                     public void onResult(int point) {
                                         listener.onResult(point);
+                                    }
+
+                                    @Override
+                                    public void onDataResult(int cal, double carb, double protein, double fat, double fiber) {
+                                        listener.onDataResult(cal, carb, protein, fat, fiber);
                                     }
                                 });
                             }

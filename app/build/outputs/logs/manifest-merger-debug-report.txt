@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:2:1-54:12
-INJECTED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:2:1-54:12
-INJECTED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:2:1-54:12
-INJECTED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:2:1-54:12
+ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:2:1-57:12
+INJECTED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:2:1-57:12
+INJECTED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:2:1-57:12
+INJECTED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:2:1-57:12
 MERGED from [com.doinglab.foodlens:FoodLens:2.5.1] C:\Users\User\.gradle\caches\transforms-3\9e412c4e895a64b34367073911688f8f\transformed\jetified-FoodLens-2.5.1\AndroidManifest.xml:2:1-54:12
 MERGED from [com.github.bumptech.glide:glide:4.7.1] C:\Users\User\.gradle\caches\transforms-3\626c8965e2b9ff281830f41e41de8e9f\transformed\jetified-glide-4.7.1\AndroidManifest.xml:2:1-13:12
 MERGED from [com.naver.maps:map-sdk:3.16.0] C:\Users\User\.gradle\caches\transforms-3\24f7711ab1fc387f85008ac212c53bb3\transformed\jetified-map-sdk-3.16.0\AndroidManifest.xml:2:1-38:12
@@ -94,22 +94,22 @@ MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\User
 MERGED from [androidx.print:print:1.0.0] C:\Users\User\.gradle\caches\transforms-3\e49e4dff70250dbb03e409465432a16f\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\User\.gradle\caches\transforms-3\9f8ae07c01b7029dd5f1bc24deb42eb2\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-components:16.0.0] C:\Users\User\.gradle\caches\transforms-3\963e47b524fe7a63c4ed9216b68d50d4\transformed\jetified-firebase-components-16.0.0\AndroidManifest.xml:15:1-23:12
-INJECTED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:2:1-54:12
-INJECTED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:2:1-54:12
-INJECTED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:2:1-54:12
+INJECTED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:2:1-57:12
+INJECTED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:2:1-57:12
+INJECTED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:2:1-57:12
 	package
 		INJECTED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:2:1-54:12
+		ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:2:1-57:12
 		INJECTED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:2:1-54:12
+		ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:2:1-57:12
 		INJECTED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:2:1-54:12
+		ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:2:1-57:12
 		INJECTED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:2:11-69
@@ -142,7 +142,7 @@ ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManife
 	android:name
 		ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:7:22-76
 application
-ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:9:5-52:19
+ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:9:5-55:19
 MERGED from [com.doinglab.foodlens:FoodLens:2.5.1] C:\Users\User\.gradle\caches\transforms-3\9e412c4e895a64b34367073911688f8f\transformed\jetified-FoodLens-2.5.1\AndroidManifest.xml:21:5-52:19
 MERGED from [com.doinglab.foodlens:FoodLens:2.5.1] C:\Users\User\.gradle\caches\transforms-3\9e412c4e895a64b34367073911688f8f\transformed\jetified-FoodLens-2.5.1\AndroidManifest.xml:21:5-52:19
 MERGED from [com.github.bumptech.glide:glide:4.7.1] C:\Users\User\.gradle\caches\transforms-3\626c8965e2b9ff281830f41e41de8e9f\transformed\jetified-glide-4.7.1\AndroidManifest.xml:11:5-20
@@ -278,50 +278,62 @@ activity#com.example.blueday4meals.Nutrient.NutrientMain
 ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:32:9-58
 	android:name
 		ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:32:19-56
+activity#com.example.blueday4meals.Nutrient.calendar.CalendarAdapter
+ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:33:9-70
+	android:name
+		ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:33:19-68
+activity#com.example.blueday4meals.Nutrient.calendar.CalendarViewHolder
+ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:34:9-73
+	android:name
+		ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:34:19-71
+activity#com.example.blueday4meals.Nutrient.calendar.CalendarUtils
+ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:35:9-68
+	android:name
+		ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:35:19-66
 activity#com.example.blueday4meals.Login.LoginActivity
-ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:33:9-41:20
+ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:36:9-44:20
 	android:exported
-		ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:33:55-78
+		ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:36:55-78
 	android:name
-		ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:33:19-54
+		ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:36:19-54
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:34:13-37:29
+ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:37:13-40:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:35:17-69
+ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:38:17-69
 	android:name
-		ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:35:25-66
+		ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:38:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:36:17-77
+ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:39:17-77
 	android:name
-		ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:36:27-74
+		ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:39:27-74
 meta-data#android.app.lib_name
-ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:38:13-40:36
+ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:41:13-43:36
 	android:value
-		ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:40:17-33
+		ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:43:17-33
 	android:name
-		ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:39:17-52
+		ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:42:17-52
 activity#com.example.blueday4meals.Register.RegisterType
-ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:42:9-58
+ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:45:9-58
 	android:name
-		ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:42:19-56
+		ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:45:19-56
 meta-data#com.naver.maps.map.CLIENT_ID
-ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:43:9-45:42
+ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:46:9-48:42
 	android:value
-		ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:45:13-39
+		ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:48:13-39
 	android:name
-		ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:44:13-56
+		ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:47:13-56
 meta-data#com.doinglab.foodlens.sdk.apptoken
-ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:46:9-48:57
+ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:49:9-51:57
 	android:value
-		ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:48:13-55
+		ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:51:13-55
 	android:name
-		ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:47:13-62
+		ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:50:13-62
 meta-data#com.doinglab.foodlens.sdk.companytoken
-ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:49:9-51:61
+ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:52:9-54:61
 	android:value
-		ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:51:13-59
+		ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:54:13-59
 	android:name
-		ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:50:13-66
+		ADDED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml:53:13-66
 uses-sdk
 INJECTED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\AndroidManifest.xml

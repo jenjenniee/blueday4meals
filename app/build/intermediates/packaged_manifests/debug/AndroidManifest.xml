@@ -87,6 +87,9 @@
         <activity android:name="com.example.blueday4meals.Camera.CameraMain" />
         <activity android:name="com.example.blueday4meals.MainPages.SettingMain" />
         <activity android:name="com.example.blueday4meals.Nutrient.NutrientMain" />
+        <activity android:name="com.example.blueday4meals.Nutrient.calendar.CalendarAdapter" />
+        <activity android:name="com.example.blueday4meals.Nutrient.calendar.CalendarViewHolder" />
+        <activity android:name="com.example.blueday4meals.Nutrient.calendar.CalendarUtils" />
         <activity
             android:name="com.example.blueday4meals.Login.LoginActivity"
             android:exported="true" >
