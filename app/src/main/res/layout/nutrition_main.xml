@@ -179,7 +179,7 @@
                 android:id="@+id/tv_energyIntake"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
+                android:layout_marginLeft="20dp"
                 android:fontFamily="@font/mainfont"
                 android:gravity="center"
                 android:text="0"
@@ -198,8 +198,8 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/mainfont"
                 android:gravity="center"
-                android:text="2000"
-                android:textSize="34sp" />
+                android:text="9999"
+                android:textSize="32sp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -276,8 +276,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/dongle"
-                        android:text="200"
-                        android:textSize="30sp" />
+                        android:text="999"
+                        android:textSize="28sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -339,8 +339,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/dongle"
-                        android:text="200"
-                        android:textSize="30sp" />
+                        android:text="999"
+                        android:textSize="28sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -374,7 +374,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:max="100"
-                    android:progress="20" />
+                    android:progress="0" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -402,8 +402,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/dongle"
-                        android:text="200"
-                        android:textSize="30sp" />
+                        android:text="999"
+                        android:textSize="28sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -437,7 +437,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:max="100"
-                    android:progress="50" />
+                    android:progress="0" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -465,8 +465,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/dongle"
-                        android:text="200"
-                        android:textSize="30sp" />
+                        android:text="999"
+                        android:textSize="28sp" />
 
                     <TextView
                         android:layout_width="wrap_content"

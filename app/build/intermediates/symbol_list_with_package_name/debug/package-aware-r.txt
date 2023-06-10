@@ -3373,6 +3373,7 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_search_black_24
+drawable layout_meal_shape
 drawable left_arrow
 drawable login_pic1
 drawable login_pic2
@@ -3892,6 +3893,7 @@ id item_touch_helper_previous_elevation
 id iv_anim
 id iv_anim_gallery
 id iv_dailyScoreIcon
+id iv_foodImg
 id iv_photo
 id jpeg
 id jumpToEnd
@@ -4340,6 +4342,8 @@ id tv_fatIntake
 id tv_fatStandard
 id tv_fiberIntake
 id tv_fiberStandard
+id tv_foodEnergy
+id tv_foodName
 id tv_food_name
 id tv_food_nutrition_info
 id tv_food_position
@@ -4365,6 +4369,7 @@ id tv_sugar_value
 id tv_surving_value
 id tv_text
 id tv_time
+id tv_timeOfDay
 id tv_title_food
 id tv_total_fat_g
 id tv_total_fat_value
@@ -4519,10 +4524,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
-layout calendar_cell_bad
-layout calendar_cell_basic
-layout calendar_cell_good
-layout calendar_cell_notbad
+layout calendar_cell
 layout camera
 layout cameraview_gl_view
 layout cameraview_layout_focus_marker
@@ -4627,6 +4629,7 @@ layout md_dialog_stub_title
 layout md_listitem
 layout md_listitem_multichoice
 layout md_listitem_singlechoice
+layout meal_cell
 layout mtrl_alert_dialog
 layout mtrl_alert_dialog_actions
 layout mtrl_alert_dialog_title

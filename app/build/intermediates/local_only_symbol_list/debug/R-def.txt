@@ -26,6 +26,7 @@ drawable cityspinner
 drawable good
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable layout_meal_shape
 drawable left_arrow
 drawable login_pic1
 drawable login_pic2
@@ -87,6 +88,7 @@ id imageView3
 id imageView4
 id img_food
 id iv_dailyScoreIcon
+id iv_foodImg
 id left_cals
 id li_meal
 id listview
@@ -129,17 +131,17 @@ id tv_fatIntake
 id tv_fatStandard
 id tv_fiberIntake
 id tv_fiberStandard
+id tv_foodEnergy
+id tv_foodName
 id tv_food_nutrition_info
 id tv_food_position
 id tv_foodname
 id tv_proteinIntake
 id tv_proteinStandard
+id tv_timeOfDay
 id webview
 layout activity_main
-layout calendar_cell_bad
-layout calendar_cell_basic
-layout calendar_cell_good
-layout calendar_cell_notbad
+layout calendar_cell
 layout camera
 layout child_nutrient
 layout childmain
@@ -148,6 +150,7 @@ layout item_loading
 layout item_row
 layout list_item
 layout login
+layout meal_cell
 layout naver_map
 layout nutrition_main
 layout parentmain

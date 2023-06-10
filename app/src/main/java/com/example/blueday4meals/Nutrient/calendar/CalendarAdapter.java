@@ -14,19 +14,21 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class CalendarAdapter extends RecyclerView.Adapter<CalendarViewHolder> {
+    private final int point;
     private final ArrayList<LocalDate> days;
     private final OnItemListener onItemListener;
 
-    public CalendarAdapter(ArrayList<LocalDate> days, OnItemListener onItemListener) {
+    public CalendarAdapter(ArrayList<LocalDate> days, OnItemListener onItemListener, int point) {
         this.days = days;
         this.onItemListener = onItemListener;
+        this.point = point;
     }
 
     @NonNull
     @Override
     public CalendarViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        View view = inflater.inflate(R.layout.calendar_cell_basic, parent, false);
+        View view = inflater.inflate(R.layout.calendar_cell, parent, false);
         ViewGroup.LayoutParams layoutParams = view.getLayoutParams();
 
         layoutParams.height = parent.getHeight();
@@ -40,7 +42,20 @@ public class CalendarAdapter extends RecyclerView.Adapter<CalendarViewHolder> {
         if (date == null)
             holder.dayOfMonth.setText("");
         else {
+            // 캘린더 셀 구성
             holder.dayOfMonth.setText(String.valueOf(date.getDayOfMonth()));
+
+            if(point > 2 && point < 6 ){
+                // 일별주의
+                holder.dailyScoreIcon.setImageResource(R.drawable.notbad);
+            } else if(point > 5){
+                // 일별경고
+                holder.dailyScoreIcon.setImageResource(R.drawable.bad);
+            } else {
+                // 일별양호
+                holder.dailyScoreIcon.setImageResource(R.drawable.good);
+            }
+
             if (date.equals(CalendarUtils.selectedDate))
                 holder.parentView.setBackgroundColor(Color.LTGRAY);
         }
@@ -54,4 +69,5 @@ public class CalendarAdapter extends RecyclerView.Adapter<CalendarViewHolder> {
     public interface OnItemListener {
         void onItemClick(int position, LocalDate date);
     }
+
 }
