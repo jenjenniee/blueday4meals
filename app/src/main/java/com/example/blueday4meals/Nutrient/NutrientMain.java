@@ -2,6 +2,7 @@ package com.example.blueday4meals.Nutrient;
 
 import static com.example.blueday4meals.Nutrient.calendar.CalendarUtils.daysInWeekArray;
 import static com.example.blueday4meals.Nutrient.calendar.CalendarUtils.monthYearFromDate;
+import static com.example.blueday4meals.Nutrient.calendar.CalendarUtils.selectedDate;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,6 +13,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.volley.RequestQueue;
@@ -22,6 +24,7 @@ import com.example.blueday4meals.Function.navigationbar;
 import com.example.blueday4meals.NaverMap.NaverMapMain;
 import com.example.blueday4meals.Nutrient.calendar.CalendarAdapter;
 import com.example.blueday4meals.Nutrient.calendar.CalendarUtils;
+import com.example.blueday4meals.Nutrient.meal.MealAdapter;
 import com.example.blueday4meals.Nutrient.rating.RatingMain;
 import com.example.blueday4meals.Nutrient.requests.getdaynuti;
 import com.example.blueday4meals.Nutrient.requests.getpoint;
@@ -31,6 +34,7 @@ import com.example.blueday4meals.MainPages.SettingMain;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -39,8 +43,12 @@ import java.util.Locale;
 
 public class NutrientMain extends AppCompatActivity implements CalendarAdapter.OnItemListener {
 
+    public String id;
+    public int dpoint;
     private TextView monthYearText;
     private RecyclerView calendarRecyclerView;
+    private RecyclerView mealRecyclerView;
+    TextView cals, carbs, proteins, fats, fibers;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +59,7 @@ public class NutrientMain extends AppCompatActivity implements CalendarAdapter.O
         setWeekView();
 
         String userID = getIntent().getStringExtra("userID");
+        id = userID;
 
         Date currentDate = new Date();
         // Calendar 객체를 생성하고 현재 날짜와 시간을 설정합니다
@@ -68,13 +77,9 @@ public class NutrientMain extends AppCompatActivity implements CalendarAdapter.O
             e.printStackTrace();
         }
 
-        SimpleDateFormat outputFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
-        String formattedDate = outputFormat.format(today);
-
 
         Button btnMain, btnCam, btnNut, btnMap, btnSet, btnrat;
 
-        TextView cals, carbs, proteins, fats, fibers;
 
         btnMain = findViewById(R.id.button1);
         btnMap = findViewById(R.id.button2);
@@ -132,10 +137,59 @@ public class NutrientMain extends AppCompatActivity implements CalendarAdapter.O
         });
 
 
+
+    }
+
+    // 위젯 아이디로 연결
+    private void initWidgets() {
+        calendarRecyclerView = findViewById(R.id.rv_calendar);
+        monthYearText = findViewById(R.id.monthYearTV);
+        monthYearText = findViewById(R.id.monthYearTV);
+    }
+
+    // 주별 리사이클뷰 설정
+    private void setWeekView() {
+        monthYearText.setText(monthYearFromDate(CalendarUtils.selectedDate));
+        ArrayList<LocalDate> days = daysInWeekArray(CalendarUtils.selectedDate);
+
+        CalendarAdapter calendarAdapter = new CalendarAdapter(days, this, dpoint);
+        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getApplicationContext(), 7);
+        calendarRecyclerView.setLayoutManager(layoutManager);
+        calendarRecyclerView.setAdapter(calendarAdapter);
+    }
+
+    // 이전 주로 이동 액션
+    public void previousWeekAction(View view) {
+        CalendarUtils.selectedDate = CalendarUtils.selectedDate.minusWeeks(1);
+        setWeekView();
+    }
+
+    // 다음 주로 이동 액션
+    public void nextWeekAction(View view) {
+        CalendarUtils.selectedDate = CalendarUtils.selectedDate.plusWeeks(1);
+        setWeekView();
+    }
+
+    // 아이템 클릭
+    @Override
+    public void onItemClick(int position, LocalDate date) {
+        CalendarUtils.selectedDate = date;
+        loadNutrient();
+        setWeekView();
+    }
+
+    public void loadNutrient() {
         RequestQueue queue = Volley.newRequestQueue(NutrientMain.this);
         RequestQueue queue1 = Volley.newRequestQueue(NutrientMain.this);
 
-        getdaynuti.nuturientgetter.getter(userID, formattedDate, queue, queue1, new getdaynuti.ResultListener() {
+        // LocalDate를 Date로 변환
+        Date pickedDate = Date.from(CalendarUtils.selectedDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
+
+        SimpleDateFormat outputFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
+
+        String formattedDate = outputFormat.format(pickedDate);
+
+        getdaynuti.nuturientgetter.getter(id, formattedDate, queue, queue1, new getdaynuti.ResultListener() {
             @Override
             public void onResult(int point) {
 //                textViewResult.setText(String.valueOf(point));
@@ -153,35 +207,12 @@ public class NutrientMain extends AppCompatActivity implements CalendarAdapter.O
         });
     }
 
-    private void initWidgets() {
-        calendarRecyclerView = findViewById(R.id.rv_calendar);
-        monthYearText = findViewById(R.id.monthYearTV);
-    }
-
-    private void setWeekView() {
-        monthYearText.setText(monthYearFromDate(CalendarUtils.selectedDate));
-        ArrayList<LocalDate> days = daysInWeekArray(CalendarUtils.selectedDate);
-
-        CalendarAdapter calendarAdapter = new CalendarAdapter(days, this);
-        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getApplicationContext(), 7);
-        calendarRecyclerView.setLayoutManager(layoutManager);
-        calendarRecyclerView.setAdapter(calendarAdapter);
-    }
-
-    public void previousWeekAction(View view) {
-        CalendarUtils.selectedDate = CalendarUtils.selectedDate.minusWeeks(1);
-        setWeekView();
-    }
-
-    public void nextWeekAction(View view) {
-        CalendarUtils.selectedDate = CalendarUtils.selectedDate.plusWeeks(1);
-        setWeekView();
-    }
-
-    @Override
-    public void onItemClick(int position, LocalDate date) {
-        CalendarUtils.selectedDate = date;
-        setWeekView();
+    // 식사 리사이클뷰 설정
+    private void setMealView() {
+        MealAdapter mealAdapter = new MealAdapter();
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this, RecyclerView.VERTICAL, false);
+        mealRecyclerView.setLayoutManager(layoutManager);
+        mealRecyclerView.setAdapter(mealAdapter);
     }
 
     @Override
