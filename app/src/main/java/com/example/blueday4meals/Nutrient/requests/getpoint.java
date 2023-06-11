@@ -30,6 +30,11 @@ public class getpoint {
                 @Override
                 public void onResponse(String response) {
                     String jsonResponse = response; // 받은 JSON 응답 문자열
+                    int ccal = 0;
+                    double ccarb = 0;
+                    double cprotein = 0;
+                    double cfat = 0;
+                    double cfiber = 0;
 
                     try {
                         JSONObject jsonObject = new JSONObject(jsonResponse);
@@ -43,6 +48,7 @@ public class getpoint {
                             double[] Protain =  new double[dataArray.length()];
                             double[] Fat =  new double[dataArray.length()];
                             double[] DietFiber =  new double[dataArray.length()];
+
                             if (dataArray.length() > 0) {
 
                                 Log.d("TAG", "co 값: " + jsonResponse);
@@ -61,14 +67,24 @@ public class getpoint {
                                     protein += Protain[i];
                                     fat += Fat[i];
                                     dietary_fiber += DietFiber[i];
-
+                                    ccal += Cal[i];
+                                    ccarb += Carbon[i];
+                                    cprotein += Protain[i];
+                                    cfat += Fat[i];
+                                    cfiber += DietFiber[i];
                                 }
 
                                 int point = Rating.calculateRating(needCal, calorie, carbohydrate, protein, fat, needDietFiber, dietary_fiber);
                                 listener.onResult(point);
-                                listener.onDataResult(calorie, carbohydrate, protein, fat, dietary_fiber);
+                                listener.onDataResult(ccal, ccarb, cprotein, cfat, cfiber);
                             }
                         } else {
+                            ccal = 0;
+                            ccarb = 0;
+                            cprotein = 0;
+                            cfat = 0;
+
+                            listener.onDataResult(ccal, ccarb, cprotein, cfat, cfiber);
                         }
                     } catch (JSONException e) {
                         e.printStackTrace();
