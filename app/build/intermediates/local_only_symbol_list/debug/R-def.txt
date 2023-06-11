@@ -39,8 +39,10 @@ drawable rectangle_style
 drawable rectangle_white
 drawable recycleview_shape
 drawable right_arrow
+drawable round_background_border
 drawable round_border
 drawable round_button
+drawable side_menu
 drawable temp1
 drawable temp2
 drawable temp3
@@ -87,6 +89,7 @@ id imageView2
 id imageView3
 id imageView4
 id img_food
+id iv_balanceInquiry
 id iv_dailyScoreIcon
 id iv_foodImg
 id left_cals
@@ -136,6 +139,7 @@ id tv_foodName
 id tv_food_nutrition_info
 id tv_food_position
 id tv_foodname
+id tv_mainName
 id tv_proteinIntake
 id tv_proteinStandard
 id tv_timeOfDay

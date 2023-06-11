@@ -54,11 +54,11 @@ public class getpoint {
                                 Log.d("TAG", "co 값: " + jsonResponse);
                                 for(int i = 0; i < dataArray.length(); i++) {
                                     JSONObject dataObject = dataArray.getJSONObject(i);
-                                    Cal[i] =dataObject.getInt("calorie");
-                                    Carbon[i] =dataObject.getDouble("carbohydrate");
-                                    Protain[i] =dataObject.getDouble("protein");
-                                    Fat[i] =dataObject.getDouble("fat");
-                                    DietFiber[i] =dataObject.getDouble("dietary_fiber");
+                                    Cal[i] = dataObject.getInt("calorie");
+                                    Carbon[i] = dataObject.getDouble("carbohydrate");
+                                    Protain[i] = dataObject.getDouble("protein");
+                                    Fat[i] = dataObject.getDouble("fat");
+                                    DietFiber[i] = dataObject.getDouble("dietary_fiber");
                                 }
                                 // 사용자의 성별(gender)과 생년월일(birthdate) 값을 사용하여 처리
                                 for(int i = 0; i < dataArray.length(); i++) {

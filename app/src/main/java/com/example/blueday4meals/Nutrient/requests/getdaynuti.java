@@ -13,8 +13,8 @@ import org.json.JSONObject;
 
 public class getdaynuti {
 
-    private static int gender = 0;
-    private static int age = 0;
+    public static int gender = 0;
+    public static int age = 0;
     private static int needCal = 0;
     private static int needDietFiber = 0;
 
@@ -43,10 +43,11 @@ public class getdaynuti {
                                 gender = dataObject.getInt("userGender");
                                 String birthdate = dataObject.getString("userBirth");
                                 age = AgeCalculator.calculateAge(birthdate);
+
                                 // 사용자의 성별(gender)과 생년월일(birthdate) 값을 사용하여 처리
                                 int[] result = DailyCalculator.calculate(age, gender);
                                 needCal = result[0];
-                                needDietFiber = result[1];
+                                needDietFiber = result[4];
                                 Log.d("TAG", "gen 값: " + gender);
                                 Log.d("TAG", "age 값: " + age);
                                 Log.d("TAG", "need 값: " + needCal);

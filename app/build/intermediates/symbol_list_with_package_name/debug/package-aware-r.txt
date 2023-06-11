@@ -3518,8 +3518,10 @@ drawable rectangle_style
 drawable rectangle_white
 drawable recycleview_shape
 drawable right_arrow
+drawable round_background_border
 drawable round_border
 drawable round_button
+drawable side_menu
 drawable temp1
 drawable temp2
 drawable temp3
@@ -3892,6 +3894,7 @@ id italic
 id item_touch_helper_previous_elevation
 id iv_anim
 id iv_anim_gallery
+id iv_balanceInquiry
 id iv_dailyScoreIcon
 id iv_foodImg
 id iv_photo
@@ -4350,6 +4353,7 @@ id tv_food_position
 id tv_food_unit
 id tv_foodname
 id tv_gram_main
+id tv_mainName
 id tv_powered_by_foodlens
 id tv_protein
 id tv_proteinIntake
