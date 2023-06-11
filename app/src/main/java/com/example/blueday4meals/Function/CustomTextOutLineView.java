@@ -11,7 +11,7 @@ import android.util.AttributeSet;
 import android.widget.TextView;
 
 import com.example.blueday4meals.R;
-
+//이준호 작성
 @SuppressLint("AppCompatCustomView")
 public class CustomTextOutLineView extends TextView {
     private boolean stroke = false;
@@ -52,4 +52,4 @@ public class CustomTextOutLineView extends TextView {
         }
         super.onDraw(canvas);
     }
-}
+}//이준호 작성

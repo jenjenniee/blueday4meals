@@ -11,7 +11,7 @@ import com.example.blueday4meals.Function.navigationbar;
 import com.example.blueday4meals.NaverMap.NaverMapMain;
 import com.example.blueday4meals.Nutrient.NutrientMain;
 import com.example.blueday4meals.R;
-
+//이준호 작성
 public class ParentMainPage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,3 +64,4 @@ public class ParentMainPage extends AppCompatActivity {
         });
     }
 }
+//이준호 작성

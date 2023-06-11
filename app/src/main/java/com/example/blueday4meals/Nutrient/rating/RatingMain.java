@@ -34,7 +34,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
-
+//이준호 작성
 public class RatingMain extends AppCompatActivity {
 
     private RecyclerView recyclerView;
@@ -260,4 +260,4 @@ public class RatingMain extends AppCompatActivity {
         }, 2000);
     }
 
-}
+}//이준호 작성

@@ -13,7 +13,7 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 
 import com.example.blueday4meals.R;
-
+//이준호 작성
 @SuppressLint("AppCompatCustomView")
 public class CustomRadioOutlineView extends RadioButton {
     private boolean stroke = false;
@@ -55,3 +55,4 @@ public class CustomRadioOutlineView extends RadioButton {
         super.onDraw(canvas);
     }
 }
+//이준호 작성

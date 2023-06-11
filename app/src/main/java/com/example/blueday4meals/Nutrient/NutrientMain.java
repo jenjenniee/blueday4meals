@@ -43,7 +43,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
-
+//이준호 작성
 public class NutrientMain extends AppCompatActivity implements CalendarAdapter.OnItemListener {
 
     public String id;
@@ -153,10 +153,7 @@ public class NutrientMain extends AppCompatActivity implements CalendarAdapter.O
                 new navigationbar(NutrientMain.this, RatingMain.class, userID);
             }
         });
-
-
-
-    }
+    }//이준호 작성
 
     // 위젯 아이디로 연결
     private void initWidgets() {
@@ -233,8 +230,6 @@ public class NutrientMain extends AppCompatActivity implements CalendarAdapter.O
 
                 need_fiber.setText(Integer.toString(result[4]));
                 pb_fiber.setMax(result[4]);
-
-
                 // 섭취영양소 표시
                 cals.setText(Integer.toString(cal));
 
@@ -252,7 +247,6 @@ public class NutrientMain extends AppCompatActivity implements CalendarAdapter.O
             }
         });
     }
-
     // 식사 리사이클뷰 설정
     private void setMealView() {
         MealAdapter mealAdapter = new MealAdapter();
@@ -260,11 +254,8 @@ public class NutrientMain extends AppCompatActivity implements CalendarAdapter.O
         mealRecyclerView.setLayoutManager(layoutManager);
         mealRecyclerView.setAdapter(mealAdapter);
     }
-
     @Override
     protected void onResume() {
         super.onResume();
     }
-
-
 }

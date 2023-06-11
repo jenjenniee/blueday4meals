@@ -1,7 +1,7 @@
 package com.example.blueday4meals.Nutrient.calculaors;
 
 public class DailyCalculator {
-
+    //이준호 작성
     public static int[] calculate(int age, int gender) {
 
         int need_cal = 0;
@@ -94,4 +94,4 @@ public class DailyCalculator {
         int[] result = {need_cal, need_carb, need_protein, need_fat, need_fiber};
         return result;
     }
-}
+}//이준호 작성

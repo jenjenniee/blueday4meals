@@ -27,7 +27,7 @@ import com.example.blueday4meals.R;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
+//이준호 작성
 public class ChildMainPage extends AppCompatActivity {
     private TextView textView;
     private Button startButton;
@@ -195,4 +195,4 @@ public class ChildMainPage extends AppCompatActivity {
             }
         });
     }
-}
+}//이준호 작성

@@ -8,7 +8,7 @@ import com.example.blueday4meals.Nutrient.calculaors.Rating;
 
 import org.json.JSONArray;
 import org.json.JSONException;
-import org.json.JSONObject;
+import org.json.JSONObject;//이준호 작성
 
 public class getpoint {
 
@@ -95,6 +95,6 @@ public class getpoint {
             getnutrient nutrientRequest = new getnutrient(userID, date, responseListener2);
             queue1.add(nutrientRequest);
 
-        }
+        }//이준호 작성
     }
 }

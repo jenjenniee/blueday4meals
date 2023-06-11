@@ -3,7 +3,7 @@ package com.example.blueday4meals.Nutrient;
 import android.content.Intent;
 
 import androidx.appcompat.app.AppCompatActivity;
-
+//이준호 작성
 public class daily extends AppCompatActivity {
     public daily(int age, int gender) {
     }
@@ -63,4 +63,4 @@ public class daily extends AppCompatActivity {
         startActivity(intent);
         intent.putExtra("Cal", needcal);
     }
-}
+}//이준호 작성

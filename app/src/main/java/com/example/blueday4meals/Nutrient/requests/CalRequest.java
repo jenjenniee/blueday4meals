@@ -6,7 +6,7 @@ import com.android.volley.toolbox.StringRequest;
 
 import java.util.HashMap;
 import java.util.Map;
-
+//이준호 작성
 public class CalRequest extends StringRequest {
 
     // 서버 URL 설정 ( PHP 파일 연동 )
@@ -26,4 +26,4 @@ public class CalRequest extends StringRequest {
     protected Map<String, String> getParams() throws AuthFailureError {
         return map;
     }
-}
+}//이준호 작성

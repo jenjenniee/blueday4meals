@@ -6,7 +6,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.View;
-
+//이준호 작성
 public class CustomCircleBarView extends View {
 
     public CustomCircleBarView(Context context) {
@@ -38,4 +38,4 @@ public class CustomCircleBarView extends View {
         paint.setStrokeCap(Paint.Cap.ROUND);
         canvas.drawArc(30f, 30f, 110f, 110f, -90f, 180f, false, paint);
     }
-}
+}//이준호 작성

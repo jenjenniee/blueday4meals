@@ -10,7 +10,7 @@ import com.example.blueday4meals.Nutrient.calculaors.DailyCalculator;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
+//이준호 작성
 public class getdaynuti {
 
     public static int gender = 0;
@@ -76,6 +76,6 @@ public class getdaynuti {
             };
             CalRequest request = new CalRequest(userID, responseListener);
             queue.add(request);
-        }
+        }//이준호 작성
     }
 }
