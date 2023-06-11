@@ -32,6 +32,7 @@ public class ChildMainPage extends AppCompatActivity {
     private TextView textView;
     private Button startButton;
     private WebView webView;
+    private String cardnum;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -89,7 +90,7 @@ public class ChildMainPage extends AppCompatActivity {
         startButton = findViewById(R.id.refreshbutton);
 
 
-        /*Response.Listener<String> responseListener = new Response.Listener<String>() {
+        Response.Listener<String> responseListener = new Response.Listener<String>() {
 
             @Override
             public void onResponse(String response) {
@@ -104,7 +105,8 @@ public class ChildMainPage extends AppCompatActivity {
                         if (dataArray.length() > 0) {
                             Log.d("TAG", "co 값: " + jsonResponse);
                             JSONObject dataObject = dataArray.getJSONObject(0);
-                            int cardnum = dataObject.getInt("calorie");
+                            cardnum = dataObject.getString("cardNum");
+                            Log.d("num", ""+cardnum);
                         }
                     } else {
                     }
@@ -117,7 +119,7 @@ public class ChildMainPage extends AppCompatActivity {
         CardNumrequest Request = new CardNumrequest(userID, responseListener);
         RequestQueue queue = Volley.newRequestQueue(ChildMainPage.this);
         queue.add(Request);
-        */
+
 
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -126,7 +128,7 @@ public class ChildMainPage extends AppCompatActivity {
                     @Override
                     public void onPageFinished(WebView view, String url) {
                         // 페이지 로딩이 완료되었을 때 호출됩니다.
-                        setCardValue();
+                        setCardValue(cardnum);
                         clickButton();
                         extractTableInfo();
                     }
@@ -139,10 +141,12 @@ public class ChildMainPage extends AppCompatActivity {
 
     }
 
-    private void setCardValue() {
-        String script = "document.getElementById('card').value = '1036745201030364';";
+    private void setCardValue(String cardNum) {
+        Log.d("num", ""+cardnum);
+        String script = "document.getElementById('card').value = '" + cardNum + "';";
         webView.evaluateJavascript(script, null);
     }
+
 
     private void clickButton() {
         String script = "var buttons = document.getElementsByClassName('btn btn-primary py-3 px-4');"
