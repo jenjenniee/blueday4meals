@@ -148,6 +148,24 @@ public class ParentsRegisterActivity extends AppCompatActivity {
                     }
                 };
 
+                if(id.length() >= 5) {
+                    if(pwd.length() >= 8) {
+                        if(validate) {
+                            if(pwd.equals(pwdR)) {
+                                okay = 1;
+                            } else {
+                                Toast.makeText(getApplicationContext(),"비밀번호 확인이 틀립니다.",Toast.LENGTH_SHORT).show();
+                            }
+                        } else {
+                            Toast.makeText(getApplicationContext(),"아이디 중복확인을 해주세요.",Toast.LENGTH_SHORT).show();
+                        }
+                    } else {
+                        Toast.makeText(getApplicationContext(),"비밀번호는 8자 이상이어야 합니다.",Toast.LENGTH_SHORT).show();
+                    }
+                } else {
+                    Toast.makeText(getApplicationContext(),"아이디는 5자 이상이어야 합니다.",Toast.LENGTH_SHORT).show();
+                }
+
                 if (okay == 1) {
                     // 서버로 Volley를 이용해서 요청을 함.
                     ParentsRegisterRequest registerRequest = new ParentsRegisterRequest(id, pwd, responseListener);
