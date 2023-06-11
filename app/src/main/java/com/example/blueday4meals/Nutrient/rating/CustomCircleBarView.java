@@ -1,12 +1,12 @@
 package com.example.blueday4meals.Nutrient.rating;
-
+//이준호 작성
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.View;
-//이준호 작성
+
 public class CustomCircleBarView extends View {
 
     public CustomCircleBarView(Context context) {

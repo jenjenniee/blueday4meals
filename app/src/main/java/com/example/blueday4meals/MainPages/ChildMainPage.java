@@ -1,5 +1,5 @@
 package com.example.blueday4meals.MainPages;
-
+//이준호 작성
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -27,7 +27,7 @@ import com.example.blueday4meals.R;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-//이준호 작성
+
 public class ChildMainPage extends AppCompatActivity {
     private TextView textView;
     private Button startButton;

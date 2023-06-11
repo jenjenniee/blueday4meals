@@ -1,5 +1,5 @@
 package com.example.blueday4meals.MainPages;
-
+//이준호 작성
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,7 +11,7 @@ import com.example.blueday4meals.Function.navigationbar;
 import com.example.blueday4meals.NaverMap.NaverMapMain;
 import com.example.blueday4meals.Nutrient.NutrientMain;
 import com.example.blueday4meals.R;
-//이준호 작성
+
 public class SettingMain extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {

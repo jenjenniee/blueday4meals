@@ -1,5 +1,5 @@
 package com.example.blueday4meals.Nutrient.requests;
-
+//이준호 작성
 import android.util.Log;
 
 import com.android.volley.RequestQueue;
@@ -30,11 +30,6 @@ public class getpoint {
                 @Override
                 public void onResponse(String response) {
                     String jsonResponse = response; // 받은 JSON 응답 문자열
-                    int ccal = 0;
-                    double ccarb = 0;
-                    double cprotein = 0;
-                    double cfat = 0;
-                    double cfiber = 0;
 
                     try {
                         JSONObject jsonObject = new JSONObject(jsonResponse);
@@ -67,24 +62,15 @@ public class getpoint {
                                     protein += Protain[i];
                                     fat += Fat[i];
                                     dietary_fiber += DietFiber[i];
-                                    ccal += Cal[i];
-                                    ccarb += Carbon[i];
-                                    cprotein += Protain[i];
-                                    cfat += Fat[i];
-                                    cfiber += DietFiber[i];
                                 }
 
                                 int point = Rating.calculateRating(needCal, calorie, carbohydrate, protein, fat, needDietFiber, dietary_fiber);
                                 listener.onResult(point);
-                                listener.onDataResult(ccal, ccarb, cprotein, cfat, cfiber);
+                                listener.onDataResult(calorie, carbohydrate, protein, fat, dietary_fiber);
                             }
                         } else {
-                            ccal = 0;
-                            ccarb = 0;
-                            cprotein = 0;
-                            cfat = 0;
 
-                            listener.onDataResult(ccal, ccarb, cprotein, cfat, cfiber);
+                            listener.onDataResult(calorie, carbohydrate, protein, fat, dietary_fiber);
                         }
                     } catch (JSONException e) {
                         e.printStackTrace();
@@ -95,6 +81,6 @@ public class getpoint {
             getnutrient nutrientRequest = new getnutrient(userID, date, responseListener2);
             queue1.add(nutrientRequest);
 
-        }//이준호 작성
+        }
     }
-}
+}//이준호 작성

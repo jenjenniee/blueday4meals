@@ -1,5 +1,5 @@
 package com.example.blueday4meals.Nutrient.rating;
-
+//이준호 작성
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.blueday4meals.R;
 
 import java.util.List;
-//이준호 작성
+
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private final int VIEW_TYPE_ITEM = 0;
     private final int VIEW_TYPE_LOADING = 1;

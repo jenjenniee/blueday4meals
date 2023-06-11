@@ -1,7 +1,7 @@
 package com.example.blueday4meals.Nutrient.calculaors;
-
-import android.util.Log;
 //이준호 작성
+import android.util.Log;
+
 public class Rating {
     public static int calculateRating(int needCal, int Cal, double Carbon, double Protein, double Fat, int needDietFiber, double DietFiber) {
         int points = 0;
@@ -58,5 +58,5 @@ public class Rating {
         }
         Log.d("TAG", "일일점수 값: " + points);
         return point;
-    }//이준호 작성
-}
+    }
+}//이준호 작성

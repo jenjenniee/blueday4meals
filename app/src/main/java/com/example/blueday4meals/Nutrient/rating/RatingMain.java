@@ -1,5 +1,5 @@
 package com.example.blueday4meals.Nutrient.rating;
-
+//이준호 작성
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -34,7 +34,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
-//이준호 작성
+
 public class RatingMain extends AppCompatActivity {
 
     private RecyclerView recyclerView;

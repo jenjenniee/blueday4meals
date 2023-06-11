@@ -70,7 +70,7 @@ public class CameraMain extends AppCompatActivity {
 
     RecognitionResult recognitionResult = null;
 
-    @Override
+    @Override//이준호
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.camera);
@@ -87,7 +87,7 @@ public class CameraMain extends AppCompatActivity {
         btnNut = findViewById(R.id.button3);
         btnCam = findViewById(R.id.button4);
         btnSet = findViewById(R.id.button5);
-        openCamera = findViewById(R.id.Btn_camera_open);
+        openCamera = findViewById(R.id.Btn_camera_open);//이준호
 
         uiService = FoodLens.createUIService(this);
         uiService.setUiServiceMode(UIServiceMode.USER_SELECTED_WITH_CANDIDATES);
@@ -155,7 +155,7 @@ public class CameraMain extends AppCompatActivity {
             }
         });
 
-
+        //이준호
         btnMain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -190,7 +190,7 @@ public class CameraMain extends AppCompatActivity {
                 new navigationbar(CameraMain.this, SettingMain.class, userID);
             }
         });
-    }
+    }//이준호
 
     private void setRecognitionResultData(RecognitionResult recognitionResultData)
     {

@@ -1,11 +1,11 @@
 package com.example.blueday4meals.Nutrient.calculaors;
-
+//이준호 작성
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
-//이준호 작성
+
 public class AgeCalculator {
 
     public static int calculateAge(String birthdateString) {
@@ -34,5 +34,5 @@ public class AgeCalculator {
 
         return age;
 
-    }//이준호 작성
-}
+    }
+}//이준호 작성
