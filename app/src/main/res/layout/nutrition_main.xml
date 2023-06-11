@@ -10,7 +10,7 @@
     <LinearLayout
         android:id="@+id/containerLayout"
         android:layout_width="match_parent"
-        android:layout_height="738dp"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         android:weightSum="100"
         app:layout_constraintBaseline_toBaselineOf="parent"

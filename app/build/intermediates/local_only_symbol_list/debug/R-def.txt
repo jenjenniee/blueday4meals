@@ -38,6 +38,7 @@ drawable rectangle_purple
 drawable rectangle_style
 drawable rectangle_white
 drawable recycleview_shape
+drawable refresh
 drawable right_arrow
 drawable round_background_border
 drawable round_border

@@ -3516,6 +3516,7 @@ int drawable rectangle_purple 0x7f080194
 int drawable rectangle_style 0x7f080195
 int drawable rectangle_white 0x7f080196
 int drawable recycleview_shape 0x7f080197
+int drawable refresh 0x7f0801a4
 int drawable right_arrow 0x7f080198
 int drawable round_background_border 0x7f080199
 int drawable round_border 0x7f08019a

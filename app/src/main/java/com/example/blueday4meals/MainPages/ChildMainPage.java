@@ -47,6 +47,7 @@ public class ChildMainPage extends AppCompatActivity {
         btnCam = findViewById(R.id.button4);
         btnSet = findViewById(R.id.button5);
 
+
         btnMain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -88,9 +89,6 @@ public class ChildMainPage extends AppCompatActivity {
         startButton = findViewById(R.id.refreshbutton);
 
 
-
-
-
         /*Response.Listener<String> responseListener = new Response.Listener<String>() {
 
             @Override
@@ -121,7 +119,6 @@ public class ChildMainPage extends AppCompatActivity {
         queue.add(Request);
         */
 
-        
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -138,6 +135,8 @@ public class ChildMainPage extends AppCompatActivity {
                 webView.loadUrl("https://www.purmeecard.com/public.do?request=popCardSelectForm");
             }
         });
+        startButton.performClick();
+
     }
 
     private void setCardValue() {
@@ -172,7 +171,9 @@ public class ChildMainPage extends AppCompatActivity {
         webView.evaluateJavascript(script, new ValueCallback<String>() {
             @Override
             public void onReceiveValue(String value) {
+                Log.d("recieve", ""+value);
                 if (value != null && value.startsWith("\"") && value.endsWith("\"")) {
+
                     value = value.substring(1, value.length() - 1); // 따옴표 제거
                     value = value.replaceAll("[^\\p{IsHangul}\\p{Digit}-~ :,()]", ""); // 특수 문자와 한글 숫자 제거
                     value = value.replaceAll(",", "\n"); // ,를 줄바꿈으로 대체
@@ -180,10 +181,12 @@ public class ChildMainPage extends AppCompatActivity {
                     String secondLine = ""; // 두 번째 줄을 저장할 변수
 
                     if (lines.length >= 2) {
-                        secondLine = lines[1]; // 두 번째 줄을 저장합니다.
+                        secondLine = lines[1] + lines[2]; // 두 번째 줄을 저장합니다.
                     }
-
+                    secondLine = secondLine.replaceAll("    ", "");
+                    Log.d("cut", ""+secondLine);
                     textView.setText(secondLine); // 텍스트뷰에 두 번째 줄을 설정합니다.
+                    webView.setWebViewClient(null);
                 }
             }
         });
