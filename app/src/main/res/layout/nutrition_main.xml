@@ -183,7 +183,7 @@
                 android:fontFamily="@font/mainfont"
                 android:gravity="center"
                 android:text="0"
-                android:textSize="34sp" />
+                android:textSize="32sp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -199,7 +199,7 @@
                 android:fontFamily="@font/mainfont"
                 android:gravity="center"
                 android:text="9999"
-                android:textSize="32sp" />
+                android:textSize="28sp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -262,7 +262,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/dongle"
                         android:text="0"
-                        android:textSize="30sp" />
+                        android:textSize="28sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -277,14 +277,14 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/dongle"
                         android:text="999"
-                        android:textSize="28sp" />
+                        android:textSize="25sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/dongle"
                         android:text=" g"
-                        android:textSize="30sp" />
+                        android:textSize="28sp" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -325,7 +325,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/dongle"
                         android:text="0"
-                        android:textSize="30sp" />
+                        android:textSize="28sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -340,14 +340,14 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/dongle"
                         android:text="999"
-                        android:textSize="28sp" />
+                        android:textSize="25sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/dongle"
                         android:text=" g"
-                        android:textSize="30sp" />
+                        android:textSize="28sp" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -388,7 +388,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/dongle"
                         android:text="0"
-                        android:textSize="30sp" />
+                        android:textSize="28sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -403,14 +403,14 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/dongle"
                         android:text="999"
-                        android:textSize="28sp" />
+                        android:textSize="25sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/dongle"
                         android:text=" g"
-                        android:textSize="30sp" />
+                        android:textSize="28sp" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -451,7 +451,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/dongle"
                         android:text="0"
-                        android:textSize="30sp" />
+                        android:textSize="28sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -466,14 +466,14 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/dongle"
                         android:text="999"
-                        android:textSize="28sp" />
+                        android:textSize="25sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/dongle"
                         android:text=" g"
-                        android:textSize="30sp" />
+                        android:textSize="28sp" />
                 </LinearLayout>
 
             </LinearLayout>

@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,6 +23,7 @@ import com.example.blueday4meals.Camera.CameraMain;
 import com.example.blueday4meals.MainPages.ChildMainPage;
 import com.example.blueday4meals.Function.navigationbar;
 import com.example.blueday4meals.NaverMap.NaverMapMain;
+import com.example.blueday4meals.Nutrient.calculaors.DailyCalculator;
 import com.example.blueday4meals.Nutrient.calendar.CalendarAdapter;
 import com.example.blueday4meals.Nutrient.calendar.CalendarUtils;
 import com.example.blueday4meals.Nutrient.meal.MealAdapter;
@@ -31,6 +33,7 @@ import com.example.blueday4meals.Nutrient.requests.getpoint;
 import com.example.blueday4meals.R;
 import com.example.blueday4meals.MainPages.SettingMain;
 
+import java.text.DecimalFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
@@ -48,7 +51,8 @@ public class NutrientMain extends AppCompatActivity implements CalendarAdapter.O
     private TextView monthYearText;
     private RecyclerView calendarRecyclerView;
     private RecyclerView mealRecyclerView;
-    TextView cals, carbs, proteins, fats, fibers;
+    TextView cals, carbs, proteins, fats, fibers, need_cal, need_carbs, need_protein, need_fat, need_fiber;
+    ProgressBar pb_carbs, pb_protein, pb_fat, pb_fiber;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,19 +84,33 @@ public class NutrientMain extends AppCompatActivity implements CalendarAdapter.O
 
         Button btnMain, btnCam, btnNut, btnMap, btnSet, btnrat;
 
-
+        // 메뉴버튼 연결
         btnMain = findViewById(R.id.button1);
         btnMap = findViewById(R.id.button2);
         btnNut = findViewById(R.id.button3);
         btnCam = findViewById(R.id.button4);
         btnSet = findViewById(R.id.button5);
         btnrat = findViewById(R.id.btn_rating);
-//        TextView textViewResult = findViewById(R.id.textView);
+
+        // 섭취영양소 텍스트뷰 연결
         cals = findViewById(R.id.tv_energyIntake);
         carbs = findViewById(R.id.tv_carbsIntake);
         proteins = findViewById(R.id.tv_proteinIntake);
         fats = findViewById(R.id.tv_fatIntake);
         fibers = findViewById(R.id.tv_fiberIntake);
+
+        // 기준영양소 텍스트뷰 연결
+        need_cal = findViewById(R.id.tv_energyStandard);
+        need_carbs = findViewById(R.id.tv_carbsStandard);
+        need_protein = findViewById(R.id.tv_proteinStandard);
+        need_fat = findViewById(R.id.tv_fatStandard);
+        need_fiber = findViewById(R.id.tv_fiberStandard);
+
+        // 프로그래스바 연결
+        pb_carbs = findViewById(R.id.pb_carbs);
+        pb_protein = findViewById(R.id.pb_protein);
+        pb_fat = findViewById(R.id.pb_fat);
+        pb_fiber = findViewById(R.id.pb_fiber);
 
         btnMain.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -197,12 +215,40 @@ public class NutrientMain extends AppCompatActivity implements CalendarAdapter.O
 
             @Override
             public void onDataResult(int cal, double carb, double protein, double fat, double fiber) {
-//                String res = cal + " " + carb + " " + protein + " " + fat + " " + fiber;
+
+                DecimalFormat decimalFormat = new DecimalFormat("#.#");
+
+                // 기준영양소 표시
+                int[] result = DailyCalculator.calculate(getdaynuti.age, getdaynuti.gender);
+                need_cal.setText(Integer.toString(result[0]));
+
+                need_carbs.setText(Integer.toString(result[1]));
+                pb_carbs.setMax(result[1]);
+
+                need_protein.setText(Integer.toString(result[2]));
+                pb_protein.setMax(result[2]);
+
+                need_fat.setText(Integer.toString(result[3]));
+                pb_fat.setMax(result[3]);
+
+                need_fiber.setText(Integer.toString(result[4]));
+                pb_fiber.setMax(result[4]);
+
+
+                // 섭취영양소 표시
                 cals.setText(Integer.toString(cal));
-                carbs.setText(Double.toString(carb));
-                proteins.setText(Double.toString(protein));
-                fats.setText(Double.toString(fat));
-                fibers.setText(Double.toString(fiber));
+
+                carbs.setText(decimalFormat.format(carb));
+                pb_carbs.setProgress(Integer.parseInt(decimalFormat.format(Math.round(carb))));
+
+                proteins.setText(decimalFormat.format(protein));
+                pb_protein.setProgress(Integer.parseInt(decimalFormat.format(Math.round(protein))));
+
+                fats.setText(decimalFormat.format(fat));
+                pb_fat.setProgress(Integer.parseInt(decimalFormat.format(Math.round(fat))));
+
+                fibers.setText(decimalFormat.format(fiber));
+                pb_fiber.setProgress(Integer.parseInt(decimalFormat.format(Math.round(fiber))));
             }
         });
     }
