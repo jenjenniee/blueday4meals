@@ -45,8 +45,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="layoutResourceFile" />
-        <option value="Class" />
         <option value="resourceFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -60,10 +60,6 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/local.properties" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/app/build.gradle" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -88,6 +84,7 @@
     <property name="android-custom-viewC:/AndroidWorkSpace/OpenSource_Specialty_Project/main_Project/blueday4meals/app/src/main/java/com/example/blueday4meals/CustomRadioOutlineView.java_SELECTED" value="CustomRadioOutlineView" />
     <property name="android-custom-viewC:/AndroidWorkSpace/OpenSource_Specialty_Project/main_Project/blueday4meals/app/src/main/java/com/example/blueday4meals/CustomTextOutLineView.java_SELECTED" value="CustomTextOutLineView" />
     <property name="android-custom-viewC:/Users/USER/AndroidStudioProjects/blueday4meals-main/app/src/main/java/com/example/blueday4meals/Nutrient/rating/CustomCircleBarView.java_SELECTED" value="CustomCircleBarView" />
+    <property name="android-custom-viewC:/Users/USER/Documents/GitHub/blueday4meals/app/src/main/java/com/example/blueday4meals/Nutrient/rating/CustomCircleBarView.java_SELECTED" value="CustomCircleBarView" />
     <property name="android-custom-viewC:/Users/USER/Downloads/blueday4meals-main/blueday4meals-main/app/src/main/java/com/example/blueday4meals/Function/CustomButtonOutLineView.java_SELECTED" value="CustomButtonOutLineView" />
     <property name="android-custom-viewC:/Users/USER/Downloads/blueday4meals-main/blueday4meals-main/app/src/main/java/com/example/blueday4meals/Function/CustomRadioOutlineView.java_SELECTED" value="CustomRadioOutlineView" />
     <property name="android-custom-viewC:/Users/USER/Downloads/blueday4meals-main/blueday4meals-main/app/src/main/java/com/example/blueday4meals/Function/CustomTextOutLineView.java_SELECTED" value="CustomTextOutLineView" />
@@ -95,7 +92,7 @@
     <property name="android-custom-viewC:/Users/animalnara/github/blueday4meals_0520/app/src/main/java/com/example/blueday4meals/CustomButtonOutLineView.java_SELECTED" value="CustomButtonOutLineView" />
     <property name="android-custom-viewC:/Users/qorld/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.1.0/f2bdf79e1977939817f54a9d3e2f6bc52b63bdd0/recyclerview-1.1.0-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_SELECTED" value="RecyclerView" />
     <property name="cidr.known.project.marker" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/layout" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -103,11 +100,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\USER\Documents\GitHub\blueday4meals\app\src\main\res\layout" />
+      <recent name="C:\Users\USER\Documents\GitHub\blueday4meals\app\src\main\java\com\example\blueday4meals\Nutrient\requests" />
+      <recent name="C:\Users\USER\Documents\GitHub\blueday4meals\app\src\main\java\com\example\blueday4meals\Nutrient\rating" />
       <recent name="C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\res\layout" />
       <recent name="C:\Users\User\Desktop\VSCode\blueday4meals\app\src\main\java\com\example\blueday4meals\Camera" />
-      <recent name="C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\res\drawable-v24" />
-      <recent name="C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\java\com\example\blueday4meals\Nutrient\rating" />
-      <recent name="C:\Users\USER\AndroidStudioProjects\blueday4meals-main\app\src\main\res\layout" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\USER\Documents\GitHub\blueday4meals\app\src\main\res\layout" />
