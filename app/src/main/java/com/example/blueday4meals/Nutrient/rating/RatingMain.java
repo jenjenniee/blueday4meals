@@ -122,7 +122,6 @@
                                                 dpoint[j][k] = point;
 
                                                 wpoint[k] = dpoint[0][k] + dpoint[1][k] + dpoint[2][k] + dpoint[3][k] + dpoint[4][k] + dpoint[5][k] + dpoint[6][k];
-                                                Log.d("", "" + wpoint[week-2]);
                                                 j++;
 
                                                 if (j > 6) {
@@ -142,7 +141,6 @@
 
                                             @Override
                                             public void onDataResult(int cal, double carb, double protein, double fat, double fiber) {
-
                                             }
                                         });
 

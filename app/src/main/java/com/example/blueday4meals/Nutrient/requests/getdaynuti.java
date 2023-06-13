@@ -49,7 +49,7 @@ public class getdaynuti {
                                 needCal = result[0];
                                 needDietFiber = result[4];
 
-                                getpoint.RatingCalculator.getter(userID, date, needCal, needDietFiber, queue1, new getpoint.ResultListener() {
+                                getpoint.RatingCalculator.getter(userID, date, needCal, needDietFiber,age, gender, queue1, new getpoint.ResultListener() {
                                     @Override
                                     public void onResult(int point) {
                                         listener.onResult(point);

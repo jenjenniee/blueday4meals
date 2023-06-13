@@ -64,6 +64,5 @@ public class daily extends AppCompatActivity {
         }
         Intent intent = new Intent(daily.this, NutrientMain.class);
         startActivity(intent);
-        intent.putExtra("Cal", needcal);
     }
 }//이준호 작성

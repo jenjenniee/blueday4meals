@@ -4,11 +4,14 @@ import android.util.Log;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
+import com.example.blueday4meals.Nutrient.calculaors.DailyCalculator;
 import com.example.blueday4meals.Nutrient.calculaors.Rating;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;//이준호 작성
+
+import java.util.Arrays;
 
 public class getpoint {
 
@@ -24,7 +27,7 @@ public class getpoint {
     }
 
     public static class RatingCalculator {
-        public static void getter(String userID, String date, int needCal, int needDietFiber, RequestQueue queue1, ResultListener listener) {
+        public static void getter(String userID, String date, int needCal, int needDietFiber,int age, int gender, RequestQueue queue1, ResultListener listener) {
             Response.Listener<String> responseListener2 = new Response.Listener<String>() {
 
                 @Override
@@ -44,6 +47,21 @@ public class getpoint {
                             double[] Fat =  new double[dataArray.length()];
                             double[] DietFiber =  new double[dataArray.length()];
 
+                            Arrays.fill(Cal, 0);
+                            Arrays.fill(Carbon, 0);
+                            Arrays.fill(Cal, 0);
+                            Arrays.fill(Protain, 0);
+                            Arrays.fill(Fat, 0);
+                            Arrays.fill(DietFiber, 0);
+
+                            calorie = 0;
+                            carbohydrate = 0;
+                            protein = 0;
+                            fat = 0;
+                            dietary_fiber = 0;
+
+
+
                             if (dataArray.length() > 0) {
 
                                 for(int i = 0; i < dataArray.length(); i++) {
@@ -54,7 +72,7 @@ public class getpoint {
                                     Fat[i] = dataObject.getDouble("fat");
                                     DietFiber[i] = dataObject.getDouble("dietary_fiber");
                                 }
-                                // 사용자의 성별(gender)과 생년월일(birthdate) 값을 사용하여 처리
+
                                 for(int i = 0; i < dataArray.length(); i++) {
                                     calorie += Cal[i];
                                     carbohydrate += Carbon[i];
@@ -63,7 +81,12 @@ public class getpoint {
                                     dietary_fiber += DietFiber[i];
                                 }
 
-                                int point = Rating.calculateRating(needCal, calorie, carbohydrate, protein, fat, needDietFiber, dietary_fiber);
+                                int[] need= DailyCalculator.calculate(age, gender);
+                                int needCarbon = need[1];
+                                int needProtein = need[2];
+                                int needFat = need[3];
+
+                                int point = Rating.calculateRating( calorie, carbohydrate, protein, fat,dietary_fiber, needCal, needCarbon, needProtein, needFat, needDietFiber);
                                 listener.onResult(point);
                                 listener.onDataResult(calorie, carbohydrate, protein, fat, dietary_fiber);
                             }
