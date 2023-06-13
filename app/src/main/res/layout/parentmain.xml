@@ -1,61 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="부모메인 였어야 했던것"
-            android:textSize="110dp"
-            android:layout_weight="1"/>
+        android:orientation="vertical"
+        android:weightSum="100"
+        app:layout_constraintBaseline_toBaselineOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" >
 
         <LinearLayout
+            android:id="@+id/topLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="7"
             android:orientation="horizontal"
-            android:gravity="center_horizontal">
+            app:layout_constraintBottom_toTopOf="@id/iv_balanceInquiry"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.1" />
 
             <Button
-                android:id="@+id/button1"
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:text="홈" />
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.4"
+                android:background="@drawable/side_menu" />
 
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="80dp"
+            <TextView
+                android:id="@+id/tv_mainName"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="지도" />
+                android:layout_weight="2"
+                android:fontFamily="@font/dongle"
+                android:text="식사푸른날"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="38sp" />
 
-            <Button
-                android:id="@+id/button3"
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:text="영양" />
-
-            <Button
-                android:id="@+id/button4"
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:text="카메라" />
-
-            <Button
-                android:id="@+id/button5"
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:text="설정" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.6" />
 
         </LinearLayout>
 
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="41">
+
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="60dp"
+                android:fontFamily="@font/dongle"
+                android:gravity="bottom|start"
+                android:text="잔액"
+                android:textColor="@color/black"
+                android:textSize="38sp" />
+
+            <Button
+                android:id="@+id/refreshbutton"
+                android:layout_width="130px"
+                android:layout_height="130px"
+                android:layout_marginLeft="300dp"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/refresh"
+                android:gravity="center" />
+
+            <WebView
+                android:id="@+id/webview"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="gone"></WebView>
+
+        </FrameLayout>
 
     </LinearLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

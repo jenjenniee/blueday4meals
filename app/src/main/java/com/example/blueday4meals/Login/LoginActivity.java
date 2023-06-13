@@ -19,6 +19,7 @@ import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
 import com.example.blueday4meals.MainPages.ChildMainPage;
 import com.example.blueday4meals.Function.CustomButtonOutLineView;
+import com.example.blueday4meals.MainPages.ParentMainPage;
 import com.example.blueday4meals.R;
 import com.example.blueday4meals.Register.RegisterType;
 
@@ -142,7 +143,7 @@ public class LoginActivity extends AppCompatActivity {
                                         String userPass = jsonObject.getString("userPassword");
 
                                         Toast.makeText(getApplicationContext(), "로그인에 성공하였습니다.", Toast.LENGTH_SHORT).show();
-                                        Intent intent = new Intent(LoginActivity.this, ChildMainPage.class);//Register대신 메인화면.class로 이동시키면 됨
+                                        Intent intent = new Intent(LoginActivity.this, ParentMainPage.class);//Register대신 메인화면.class로 이동시키면 됨
                                         intent.putExtra("userID", userID);
                                         intent.putExtra("userPass", userPass);
                                         startActivity(intent);
