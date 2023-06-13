@@ -38,15 +38,13 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <TextView
-                    android:id="@+id/tv_mainName"
-                    android:layout_width="match_parent"
+                <ImageView
+                    android:id="@+id/logo"
+                    android:layout_width="300sp"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/dongle"
-                    android:text="식사푸른날"
-                    android:textAlignment="center"
-                    android:textColor="@color/black"
-                    android:textSize="60sp" />
+                    android:layout_weight="2"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/logo" />
 
             </LinearLayout>
 

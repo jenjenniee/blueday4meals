@@ -3379,6 +3379,7 @@ drawable login_pic1
 drawable login_pic2
 drawable login_pic3
 drawable login_pic4
+drawable logo
 drawable m3_appbar_background
 drawable m3_avd_hide_password
 drawable m3_avd_show_password
@@ -3966,6 +3967,7 @@ id lo_thrid_tab
 id lo_top
 id locale
 id login
+id logo
 id ltr
 id m3_side_sheet
 id main_back_btn
@@ -4353,7 +4355,6 @@ id tv_food_position
 id tv_food_unit
 id tv_foodname
 id tv_gram_main
-id tv_mainName
 id tv_powered_by_foodlens
 id tv_protein
 id tv_proteinIntake

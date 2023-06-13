@@ -32,6 +32,7 @@ drawable login_pic1
 drawable login_pic2
 drawable login_pic3
 drawable login_pic4
+drawable logo
 drawable marker
 drawable notbad
 drawable rectangle_purple
@@ -96,6 +97,7 @@ id left_cals
 id li_meal
 id listview
 id login
+id logo
 id male
 id map
 id monthYearTV
@@ -139,7 +141,6 @@ id tv_foodName
 id tv_food_nutrition_info
 id tv_food_position
 id tv_foodname
-id tv_mainName
 id tv_proteinIntake
 id tv_proteinStandard
 id tv_timeOfDay
