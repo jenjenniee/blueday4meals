@@ -46,7 +46,6 @@ public class getpoint {
 
                             if (dataArray.length() > 0) {
 
-                                Log.d("TAG", "co 값: " + jsonResponse);
                                 for(int i = 0; i < dataArray.length(); i++) {
                                     JSONObject dataObject = dataArray.getJSONObject(i);
                                     Cal[i] = dataObject.getInt("calorie");

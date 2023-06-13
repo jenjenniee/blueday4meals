@@ -8,18 +8,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:weightSum="100"
         app:layout_constraintBaseline_toBaselineOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" >
-
-        <ImageView
-            android:id="@+id/logo"
-            android:layout_width="300sp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:layout_gravity="center"
-            app:srcCompat="@drawable/logo" />
 
         <TextView
             android:id="@+id/textView"
@@ -27,7 +18,7 @@
             android:layout_height="wrap_content"
             android:text="설정 였어야 했던것"
             android:textSize="110dp"
-            android:layout_weight="1"/>
+            android:layout_weight="3"/>
 
         <LinearLayout
             android:layout_width="match_parent"

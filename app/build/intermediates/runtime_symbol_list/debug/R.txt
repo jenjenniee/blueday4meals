@@ -3872,7 +3872,6 @@ int id imageView 0x7f0a014f
 int id imageView2 0x7f0a0150
 int id imageView3 0x7f0a0151
 int id imageView4 0x7f0a0152
-int id imageView5 0x7f0a0153
 int id imageview_food_image 0x7f0a0154
 int id imageview_foods 0x7f0a0155
 int id imageview_star 0x7f0a0156

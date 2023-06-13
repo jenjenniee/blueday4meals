@@ -48,10 +48,6 @@ public class getdaynuti {
                                 int[] result = DailyCalculator.calculate(age, gender);
                                 needCal = result[0];
                                 needDietFiber = result[4];
-                                Log.d("TAG", "gen 값: " + gender);
-                                Log.d("TAG", "age 값: " + age);
-                                Log.d("TAG", "need 값: " + needCal);
-                                Log.d("TAG", "need2 값: " + needDietFiber);
 
                                 getpoint.RatingCalculator.getter(userID, date, needCal, needDietFiber, queue1, new getpoint.ResultListener() {
                                     @Override

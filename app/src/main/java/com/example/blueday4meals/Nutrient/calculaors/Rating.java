@@ -56,7 +56,6 @@ public class Rating {
                 point = 2;
                 break;
         }
-        Log.d("TAG", "일일점수 값: " + points);
         return point;
     }
 }//이준호 작성

@@ -103,10 +103,8 @@ public class ChildMainPage extends AppCompatActivity {
                     if (success) {
                         JSONArray dataArray = jsonObject.getJSONArray("data");
                         if (dataArray.length() > 0) {
-                            Log.d("TAG", "co 값: " + jsonResponse);
                             JSONObject dataObject = dataArray.getJSONObject(0);
                             cardnum = dataObject.getString("cardNum");
-                            Log.d("num", ""+cardnum);
                         }
                     } else {
                     }
@@ -142,7 +140,6 @@ public class ChildMainPage extends AppCompatActivity {
     }
 
     private void setCardValue(String cardNum) {
-        Log.d("num", ""+cardnum);
         String script = "document.getElementById('card').value = '" + cardNum + "';";
         webView.evaluateJavascript(script, null);
     }
@@ -175,7 +172,6 @@ public class ChildMainPage extends AppCompatActivity {
         webView.evaluateJavascript(script, new ValueCallback<String>() {
             @Override
             public void onReceiveValue(String value) {
-                Log.d("recieve", ""+value);
                 if (value != null && value.startsWith("\"") && value.endsWith("\"")) {
 
                     value = value.substring(1, value.length() - 1); // 따옴표 제거

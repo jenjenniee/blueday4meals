@@ -50,7 +50,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
-
+// 이진경 작성
 public class ParentMainPage extends AppCompatActivity implements CalendarAdapter.OnItemListener {
     private TextView textView;
     private Button startButton;
@@ -107,7 +107,6 @@ public class ParentMainPage extends AppCompatActivity implements CalendarAdapter
                                             if (success) {
                                                 JSONArray dataArray = jsonObject.getJSONArray("data");
                                                 if (dataArray.length() > 0) {
-                                                    Log.d("TAG", "co 값: " + jsonResponse);
                                                     JSONObject dataObject = dataArray.getJSONObject(0);
                                                     cardnum = dataObject.getString("cardNum");
                                                 }

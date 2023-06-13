@@ -1,8 +1,10 @@
 package com.example.blueday4meals.Nutrient.rating;
 //이준호 작성
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -65,6 +67,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
 
     private class ItemViewHolder extends RecyclerView.ViewHolder {
         private TextView textView;
+        private ImageView imageView;
 
         public ItemViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -72,7 +75,19 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
         }
 
         public void setItem(String item) {
-            textView.setText(item);
+            imageView = itemView.findViewById(R.id.imageView);
+            String[] parts = item.split(",");
+            String stringPart = parts[0];  // 앞부분을 String으로 받음
+            int intPart = Integer.parseInt(parts[1].trim());  // 뒷부분을 int로 받음
+            textView.setText(stringPart);
+            // intPart를 원하는 곳에 사용할 수 있음
+            if(intPart < 3){
+                imageView.setImageResource(R.drawable.good);
+            }else if(intPart < 5){
+                imageView.setImageResource(R.drawable.notbad);
+            }else{
+                imageView.setImageResource(R.drawable.bad);
+            }
         }
     }
 
