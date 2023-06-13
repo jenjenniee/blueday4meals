@@ -3646,7 +3646,6 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
-id breakfast
 id btn_add_nutrition
 id btn_camera
 id btn_cancel
@@ -3760,7 +3759,6 @@ id design_navigation_view
 id deviceDefault
 id dialog_button
 id dimensions
-id dinner
 id direct
 id disableHome
 id disableIntraAutoTransition
@@ -3969,7 +3967,6 @@ id lo_top
 id locale
 id login
 id ltr
-id lunch
 id m3_side_sheet
 id main_back_btn
 id male
@@ -4309,6 +4306,7 @@ id toolbar
 id toolbarlayout
 id top
 id topLayout
+id topLayout2
 id topLeft
 id topPanel
 id topRight
@@ -4529,19 +4527,16 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
-layout activity_main
 layout calendar_cell
 layout camera
 layout cameraview_gl_view
 layout cameraview_layout_focus_marker
 layout cameraview_surface_view
 layout cameraview_texture_view
-layout child_nutrient
 layout childmain
 layout crop_activity_crop
 layout crop_layout_done_cancel
 layout custom_dialog
-layout daily
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar

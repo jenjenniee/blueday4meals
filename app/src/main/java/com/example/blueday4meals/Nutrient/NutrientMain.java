@@ -92,25 +92,7 @@ public class NutrientMain extends AppCompatActivity implements CalendarAdapter.O
         btnSet = findViewById(R.id.button5);
         btnrat = findViewById(R.id.btn_rating);
 
-        // 섭취영양소 텍스트뷰 연결
-        cals = findViewById(R.id.tv_energyIntake);
-        carbs = findViewById(R.id.tv_carbsIntake);
-        proteins = findViewById(R.id.tv_proteinIntake);
-        fats = findViewById(R.id.tv_fatIntake);
-        fibers = findViewById(R.id.tv_fiberIntake);
 
-        // 기준영양소 텍스트뷰 연결
-        need_cal = findViewById(R.id.tv_energyStandard);
-        need_carbs = findViewById(R.id.tv_carbsStandard);
-        need_protein = findViewById(R.id.tv_proteinStandard);
-        need_fat = findViewById(R.id.tv_fatStandard);
-        need_fiber = findViewById(R.id.tv_fiberStandard);
-
-        // 프로그래스바 연결
-        pb_carbs = findViewById(R.id.pb_carbs);
-        pb_protein = findViewById(R.id.pb_protein);
-        pb_fat = findViewById(R.id.pb_fat);
-        pb_fiber = findViewById(R.id.pb_fiber);
 
         btnMain.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -152,8 +134,28 @@ public class NutrientMain extends AppCompatActivity implements CalendarAdapter.O
             public void onClick(View view) {
                 new navigationbar(NutrientMain.this, RatingMain.class, userID);
             }
-        });
-    }//이준호 작성
+        });//이준호 작성
+
+        // 섭취영양소 텍스트뷰 연결
+        cals = findViewById(R.id.tv_energyIntake);
+        carbs = findViewById(R.id.tv_carbsIntake);
+        proteins = findViewById(R.id.tv_proteinIntake);
+        fats = findViewById(R.id.tv_fatIntake);
+        fibers = findViewById(R.id.tv_fiberIntake);
+
+        // 기준영양소 텍스트뷰 연결
+        need_cal = findViewById(R.id.tv_energyStandard);
+        need_carbs = findViewById(R.id.tv_carbsStandard);
+        need_protein = findViewById(R.id.tv_proteinStandard);
+        need_fat = findViewById(R.id.tv_fatStandard);
+        need_fiber = findViewById(R.id.tv_fiberStandard);
+
+        // 프로그래스바 연결
+        pb_carbs = findViewById(R.id.pb_carbs);
+        pb_protein = findViewById(R.id.pb_protein);
+        pb_fat = findViewById(R.id.pb_fat);
+        pb_fiber = findViewById(R.id.pb_fiber);
+    }
 
     // 위젯 아이디로 연결
     private void initWidgets() {

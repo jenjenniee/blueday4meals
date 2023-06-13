@@ -51,7 +51,6 @@ font dongle
 font dovemayo
 font mainfont
 id Btn_camera_open
-id breakfast
 id btn_login
 id btn_rating
 id btn_register
@@ -75,7 +74,6 @@ id cid
 id containerLayout
 id cpwd
 id cpwdR
-id dinner
 id drawer
 id drawer_info
 id drawer_layout
@@ -98,7 +96,6 @@ id left_cals
 id li_meal
 id listview
 id login
-id lunch
 id male
 id map
 id monthYearTV
@@ -128,6 +125,7 @@ id signup
 id start
 id textView
 id topLayout
+id topLayout2
 id tv_carbsIntake
 id tv_carbsStandard
 id tv_energyIntake
@@ -146,12 +144,9 @@ id tv_proteinIntake
 id tv_proteinStandard
 id tv_timeOfDay
 id webview
-layout activity_main
 layout calendar_cell
 layout camera
-layout child_nutrient
 layout childmain
-layout daily
 layout item_loading
 layout item_row
 layout list_item
