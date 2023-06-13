@@ -1,5 +1,6 @@
 package com.example.blueday4meals.NaverMap;
-
+// 이진경 작성
+// 강태광 부분 작성 137 ~146, 165~ 170, 176~ 180
 import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
@@ -134,7 +135,7 @@ public class NaverMapMain extends AppCompatActivity implements NaverMap.OnMapCli
         this.naverMap = naverMap;
         naverMap.setLocationSource(locationSource);  //현재위치 표시
         ActivityCompat.requestPermissions(this, PERMISSIONS, LOCATION_PERMISSION_REQUEST_CODE);
-        // 클라이언트 객체 생성 -
+        // 클라이언트 객체 생성- 강태광 시작
         NaverMapApiInterface naverMapApiInterface = NaverMapRequest.getClient().create(NaverMapApiInterface.class);
         // 응답을 받을 콜백 구현
         Call<NaverMapItem> call = naverMapApiInterface.getMapData();
@@ -143,9 +144,9 @@ public class NaverMapMain extends AppCompatActivity implements NaverMap.OnMapCli
             @Override
             public void onResponse(Call<NaverMapItem> call, Response<NaverMapItem> response) { // 통신 성공시 -
                 naverMapList = response.body(); // naverMapList에 요청에 대한 응답 결과 저장
-                naverMapInfo = naverMapList.data;
+                naverMapInfo = naverMapList.data;  // 강태광 끝
 
-                // 현재 위치 기준으로 마커 표시
+                // 현재 위치 기준으로 마커 표시 - 이진경 시작
                 LatLng currentLocation = new LatLng(latitude, longitude);
                 for (int i = 0; i < naverMapInfo.size(); i++) {
                     NaverMapData mapData = naverMapInfo.get(i);
@@ -161,9 +162,10 @@ public class NaverMapMain extends AppCompatActivity implements NaverMap.OnMapCli
                         marker.setWidth(50); // 마커 크기 조절
                         marker.setHeight(75);
                         marker.setMap(naverMap);
+                        // 이진경 끝
 
-
-                        int finalI = i;
+                        //강태광 시작
+                       int finalI = i;
                         marker.setOnClickListener(new Overlay.OnClickListener() {
                             @Override
                             public boolean onClick(@NonNull Overlay overlay) {
