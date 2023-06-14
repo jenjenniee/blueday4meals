@@ -124,9 +124,6 @@ public class NaverMapMain extends AppCompatActivity implements NaverMap.OnMapCli
 
         ActivityCompat.requestPermissions(this, PERMISSIONS, LOCATION_PERMISSION_REQUEST_CODE); // 현재위치 표시할 때 권한 확인
 
-
-        final LocationManager lm = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-
         setloc();
     }
 
@@ -148,6 +145,7 @@ public class NaverMapMain extends AppCompatActivity implements NaverMap.OnMapCli
 
                 // 현재 위치 기준으로 마커 표시 - 이진경 시작
                 LatLng currentLocation = new LatLng(latitude, longitude);
+
                 for (int i = 0; i < naverMapInfo.size(); i++) {
                     NaverMapData mapData = naverMapInfo.get(i);
                     LatLng markerLocation = new LatLng(mapData.getlatitude(), mapData.getlongitude());
@@ -183,26 +181,24 @@ public class NaverMapMain extends AppCompatActivity implements NaverMap.OnMapCli
         });
     }
 // 현재 위치 정보 가져오기
-    private void setloc(){
-        if (Build.VERSION.SDK_INT >= 23 &&
-                ContextCompat.checkSelfPermission(getApplicationContext(), android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(NaverMapMain.this, new String[] { android.Manifest.permission.ACCESS_FINE_LOCATION }, 0);
-        } else {
-            // 가장 최근 위치정보 가져오기
+private void setloc() {
+    if (Build.VERSION.SDK_INT >= 23 &&
+            ContextCompat.checkSelfPermission(getApplicationContext(), android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+        ActivityCompat.requestPermissions(NaverMapMain.this, new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION}, 0);
+    } else {
+        // 사용자의 현재 위치 가져오기
+        LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+        Location location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
 
-            final LocationManager lm = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-
-            Location location = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-            while (location == null) {
-                location = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-            }
+        if (location != null) {
             longitude = location.getLongitude();
             latitude = location.getLatitude();
-            Log.d("TAG", "변수 값: " + location);
-            Log.d("TAG", "변수 값: " + latitude);
-            Log.d("TAG", "변수 값: " + longitude);
+        } else {
+            // 위치가 사용 가능하지 않거나 null인 경우 처리
+            // 오류 메시지를 표시하거나 사용자에게 위치 서비스를 활성화하도록 요청할 수 있습니다.
         }
     }
+}
 
 
     //마커 클릭시 가게 정보 제공

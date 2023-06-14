@@ -8,5 +8,6 @@ public class navigationbar extends Activity {
         Intent intent = new Intent(activity, changingClass);
         intent.putExtra("userID", userID);
         activity.startActivity(intent);
+        finish();
     }
 }//이준호 작성
