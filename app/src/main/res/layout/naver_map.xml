@@ -30,31 +30,36 @@
                 android:id="@+id/button1"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
-                android:text="홈" />
+                android:text="홈"
+                android:textColor="@color/white"/>
 
             <Button
                 android:id="@+id/button2"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
-                android:text="지도" />
+                android:text="지도"
+                android:textColor="@color/white"/>
 
             <Button
                 android:id="@+id/button3"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
-                android:text="영양" />
+                android:text="영양"
+                android:textColor="@color/white"/>
 
             <Button
                 android:id="@+id/button4"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
-                android:text="카메라" />
+                android:text="카메라"
+                android:textColor="@color/white"/>
 
             <Button
                 android:id="@+id/button5"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
-                android:text="설정" />
+                android:text="설정"
+                android:textColor="@color/white"/>
 
         </LinearLayout>
 

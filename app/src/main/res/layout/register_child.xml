@@ -60,7 +60,7 @@
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp">
 
-        <com.example.blueday4meals.Function.CustomTextOutLineView
+        <com.example.meals.Function.CustomTextOutLineView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/dongle"
@@ -95,7 +95,7 @@
                 android:maxLength="12"
                 android:textSize="30dp" />
 
-            <com.example.blueday4meals.Function.CustomButtonOutLineView
+            <com.example.meals.Function.CustomButtonOutLineView
                 android:id="@+id/idcheck"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -162,7 +162,7 @@
             android:layout_height="wrap_content"
             android:checkedButton="@id/male" >
 
-            <com.example.blueday4meals.Function.CustomRadioOutlineView
+            <com.example.meals.Function.CustomRadioOutlineView
                 android:id="@+id/male"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -181,7 +181,7 @@
                 app:textStrokeColor="#CEC2FF"
                 app:textStrokeWidth="20.0" />
 
-            <com.example.blueday4meals.Function.CustomRadioOutlineView
+            <com.example.meals.Function.CustomRadioOutlineView
                 android:id="@+id/female"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -207,7 +207,7 @@
             android:layout_weight="1"
             android:orientation="horizontal">
 
-            <com.example.blueday4meals.Function.CustomButtonOutLineView
+            <com.example.meals.Function.CustomButtonOutLineView
                 android:id="@+id/cRegion1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -225,7 +225,7 @@
                 app:textStrokeColor="#CEC2FF"
                 app:textStrokeWidth="20.0" />
 
-            <com.example.blueday4meals.Function.CustomButtonOutLineView
+            <com.example.meals.Function.CustomButtonOutLineView
                 android:id="@+id/cRegion2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -245,7 +245,7 @@
 
         </LinearLayout>
 
-        <com.example.blueday4meals.Function.CustomButtonOutLineView
+        <com.example.meals.Function.CustomButtonOutLineView
             android:id="@+id/signup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

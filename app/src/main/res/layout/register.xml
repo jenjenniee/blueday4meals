@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="57dp" />
 
-    <com.example.blueday4meals.Function.CustomButtonOutLineView
+    <com.example.meals.Function.CustomButtonOutLineView
         android:id="@+id/child"
         android:layout_width="178dp"
         android:layout_height="90dp"
@@ -40,7 +40,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/register" />
 
-    <com.example.blueday4meals.Function.CustomButtonOutLineView
+    <com.example.meals.Function.CustomButtonOutLineView
         android:id="@+id/parent"
         android:layout_width="178dp"
         android:layout_height="90dp"

@@ -58,7 +58,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <com.example.blueday4meals.Function.CustomTextOutLineView
+        <com.example.meals.Function.CustomTextOutLineView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="2"
@@ -84,7 +84,7 @@
             android:maxLength="12"
             android:layout_weight="1"/>
 
-        <com.example.blueday4meals.Function.CustomButtonOutLineView
+        <com.example.meals.Function.CustomButtonOutLineView
             android:id="@+id/idcheck"
             android:layout_width="159dp"
             android:layout_height="25dp"
@@ -129,7 +129,7 @@
             android:layout_weight="1"/>
 
 
-        <com.example.blueday4meals.Function.CustomButtonOutLineView
+        <com.example.meals.Function.CustomButtonOutLineView
             android:id="@+id/signup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

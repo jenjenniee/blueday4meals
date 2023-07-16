@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.blueday4meals'
+    namespace 'com.example.meals'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.blueday4meals"
+        applicationId "com.example.meals"
         minSdkVersion 21
         minSdk 26
         targetSdk 33
